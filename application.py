@@ -11,7 +11,9 @@ import numpy as np
 application = flask.Flask(__name__)
 
 anne = annotator.Annotator(reader.get_reader(config.reader)(**config.reader_params))
-ordering = np.loadtxt('.//data//ordering_list.txt', dtype = int)
+ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
+ordering = np.asarray(ordering, dtype = int)
+
 
 
 """

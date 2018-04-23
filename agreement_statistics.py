@@ -186,7 +186,8 @@ def get_stats(art_id):
                            '.\\data\\out_krystie.csv']    
                            
     # has all information for all files
-    names = np.genfromtxt('.//data//ordering_list.txt')
+    names = np.genfromtxt('.\\data\\ordering_list.txt', dtype = float)
+    names = np.asarray(names, dtype = int)
     loc_art = names.tolist().index(float(art_id))
     data_opt, data_ans = np.asarray(load_data(data_loc))
     options, answers = flatten(data_opt, data_ans)
