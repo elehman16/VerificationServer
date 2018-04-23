@@ -63,4 +63,4 @@ def annotate_full(artid):
 Run the application.
 """
 if __name__ == '__main__':
-    application.run(port = '8080', host = '0.0.0.0')
+    application.run(port = 8082, host = '0.0.0.0')
