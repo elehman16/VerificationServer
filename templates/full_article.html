@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <head>
+    <!--[if lt IE 9]>
+    <script> document.createElement("stack"); </script>
+    <![endif]-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.0.0/jquery.mark.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  </head>
+<style>
+body {font-family: Arial;}
+
+italic {
+
+}
+
+.highlight1 {
+  background-color: #CCE5FF;
+}
+
+.highlight2 {
+  background-color: #99CCFF;
+}
+
+.highlight3 {
+  background-color: #66B2FF;
+}
+
+.highlight4 {
+  background-color: #3399FF;
+}
+
+.highlight5 {
+  background-color: #0080FF;
+}
+
+/* Style for the modal. */
+.invalid_prompt_text {
+  width: 570px;
+  max-width: 570px;
+  height: 300px;
+  max-height: 300px;
+  overflow: auto;
+  resize: none;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+
+        <li id = "link_Statistics" class = "tablinks" onclick = "openTab(event, 'Statistics')"> <a href="#"> Statistics </a> </li>
+        {% for tab in tabs %}
+          <li id = 'link_{{ tab[0] }}' class="tablinks" onclick="openTab(event, '{{ tab[0] }}')"> <a href="#"> {{ tab[0] }} </a> </li>
+        {% endfor %}
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Doctors <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            {% for name in doctor_names %}
+            <li> <input id = '{{ name }}' type="checkbox" style = "margin-left: 5px;" checked/>&nbsp; {{ name }} </a> </li>
+            {% endfor %}
+          </ul>
+
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Other Article <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              {% for name in ordering %}
+              <li>
+                <a id = '{{ name }}' href="http://127.0.0.1:5000/annotate_full/{{ name }}"> {{ name }} </a>
+              </li>
+              {% endfor %}
+            </ul>
+        </li>
+
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Initialize the tab with titles . -->
+  <div>
+
+    <div id = "Statistics" class = "tabcontent" style = "max-height: 400px; overflow: auto;">
+
+      <div class = "column" style = "margin-left: 1%; float:left;">
+        <b> Document answer: {{ answer }} </b>
+        <br> <br>
+        {%for d in doct_ans_names %}
+          <b> {{ d[0] }}: </b> {{ d[1] }} <br>
+        {% endfor %}
+      </div>
+
+      <div id="piechart" style = "float:left;"> </div>
+
+      <div>
+        {%for d in doct_reason %}
+          <b> {{ d[0] }}: </b> {{ d[1] }} <br>
+        {% endfor %}
+      </div>
+
+  </div>
+    <!-- Create a place to put content for each tab. -->
+    {%for tab in tabs %}
+    <div id = '{{ tab[0] }}', class="tabcontent" style = "max-height: 400px; overflow: auto;">
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- The prompt -->
+  <div class = "row">
+    <label style = "margin-left: 45px; margin-top: 20px;">
+      With respect to <b> <i> {{ outcome }}, </i> </b> characterize the
+      reported difference between patients receiving <b> <i>
+      {{ intervention }} </i> </b> and those receiving <b> <i> {{ comparator }}.
+      </i> </b>
+    </label>
+</div>
+
+<script type="text/javascript">
+  // Load google charts
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  // Draw the chart and set the chart values
+  function drawChart() {
+    var doct_answer = {{ doct_ans|tojson }};
+    var data = google.visualization.arrayToDataTable(doct_answer);
+
+    // Optional; add a title and set the width and height of the chart
+    var options = {'title':'Doctor Response', 'width':550, 'height':400};
+
+    // Display the chart inside the <div> element with id="piechart"
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+  }
+</script>
+
+
+
+
+  <script>
+    /**
+    * Displays the information in the tab when clicked on.
+    *
+    * @param evt represents what happend with the tab.
+    * @param name represents which tab to open.
+    */
+    function openTab(evt, name) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(name).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+  </script>
+
+
+  <script>
+
+    /**
+    * Used to break down a Text into a readable format (see data-definition below).
+    *
+    * @param orig_tab represents the parent HTML element if it exists.
+    * @param text is of the following data definition:
+    * Text is one of:
+    *    - Array of Text
+    *    - ['title', 'paragraph']
+    *    - ['title', Text]
+    */
+    function breakDownText(text, orig_tab) {
+      var copy = orig_tab;
+      if (text.length != 2 || Array.isArray(text[0])) { // there are multiple sections here if this is the case
+        for (var i = 0; i < text.length; i++) {
+          breakDownText(text[i], orig_tab); // break each of these larger sections down
+        }                                  // this is likely the beginnining with all tab headers
+      } else {
+        if (orig_tab === undefined) { // If there is no title for this section, make one.
+          var title = text[0];
+          var tab = document.getElementById(title);
+          var title_element = document.createElement("h3");
+          title_element.innerHTML = title;
+          tab.appendChild(title_element);
+          orig_tab = tab;
+        }
+
+        if (Array.isArray(text[1])) { // If there is a sub-section under this section, break it down
+          breakDownText(text[1], orig_tab);
+        } else { // otherwise add to it
+          if (copy !== undefined) {
+            var title = text[0];
+            var title_element = document.createElement("h4");
+            title_element.innerHTML = title;
+            orig_tab.appendChild(title_element);
+          }
+
+          var text_element = document.createElement("p");
+          text_element.innerHTML = text[1];
+          orig_tab.appendChild(text_element);
+        }
+      }
+
+    }
+
+    // call the function
+    var tab = {{ tabs|tojson }};
+    breakDownText(tab);
+  </script>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tablinks");
+    tablinks[0].click();
+  </script>
+
+  <script>
+    function highlight(text, value) {
+       $('body').mark(text, {
+        "element": "span",
+        "className": "highlight" + value,
+        "separateWordSearch": false,
+        "ignorePunctuation": true,
+        "diacritics": true,
+        "acrossElements": true,
+        "limiters": [".", ",", "!"]
+      });
+    }
+
+
+    // highlight the text_element
+    var doct_reason = {{ doct_reason|tojson }};
+    for (var i = 0; i < doct_reason.length; i++) {
+        var to_highlight = doct_reason[i][1];
+        highlight(to_highlight, 1);
+    }
+
+  </script>
+
+  <script src="{{ url_for('static', filename='scripts/post.js') }}"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
