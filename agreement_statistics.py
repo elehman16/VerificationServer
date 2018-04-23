@@ -181,12 +181,12 @@ def find_number_correct(data, answers, ordering):
 def get_stats(art_id):
     global doctor_agreement               
     doctor_agreement = {}
-    data_loc = data_loc = ['.\\data\\out_lidija.csv', '.\\data\\out_edin.csv',
-                           '.\\data\\out_milorad.csv', '.\\data\\out_sergii.csv',
-                           '.\\data\\out_krystie.csv']    
+    data_loc = data_loc = ['.//data//out_lidija.csv', './/data//out_edin.csv',
+                           './/data//out_milorad.csv', './/data//out_sergii.csv',
+                           './/data//out_krystie.csv']    
                            
     # has all information for all files
-    names = np.genfromtxt('.\\data\\ordering_list.txt', dtype = float)
+    names = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
     names = np.asarray(names, dtype = int)
     loc_art = names.tolist().index(float(art_id))
     data_opt, data_ans = np.asarray(load_data(data_loc))
