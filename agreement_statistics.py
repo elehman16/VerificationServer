@@ -168,9 +168,9 @@ def find_number_correct(data, answers, ordering):
         
         # add this to the global agreement variable
         if art in doctor_agreement:
-            doctor_agreement[int(art)].append([data[i][0], guess])
+            doctor_agreement[int(float(art))].append([data[i][0], guess])
         else:
-            doctor_agreement[int(art)] = [[data[i][0], guess]]
+            doctor_agreement[int(float(art))] = [[data[i][0], guess]]
             
         i += 1
 
@@ -228,7 +228,7 @@ def get_stats(art_id):
         
     #print(doctor_agreement[int(names[loc_art])])
 
-    doct_answer = doctor_agreement[int(names[loc_art])]
+    doct_answer = doctor_agreement[int(float(names[loc_art]))]
     data = {}
     all_answers = set()
     i = 0
