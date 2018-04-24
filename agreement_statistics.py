@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 import nltk
 import re
+import codecs
  
 global doctor_agreement               
 doctor_agreement = {}
@@ -18,9 +19,13 @@ doctor_agreement = {}
 Conver to a javascript string format for special characters.
 < = &lt;
 > = &gt;
+
+Attempt 1: #string.replace("\\xe2\\x80\\x93", "–").replace("\xe2\x80\x8a", " ")
+Attempt 2: string.encode('utf-8').decode('ascii', 'ignore') 
+Attempt 3: string.encode('latin1').decode('utf-8')
 """
 def to_js(string): # \\xe2\\x80\\x93
-    return string.replace("\\xe2\\x80\\x93", "–")
+    return codecs.decode(string, 'unicode_escape').encode('latin1').decode('utf-8', "replace")
     
 def format_doct_answer(data_ans, loc_art):
     doctor_answer_for_loc_art = []
@@ -28,6 +33,7 @@ def format_doct_answer(data_ans, loc_art):
     for data in data_ans:
         last_split = 0
         name = data[loc_art][0]
+        print(data[loc_art][2])
         data[loc_art][2] = data[loc_art][2][2:-2]
         data[loc_art][2] = to_js(data[loc_art][2])
         all_commas = [m.start() for m in re.finditer(",", data[loc_art][2])]
@@ -101,7 +107,7 @@ def load_data(data_loc):
 
     for loc in data_loc:
         df = np.asarray(pd.read_csv(loc, encoding = 'utf-8'))
-        df_opt, df_ans = remove_duplicate(loc[11:-4], df) # hard-coded
+        df_opt, df_ans = remove_duplicate(loc[13:-4], df) # hard-coded
         data_option.append(df_opt)
         data_ans.append(df_ans)
      
@@ -169,6 +175,7 @@ def find_number_correct(data, answers, ordering):
         # add this to the global agreement variable
         if art in doctor_agreement:
             doctor_agreement[int(float(art))].append([data[i][0], guess])
+        
         else:
             doctor_agreement[int(float(art))] = [[data[i][0], guess]]
             
@@ -181,9 +188,9 @@ def find_number_correct(data, answers, ordering):
 def get_stats(art_id):
     global doctor_agreement               
     doctor_agreement = {}
-    data_loc = data_loc = ['.//data//out_lidija.csv', './/data//out_edin.csv',
-                           './/data//out_milorad.csv', './/data//out_sergii.csv',
-                           './/data//out_krystie.csv']    
+    data_loc = ['.//data//out_lidija.csv', './/data//out_edin.csv',
+                './/data//out_milorad.csv', './/data//out_sergii.csv',
+                './/data//out_krystie.csv']    
                            
     # has all information for all files
     names = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
@@ -206,8 +213,8 @@ def get_stats(art_id):
         
     # the columns = # of people who got the answer wrong   
     how_many_correct = np.sum(all_doctor_res, axis = 0)
-    num_missed = list(map((lambda i: [data_loc[i][11:-4], str(len(names) - num_missed[i]) + '/' + str(len(names))]), range(len(data_loc))))    
-    doctor_names = list(map(lambda i: data_loc[i][11:-4].capitalize(), range(len(data_loc))))
+    num_missed = list(map((lambda i: [data_loc[i][13:-4], str(len(names) - num_missed[i]) + '/' + str(len(names))]), range(len(data_loc))))    
+    doctor_names = list(map(lambda i: data_loc[i][13:-4].capitalize(), range(len(data_loc))))
     
     
     # The texts highlighted:  

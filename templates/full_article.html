@@ -113,7 +113,7 @@ italic {
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Other Article <span class="caret"></span></a>
             <ul class="dropdown-menu">
               {% for name in ordering %}
-              <li>
+              <li> <!-- http://127.0.0.1:5000/annotate_full/ -->
                 <a id = '{{ name }}' href="http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8082/annotate_full/{{ name }}"> {{ name }} </a>
               </li>
               {% endfor %}
@@ -140,11 +140,7 @@ italic {
 
       <div id="piechart" style = "float:left;"> </div>
 
-      <div>
-        {%for d in doct_reason %}
-          <b> {{ d[0] }}: </b> {{ d[1] }} <br>
-        {% endfor %}
-      </div>
+      <div id = "Statistics_content"> </div>
 
   </div>
     <!-- Create a place to put content for each tab. -->
@@ -267,6 +263,30 @@ italic {
   </script>
 
   <script>
+    function aContainsB (a, b) {
+        return false; //a.indexOf(b) >= 0;
+    }
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    function getHighlighted() {
+      var all_content = [];
+      /*
+      for (var i = 1; i < 6; i++) {
+        var content = document.getElementsByClassName("highlight" + i);
+        all_content = all_content.concat(content);
+      }
+      */
+
+      all_content = document.getElementsByClassName("highlight1");
+
+
+      return all_content;
+    }
+
+    // Highlight the given text with
     function highlight(text, value) {
        $('body').mark(text, {
         "element": "span",
@@ -284,10 +304,54 @@ italic {
     var doct_reason = {{ doct_reason|tojson }};
     for (var i = 0; i < doct_reason.length; i++) {
         var to_highlight = doct_reason[i][1];
-        highlight(to_highlight, 1);
+        var highlighted = getHighlighted();
+        var substring_already_highlighted = 1; // This has already been highlighted
+        var exact_already_highlighted = 1; // This exact string has already been highlighted
+        var exact_highlight = null;
+        var cmp1 = to_highlight.replace(/\s+/g, ''); // get rid of all spaces
+
+
+        for (var j = 0; j < highlighted.length; j++) {
+          var cmp = highlighted[j].innerText;
+          cmp = cmp.replace(/\s+/g, ''); // get rid of all spaces
+
+          // Check to see if we've highlighted this one before
+          if (cmp == cmp1) {
+            exact_already_highlighted += 1;
+            exact_highlight = highlighted[j];
+
+          // check if the string already highlighted is a substring of this one
+        } else if (aContainsB(cmp, cmp1)) {
+            num_already_highlighted += 1;
+          }
+        }
+
+        if (exact_already_highlighted > 1) {
+          exact_highlight.classList.add("highlight" + exact_already_highlighted);
+          exact_highlight.title += " " + capitalizeFirstLetter(doct_reason[i][0]);
+        } else if (substring_already_highlighted > 1) {
+          highlight(to_highlight, 1);
+        } else {
+          highlight(to_highlight, 1);
+        }
+
+    }
+
+    var add_to = document.getElementById("Statistics_content");
+    // add in the beginnining section that has what everyone highlights
+    for (var i = 0; i < doct_reason.length; i++) {
+      add_to.innerHTML += "<b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br>";
     }
 
   </script>
+
+  <!--
+  <div>
+    {%for d in doct_reason %}
+
+    {% endfor %}
+  </div>
+-->
 
   <script src="{{ url_for('static', filename='scripts/post.js') }}"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
