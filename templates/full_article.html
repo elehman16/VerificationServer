@@ -114,14 +114,6 @@
   </script>
 
   <script>
-
-
-
-    highlight_main();
-
-  </script>
-
-  <script>
     // This script is going to blur out the id for this page
     var element = document.getElementById('{{ artid }}');
     element.classList += "isDisabled";
@@ -189,6 +181,11 @@
         add_to.innerHTML += "<b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br>";
       }
     }
+
+    highlight_main();
+
+
+
   </script>
 
 
