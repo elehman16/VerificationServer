@@ -8,20 +8,6 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/highlight.js') }}"> </script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/tabs.js') }}"> </script>
-    <script>
-      function highlight_main() {
-
-        // highlight the text_element
-        var doct_reason = {{ doct_reason|tojson }};
-        highlight_all(doct_reason, getDoctorSelected());
-
-        var add_to = document.getElementById("Statistics_content");
-        // add in the beginnining section that has what everyone highlights
-        for (var i = 0; i < doct_reason.length; i++) {
-          add_to.innerHTML += "<b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br>";
-        }
-      }
-    </script>
 </head>
 <body>
 
@@ -189,6 +175,22 @@
       window.location.replace("http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8082/annotate_full/" + prev_loc);
     }
   </script>
+
+  <script>
+    function highlight_main() {
+
+      // highlight the text_element
+      var doct_reason = {{ doct_reason|tojson }};
+      highlight_all(doct_reason, getDoctorSelected());
+
+      var add_to = document.getElementById("Statistics_content");
+      // add in the beginnining section that has what everyone highlights
+      for (var i = 0; i < doct_reason.length; i++) {
+        add_to.innerHTML += "<b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br>";
+      }
+    }
+  </script>
+
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
