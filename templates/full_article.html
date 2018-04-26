@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <head>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -9,8 +8,20 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/highlight.js') }}"> </script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/tabs.js') }}"> </script>
+    <script>
+      function highlight_main() {
 
-  </head>
+        // highlight the text_element
+        var doct_reason = {{ doct_reason|tojson }};
+        highlight_all(doct_reason, getDoctorSelected());
+
+        var add_to = document.getElementById("Statistics_content");
+        // add in the beginnining section that has what everyone highlights
+        for (var i = 0; i < doct_reason.length; i++) {
+          add_to.innerHTML += "<b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br>";
+        }
+      }
+    </script>
 </head>
 <body>
 
@@ -118,18 +129,7 @@
 
   <script>
 
-    function highlight_main() {
 
-      // highlight the text_element
-      var doct_reason = {{ doct_reason|tojson }};
-      highlight_all(doct_reason, getDoctorSelected());
-
-      var add_to = document.getElementById("Statistics_content");
-      // add in the beginnining section that has what everyone highlights
-      for (var i = 0; i < doct_reason.length; i++) {
-        add_to.innerHTML += "<b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br>";
-      }
-    }
 
     highlight_main();
 
