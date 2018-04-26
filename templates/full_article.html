@@ -28,7 +28,7 @@
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Doctors <span class="caret"></span></a>
           <ul id = "doctors_selected" class="dropdown-menu">
             {% for name in doctor_names %}
-              <li> <input id = '{{ name }}' type="checkbox" style = "margin-left: 5px;" checked/>&nbsp; {{ name }} </a> </li>
+              <li> <input id = '{{ name }}' type="checkbox" style = "margin-left: 5px;" onclick = "highlight_main()" checked/>&nbsp; {{ name }} </a> </li>
             {% endfor %}
           </ul>
 
