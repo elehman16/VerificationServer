@@ -2,93 +2,15 @@
 <html>
 <head>
   <head>
-    <!--[if lt IE 9]>
-    <script> document.createElement("stack"); </script>
-    <![endif]-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.0.0/jquery.mark.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/highlight.js') }}"> </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/tabs.js') }}"> </script>
 
   </head>
-<style>
-body {font-family: Arial;}
-
-italic {
-
-}
-
-.highlight1 {
-  background-color: #CCE5FF;
-}
-
-.highlight2 {
-  background-color: #99CCFF;
-}
-
-.highlight3 {
-  background-color: #66B2FF;
-}
-
-.highlight4 {
-  background-color: #3399FF;
-}
-
-.highlight5 {
-  background-color: #0080FF;
-}
-
-/* Style for the modal. */
-.invalid_prompt_text {
-  width: 570px;
-  max-width: 570px;
-  height: 300px;
-  max-height: 300px;
-  overflow: auto;
-  resize: none;
-}
-
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-
-
-</style>
 </head>
 <body>
 
@@ -104,9 +26,9 @@ italic {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Doctors <span class="caret"></span></a>
-          <ul class="dropdown-menu">
+          <ul id = "doctors_selected" class="dropdown-menu">
             {% for name in doctor_names %}
-            <li> <input id = '{{ name }}' type="checkbox" style = "margin-left: 5px;" checked/>&nbsp; {{ name }} </a> </li>
+              <li> <input id = '{{ name }}' type="checkbox" style = "margin-left: 5px;" checked/>&nbsp; {{ name }} </a> </li>
             {% endfor %}
           </ul>
 
@@ -160,200 +82,114 @@ italic {
     </label>
 </div>
 
-<script type="text/javascript">
-  // Load google charts
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
 
-  // Draw the chart and set the chart values
-  function drawChart() {
-    var doct_answer = {{ doct_ans|tojson }};
-    var data = google.visualization.arrayToDataTable(doct_answer);
-
-    // Optional; add a title and set the width and height of the chart
-    var options = {'title':'Doctor Response', 'width':550, 'height':400};
-
-    // Display the chart inside the <div> element with id="piechart"
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-    chart.draw(data, options);
-  }
-</script>
+  <a href="#" id = "previous-but" class="previous" style= "position: fixed; bottom: 0%; right: 92.5%;" onclick = "previous()">&laquo; Previous</a>
+  <a href="#" id = "next-but" class="next" style= "position: fixed; bottom: 0%; right: 1.5%;" onclick = "next()">Next &raquo;</a>
 
 
+  <script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
 
+    // Draw the chart and set the chart values
+    function drawChart() {
+      var doct_answer = {{ doct_ans|tojson }};
+      var data = google.visualization.arrayToDataTable(doct_answer);
 
-  <script>
-    /**
-    * Displays the information in the tab when clicked on.
-    *
-    * @param evt represents what happend with the tab.
-    * @param name represents which tab to open.
-    */
-    function openTab(evt, name) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
+      // Optional; add a title and set the width and height of the chart
+      var options = {'title':'Doctor Response', 'width':550, 'height':400};
 
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(name).style.display = "block";
-        evt.currentTarget.className += " active";
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
     }
   </script>
 
 
   <script>
-
-    /**
-    * Used to break down a Text into a readable format (see data-definition below).
-    *
-    * @param orig_tab represents the parent HTML element if it exists.
-    * @param text is of the following data definition:
-    * Text is one of:
-    *    - Array of Text
-    *    - ['title', 'paragraph']
-    *    - ['title', Text]
-    */
-    function breakDownText(text, orig_tab) {
-      var copy = orig_tab;
-      if (text.length != 2 || Array.isArray(text[0])) { // there are multiple sections here if this is the case
-        for (var i = 0; i < text.length; i++) {
-          breakDownText(text[i], orig_tab); // break each of these larger sections down
-        }                                  // this is likely the beginnining with all tab headers
-      } else {
-        if (orig_tab === undefined) { // If there is no title for this section, make one.
-          var title = text[0];
-          var tab = document.getElementById(title);
-          var title_element = document.createElement("h3");
-          title_element.innerHTML = title;
-          tab.appendChild(title_element);
-          orig_tab = tab;
-        }
-
-        if (Array.isArray(text[1])) { // If there is a sub-section under this section, break it down
-          breakDownText(text[1], orig_tab);
-        } else { // otherwise add to it
-          if (copy !== undefined) {
-            var title = text[0];
-            var title_element = document.createElement("h4");
-            title_element.innerHTML = title;
-            orig_tab.appendChild(title_element);
-          }
-
-          var text_element = document.createElement("p");
-          text_element.innerHTML = text[1];
-          orig_tab.appendChild(text_element);
-        }
-      }
-
-    }
-
-    // call the function
+    // Put the content into the first tab.
     var tab = {{ tabs|tojson }};
     breakDownText(tab);
-  </script>
-
-  <script>
+    // Open the first tab.
     var tablinks = document.getElementsByClassName("tablinks");
     tablinks[0].click();
   </script>
 
   <script>
-    function aContainsB (a, b) {
-        return false; //a.indexOf(b) >= 0;
-    }
 
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
+    function highlight_main() {
 
-    function getHighlighted() {
-      var all_content = [];
-      /*
-      for (var i = 1; i < 6; i++) {
-        var content = document.getElementsByClassName("highlight" + i);
-        all_content = all_content.concat(content);
+      // highlight the text_element
+      var doct_reason = {{ doct_reason|tojson }};
+      highlight_all(doct_reason, getDoctorSelected());
+
+      var add_to = document.getElementById("Statistics_content");
+      // add in the beginnining section that has what everyone highlights
+      for (var i = 0; i < doct_reason.length; i++) {
+        add_to.innerHTML += "<b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br>";
       }
-      */
-
-      all_content = document.getElementsByClassName("highlight1");
-
-
-      return all_content;
     }
 
-    // Highlight the given text with
-    function highlight(text, value) {
-       $('body').mark(text, {
-        "element": "span",
-        "className": "highlight" + value,
-        "separateWordSearch": false,
-        "ignorePunctuation": true,
-        "diacritics": true,
-        "acrossElements": true,
-        "limiters": [".", ",", "!"]
-      });
-    }
-
-
-    // highlight the text_element
-    var doct_reason = {{ doct_reason|tojson }};
-    for (var i = 0; i < doct_reason.length; i++) {
-        var to_highlight = doct_reason[i][1];
-        var highlighted = getHighlighted();
-        var substring_already_highlighted = 1; // This has already been highlighted
-        var exact_already_highlighted = 1; // This exact string has already been highlighted
-        var exact_highlight = null;
-        var cmp1 = to_highlight.replace(/\s+/g, ''); // get rid of all spaces
-
-
-        for (var j = 0; j < highlighted.length; j++) {
-          var cmp = highlighted[j].innerText;
-          cmp = cmp.replace(/\s+/g, ''); // get rid of all spaces
-
-          // Check to see if we've highlighted this one before
-          if (cmp == cmp1) {
-            exact_already_highlighted += 1;
-            exact_highlight = highlighted[j];
-
-          // check if the string already highlighted is a substring of this one
-        } else if (aContainsB(cmp, cmp1)) {
-            num_already_highlighted += 1;
-          }
-        }
-
-        if (exact_already_highlighted > 1) {
-          exact_highlight.classList.add("highlight" + exact_already_highlighted);
-          exact_highlight.title += " " + capitalizeFirstLetter(doct_reason[i][0]);
-        } else if (substring_already_highlighted > 1) {
-          highlight(to_highlight, 1);
-        } else {
-          highlight(to_highlight, 1);
-        }
-
-    }
-
-    var add_to = document.getElementById("Statistics_content");
-    // add in the beginnining section that has what everyone highlights
-    for (var i = 0; i < doct_reason.length; i++) {
-      add_to.innerHTML += "<b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br>";
-    }
+    highlight_main();
 
   </script>
 
-  <!--
-  <div>
-    {%for d in doct_reason %}
+  <script>
+    // This script is going to blur out the id for this page
+    var element = document.getElementById('{{ artid }}');
+    element.classList += "isDisabled";
 
-    {% endfor %}
-  </div>
--->
+    var current = "{{ artid }}";
+    var ordering = {{ ordering|tojson|safe  }};
 
-  <script src="{{ url_for('static', filename='scripts/post.js') }}"></script>
+    // disable the next previous buttons if we are first or last
+    if (ordering.length > 0 && current == ordering[0]) {
+      element = document.getElementById("previous-but");
+      element.classList += "isDisabled";
+      element.style.visibility = 'hidden';
+    }
+
+    if (ordering.length > 0 && current == ordering[ordering.length - 1]) {
+      element = document.getElementById("next-but");
+      element.classList += "isDisabled";
+      element.style.visibility = 'hidden';
+    }
+
+    // Set up the checkboxes
+    //var check = document.getElementById("doctors_selected").children;
+
+
+  </script>
+
+  <script>
+    // Set up the next/prev button
+    function findX(next_prev) {
+      var current = "{{ artid }}";
+      var ordering = {{ ordering|tojson }};
+      var location = "";
+
+      for (var i = 0; i < ordering.length; i++) {
+        if (current == ordering[i]) {
+
+          return ordering[i + next_prev];
+        }
+      }
+
+      return "";
+    }
+
+    function next() {
+      var next_loc = findX(1);
+      window.location.replace("http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8082/annotate_full/" + next_loc);
+    }
+
+    function previous() {
+      var prev_loc = findX(-1);
+      window.location.replace("http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8082/annotate_full/" + prev_loc);
+    }
+  </script>
+
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>

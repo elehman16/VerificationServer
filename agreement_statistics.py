@@ -31,17 +31,18 @@ def format_doct_answer(data_ans, loc_art):
     doctor_answer_for_loc_art = []
     last_split = 0
     for data in data_ans:
-        last_split = 0
+        last_split = -1
         name = data[loc_art][0]
-        print(data[loc_art][2])
         data[loc_art][2] = data[loc_art][2][2:-2]
         data[loc_art][2] = to_js(data[loc_art][2])
         all_commas = [m.start() for m in re.finditer(",", data[loc_art][2])]
+        i = 0
         # for every comma location 
         for cl in all_commas:
             if (cl + 1 < len(data[loc_art][2]) and cl - 1 > 0 and data[loc_art][2][cl - 1] != " " and data[loc_art][2][cl + 1] != " "):
-                doctor_answer_for_loc_art.append([name, data[loc_art][2][:cl]])
+                doctor_answer_for_loc_art.append([name + str(i), data[loc_art][2][(last_split + 1):cl]])
                 last_split = cl
+                i += 1
             
         if (len(all_commas) == 0 or last_split == 0):
             doctor_answer_for_loc_art.append([name, data[loc_art][2]])
@@ -214,12 +215,14 @@ def get_stats(art_id):
     # the columns = # of people who got the answer wrong   
     how_many_correct = np.sum(all_doctor_res, axis = 0)
     num_missed = list(map((lambda i: [data_loc[i][13:-4], str(len(names) - num_missed[i]) + '/' + str(len(names))]), range(len(data_loc))))    
-    doctor_names = list(map(lambda i: data_loc[i][13:-4].capitalize(), range(len(data_loc))))
     
     
     # The texts highlighted:  
     doctor_answer_for_loc_art = format_doct_answer(data_ans, loc_art)              
-        
+    
+    # Get the names of the doctors.
+    doctor_names = list(map((lambda x: x[0]), doctor_answer_for_loc_art))
+
     
     # get stats for the selected options
     task = nltk.agreement.AnnotationTask(data=options)

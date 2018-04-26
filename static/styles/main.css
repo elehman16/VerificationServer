@@ -53,3 +53,103 @@ label {
 #finish {
     text-align: center;
 }
+
+body {font-family: Arial;}
+
+italic {
+
+}
+
+.highlight1 {
+  background-color: #CCE5FF;
+}
+
+.highlight2 {
+  background-color: #99CCFF;
+}
+
+.highlight3 {
+  background-color: #66B2FF;
+}
+
+.highlight4 {
+  background-color: #3399FF;
+}
+
+.highlight5 {
+  background-color: #0080FF;
+}
+
+/* Style for the modal. */
+.invalid_prompt_text {
+  width: 570px;
+  max-width: 570px;
+  height: 300px;
+  max-height: 300px;
+  overflow: auto;
+  resize: none;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.previous {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.isDisabled {
+  color: currentColor;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
+}
