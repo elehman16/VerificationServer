@@ -11,6 +11,7 @@ import numpy as np
 import nltk
 import re
 import codecs
+import glob
  
 global doctor_agreement               
 doctor_agreement = {}
@@ -80,8 +81,7 @@ def remove_duplicate(name, df):
         # if we haven't seen this one yet, add it to the ordering of articles
         if not(key in have_seen):
             ordering.append(key)
-                        
-            
+                     
         have_seen.add(key)
         option = row[2]
         reason = row[3]
@@ -108,7 +108,7 @@ def load_data(data_loc):
 
     for loc in data_loc:
         df = np.asarray(pd.read_csv(loc, encoding = 'utf-8'))
-        df_opt, df_ans = remove_duplicate(loc[13:-4], df) # hard-coded
+        df_opt, df_ans = remove_duplicate(loc[12:-4], df) # hard-coded
         data_option.append(df_opt)
         data_ans.append(df_ans)
      
@@ -136,11 +136,11 @@ def flatten(data_opt, data_ans):
 Loads in the answers.
 """   
 def load_answers():
-    location = './/data//for-full-text-annotation.csv'
+    location = './/data//prompt_gen.csv'
     df = np.asarray(pd.read_csv(location, encoding = 'utf-8'))
     data = {}
     for f in df:
-        data[f[0]] = f[10]
+        data[f[0]] = f[5]
         
     return data
 
@@ -148,7 +148,7 @@ def load_answers():
 Determines if the answer is the same as the guess.
 """
 def is_same(guess, ans):
-    first = {'sig diff, pos': 1, 'sig diff, neg': 2, 'no sig diff': 3}.get(ans, -1)
+    first = {'significantly increased': 1, 'significantly decreased': 2, 'no significant difference': 3}.get(ans, -1)
 
     second = {"b'Significantly increased'": 1,
               "b'Significantly decreased'": 2, 
@@ -189,9 +189,15 @@ def find_number_correct(data, answers, ordering):
 def get_stats(art_id):
     global doctor_agreement               
     doctor_agreement = {}
+    data_loc = glob.glob('.//data//*.csv')
+    
+    data_loc.remove('.//data\\for-full-text-annotation.csv')
+    data_loc.remove('.//data\\prompt_gen.csv')
+    """
     data_loc = ['.//data//out_lidija.csv', './/data//out_edin.csv',
                 './/data//out_milorad.csv', './/data//out_sergii.csv',
-                './/data//out_krystie.csv']    
+                './/data//out_krystie.csv']
+    """
                            
     # has all information for all files
     names = np.genfromtxt('.//data//ordering_list.txt', dtype = float)

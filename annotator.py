@@ -12,7 +12,7 @@ class Annotator(object):
         self.reader = reader
 
     def get_next_article(self, next_file):
-        tmp = self.reader.get_next_article(next_file)
+        tmp = self.reader.get_next_article("anon", next_file)
         return tmp
 
     def get_next_file(self, id_ = None):

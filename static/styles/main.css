@@ -80,16 +80,6 @@ italic {
   background-color: #0080FF;
 }
 
-/* Style for the modal. */
-.invalid_prompt_text {
-  width: 570px;
-  max-width: 570px;
-  height: 300px;
-  max-height: 300px;
-  overflow: auto;
-  resize: none;
-}
-
 /* Style the tab */
 .tab {
     overflow: hidden;

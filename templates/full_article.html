@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/highlight.js') }}"> </script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/tabs.js') }}"> </script>
+
+  </head>
 </head>
 <body>
 
@@ -25,15 +32,16 @@
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Doctors <span class="caret"></span></a>
           <ul id = "doctors_selected" class="dropdown-menu">
             {% for name in doctor_names %}
-              <li> <input id = '{{ name }}' type="checkbox" style = "margin-left: 5px;" onclick = "highlight_main()" checked/>&nbsp; {{ name }} </a> </li>
+              <li> <input id = '{{ name }}' type="checkbox" style = "margin-left: 5px;" checked/>&nbsp; {{ name }} </a> </li>
             {% endfor %}
           </ul>
 
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Other Article <span class="caret"></span></a>
-            <ul class="dropdown-menu">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Other Article <span class="caret"></span></a>
+            <ul class="dropdown-menu" style = "max-height:600px; overflow-y: auto;">
               {% for name in ordering %}
-              <li> <!-- http://127.0.0.1:5000/annotate_full/ -->
-                <a id = '{{ name }}' href="http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8082/annotate_full/{{ name }}"> {{ name }} </a>
+              <li> <!-- http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8082/annotate_full/ -->
+                <a id = '{{ name }}' href="http://127.0.0.1:5000/annotate_full/{{ name }}"> {{ name }} </a>
               </li>
               {% endfor %}
             </ul>
@@ -47,7 +55,7 @@
   <!-- Initialize the tab with titles . -->
   <div>
 
-    <div id = "Statistics" class = "tabcontent" style = "max-height: 400px; overflow: auto;">
+    <div id = "Statistics" class = "tabcontent" style = "max-height: 700px; overflow: auto;">
 
       <div class = "column" style = "margin-left: 1%; float:left;">
         <b> Document answer: {{ answer }} </b>
@@ -59,17 +67,17 @@
 
       <div id="piechart" style = "float:left;"> </div>
 
-      <div id = "Statistics_content"> </div>
+      <div id = "Statistics_content">
+      </div>
 
   </div>
     <!-- Create a place to put content for each tab. -->
     {%for tab in tabs %}
-    <div id = '{{ tab[0] }}', class="tabcontent" style = "max-height: 400px; overflow: auto;">
+    <div id = '{{ tab[0] }}', class="tabcontent" style = "max-height: 700px; overflow: auto;">
     </div>
     {% endfor %}
   </div>
 
-  <!-- The prompt -->
   <div class = "row">
     <label style = "margin-left: 45px; margin-top: 20px;">
       With respect to <b> <i> {{ outcome }}, </i> </b> characterize the
@@ -77,32 +85,10 @@
       {{ intervention }} </i> </b> and those receiving <b> <i> {{ comparator }}.
       </i> </b>
     </label>
-</div>
-
+  </div>
 
   <a href="#" id = "previous-but" class="previous" style= "position: fixed; bottom: 0%; right: 92.5%;" onclick = "previous()">&laquo; Previous</a>
   <a href="#" id = "next-but" class="next" style= "position: fixed; bottom: 0%; right: 1.5%;" onclick = "next()">Next &raquo;</a>
-
-
-  <script type="text/javascript">
-    // Load google charts
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    // Draw the chart and set the chart values
-    function drawChart() {
-      var doct_answer = {{ doct_ans|tojson }};
-      var data = google.visualization.arrayToDataTable(doct_answer);
-
-      // Optional; add a title and set the width and height of the chart
-      var options = {'title':'Doctor Response', 'width':550, 'height':400};
-
-      // Display the chart inside the <div> element with id="piechart"
-      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-      chart.draw(data, options);
-    }
-  </script>
-
 
   <script>
     // Put the content into the first tab.
@@ -114,82 +100,43 @@
   </script>
 
   <script>
-    // This script is going to blur out the id for this page
-    var element = document.getElementById('{{ artid }}');
-    element.classList += "isDisabled";
 
-    var current = "{{ artid }}";
-    var ordering = {{ ordering|tojson|safe  }};
-
-    // disable the next previous buttons if we are first or last
-    if (ordering.length > 0 && current == ordering[0]) {
-      element = document.getElementById("previous-but");
-      element.classList += "isDisabled";
-      element.style.visibility = 'hidden';
-    }
-
-    if (ordering.length > 0 && current == ordering[ordering.length - 1]) {
-      element = document.getElementById("next-but");
-      element.classList += "isDisabled";
-      element.style.visibility = 'hidden';
-    }
-
-    // Set up the checkboxes
-    //var check = document.getElementById("doctors_selected").children;
-
-
-  </script>
-
-  <script>
-    // Set up the next/prev button
-    function findX(next_prev) {
-      var current = "{{ artid }}";
-      var ordering = {{ ordering|tojson }};
-      var location = "";
-
-      for (var i = 0; i < ordering.length; i++) {
-        if (current == ordering[i]) {
-
-          return ordering[i + next_prev];
-        }
-      }
-
-      return "";
-    }
-
-    function next() {
-      var next_loc = findX(1);
-      window.location.replace("http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8082/annotate_full/" + next_loc);
-    }
-
-    function previous() {
-      var prev_loc = findX(-1);
-      window.location.replace("http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8082/annotate_full/" + prev_loc);
-    }
-  </script>
-
-  <script>
     function highlight_main() {
 
       // highlight the text_element
       var doct_reason = {{ doct_reason|tojson }};
+
+      //console.log(doct_reason);
+      //console.log(unnamed(doct_reason));
+
       highlight_all(doct_reason, getDoctorSelected());
 
       var add_to = document.getElementById("Statistics_content");
+      add_to.innerHTML += "<b>Answer-key reasoning: {{ reasoning }}</b> <br>";
       // add in the beginnining section that has what everyone highlights
       for (var i = 0; i < doct_reason.length; i++) {
         add_to.innerHTML += "<b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br>";
       }
+
+
     }
 
     highlight_main();
 
-
-
   </script>
 
+  <script>
+    // Put the doctor responses into storage.
+    var elem = document.createElement('div');
+    elem.dataset.pie = {{ doct_ans|tojson }};
+    elem.id = "data-pie"
+    document.body.appendChild(elem);
+  </script>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <div id="data-ordering" data-ordering={{ ordering|tojson|safe }}></div>
+  <div id="artid" data-id = "{{ artid }}"> </div>
+  <script type="text/javascript" src="{{ url_for('static', filename='scripts/pie_chart.js') }}"> </script>
+  <script type="text/javascript" src="{{ url_for('static', filename='scripts/next_prev_button.js') }}"> </script>
+
 </body>
 </html>
