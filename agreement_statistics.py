@@ -182,6 +182,7 @@ def get_stats(art_id):
         data_loc.remove('.\\data\\for-full-text-annotation.csv')
         data_loc.remove('.\\data\\prompt_gen.csv')
     except:
+        print(data_loc)
         data_loc.remove('.\\data\for-full-text-annotation.csv')
         data_loc.remove('.\\data\prompt_gen.csv')
     """
