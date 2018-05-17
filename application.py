@@ -46,8 +46,6 @@ def annotate_full(artid):
     doct_reason, doct_ans, doct_ans_names, doctor_names, _ = get_stats(artid)    
 
     return flask.render_template('full_article.html',
-
-
                                   id = art.id_,
                                   artid = artid,
                                   tabs = art.text,
