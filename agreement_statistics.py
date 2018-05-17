@@ -182,9 +182,8 @@ def get_stats(art_id):
         data_loc.remove('.//data//for-full-text-annotation.csv')
         data_loc.remove('.//data//prompt_gen.csv')
     except:
-        print(data_loc)
-        data_loc.remove('.//data\for-full-text-annotation.csv')
-        data_loc.remove('.//data\prompt_gen.csv')
+        data_loc.remove('.//data/for-full-text-annotation.csv')
+        data_loc.remove('.//data/prompt_gen.csv')
     """
     data_loc = ['.//data//out_lidija.csv', './/data//out_edin.csv',
                 './/data//out_milorad.csv', './/data//out_sergii.csv',
