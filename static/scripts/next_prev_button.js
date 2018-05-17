@@ -1,12 +1,12 @@
 // Set up the next/prev button
 function findX(next_prev) {
-  var current = "{{ artid }}";
-  var ordering = document.getElementById("data-ordering").dataset.ordering;
+  var current = parseInt(document.getElementById("artid").dataset.id);
+  var ordering = eval("[" + document.getElementById("data-ordering").dataset.ordering + "]");
   var location = "";
 
   for (var i = 0; i < ordering.length; i++) {
-    if (current == ordering[i]) {
-
+    if (current == ordering[i] && ((i + next_prev) !== ordering.length) && ((i + next_prev) > -1)) {
+      debugger;
       return ordering[i + next_prev];
     }
   }
@@ -16,12 +16,17 @@ function findX(next_prev) {
 
 function next() {
   var next_loc = findX(1);
-  window.location.replace("http://127.0.0.1:5000/annotate_full/" + next_loc);
+  if ("" !== next_loc) {
+    //http://127.0.0.1:5000/annotate_full/
+    window.location.replace("http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8084/annotate_full/" + next_loc);
+  }
 }
 
 function previous() {
   var prev_loc = findX(-1);
-  window.location.replace("http://127.0.0.1:5000/annotate_full/" + prev_loc);
+  if ("" !== prev_loc) {
+    window.location.replace("http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8084/annotate_full/" + prev_loc);
+  }
 }
 
 // This script is going to blur out the id for this page

@@ -31,10 +31,11 @@ def to_js(string): # \\xe2\\x80\\x93
 def format_doct_answer(data_ans, loc_art):
     doctor_answer_for_loc_art = []
     last_split = 0
+
     for data in data_ans:
         last_split = -1
         name = data[loc_art][0]
-        data[loc_art][2] = data[loc_art][2][2:-2]
+        data[loc_art][2] = data[loc_art][2][2:-1]
         data[loc_art][2] = to_js(data[loc_art][2])
         all_commas = [m.start() for m in re.finditer(",", data[loc_art][2])]
         i = 0
@@ -50,22 +51,7 @@ def format_doct_answer(data_ans, loc_art):
         else:
             doctor_answer_for_loc_art.append([name, data[loc_art][2][(last_split+1):]])
        
-    """
-    new_ans = []
-    for data in doctor_answer_for_loc_art:
-        name = data[0]
-        txt = data[1]
-        all_loc_o = [m.start() for m in re.finditer('\(', txt)]
-        all_loc_c = [m.start() for m in re.finditer('\)', txt)]
-        for i in range(len(all_loc_o)):
-            new_ans.append([name, txt[:all_loc_o[i]]])
-            new_ans.append([name, txt[all_loc_o[i]:all_loc_c[i] + 1]])
-            
-        new_ans.append([name, txt])
-        
-        import pdb; pdb.set_trace()
-    """
-        
+    
     return doctor_answer_for_loc_art
     
 """
@@ -108,7 +94,8 @@ def load_data(data_loc):
 
     for loc in data_loc:
         df = np.asarray(pd.read_csv(loc, encoding = 'utf-8'))
-        df_opt, df_ans = remove_duplicate(loc[12:-4], df) # hard-coded
+        # THIS IS WHERE THE NAMES COME FROM
+        df_opt, df_ans = remove_duplicate(loc[11:-4].capitalize(), df) 
         data_option.append(df_opt)
         data_ans.append(df_ans)
      
@@ -183,16 +170,16 @@ def find_number_correct(data, answers, ordering):
         i += 1
 
             
-                            # number in total - # you got right
+    # number in total - # you got right
     return right_or_wrong, len(right_or_wrong) - np.sum(right_or_wrong), ans
     
 def get_stats(art_id):
     global doctor_agreement               
     doctor_agreement = {}
-    data_loc = glob.glob('.//data//*.csv')
+    data_loc = glob.glob('.\\data\\*.csv')
     
-    data_loc.remove('.//data\\for-full-text-annotation.csv')
-    data_loc.remove('.//data\\prompt_gen.csv')
+    data_loc.remove('.\\data\\for-full-text-annotation.csv')
+    data_loc.remove('.\\data\\prompt_gen.csv')
     """
     data_loc = ['.//data//out_lidija.csv', './/data//out_edin.csv',
                 './/data//out_milorad.csv', './/data//out_sergii.csv',
@@ -220,14 +207,14 @@ def get_stats(art_id):
         
     # the columns = # of people who got the answer wrong   
     how_many_correct = np.sum(all_doctor_res, axis = 0)
-    num_missed = list(map((lambda i: [data_loc[i][13:-4], str(len(names) - num_missed[i]) + '/' + str(len(names))]), range(len(data_loc))))    
+    num_missed = list(map((lambda i: [data_loc[i][12:-4].capitalize(), str(len(names) - num_missed[i]) + '/' + str(len(names))]), range(len(data_loc))))    
     
     
     # The texts highlighted:  
     doctor_answer_for_loc_art = format_doct_answer(data_ans, loc_art)              
     
     # Get the names of the doctors.
-    doctor_names = list(map((lambda x: x[0]), doctor_answer_for_loc_art))
+    doctor_names = list(map((lambda x: x[0].capitalize()), doctor_answer_for_loc_art))
 
     
     # get stats for the selected options

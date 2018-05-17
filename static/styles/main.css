@@ -19,6 +19,11 @@
     margin-bottom: 2%;
 }
 
+.statistic_content {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
 span {
     font-weight: bold;
 }
@@ -56,28 +61,54 @@ label {
 
 body {font-family: Arial;}
 
-italic {
-
-}
-
+/* Highlight color for doctor response in text. */
 .highlight1 {
   background-color: #CCE5FF;
 }
 
+/* Highlight color for doctor response in text. */
 .highlight2 {
   background-color: #99CCFF;
 }
 
+/* Highlight color for doctor response in text. */
 .highlight3 {
   background-color: #66B2FF;
 }
 
+/* Highlight color for doctor response in text. */
 .highlight4 {
   background-color: #3399FF;
 }
 
+/* Highlight color for doctor response in text. */
 .highlight5 {
   background-color: #0080FF;
+}
+
+/* Highlight color for the answer in the text. */
+.highlight_answer1 {
+  background-color: #EBDEF0;
+}
+
+/* Highlight color for the answer in the text. */
+.highlight_answer2 {
+  background-color: #D7BDE2;
+}
+
+/* Highlight color for the answer in the text. */
+.highlight_answer3 {
+  background-color: #C39BD3;
+}
+
+/* Highlight color for the answer in the text. */
+.highlight_answer4 {
+  background-color: #AF7AC5;
+}
+
+/* Highlight color for the answer in the text. */
+.highlight_answer5 {
+  background-color: #9B59B6;
 }
 
 /* Style the tab */

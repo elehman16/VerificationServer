@@ -43,10 +43,11 @@ Grabs a specified article and displays the full text.
 @application.route('/annotate_full/<artid>/', methods=['GET'])
 def annotate_full(artid):
     art = anne.get_next_article(artid)
-  
+    doct_reason, doct_ans, doct_ans_names, doctor_names, _ = get_stats(artid)    
 
-    doct_reason, doct_ans, doct_ans_names, doctor_names, _ = get_stats(artid)
     return flask.render_template('full_article.html',
+
+
                                   id = art.id_,
                                   artid = artid,
                                   tabs = art.text,
@@ -65,4 +66,4 @@ def annotate_full(artid):
 Run the application.
 """
 if __name__ == '__main__':
-    application.run() #application.run(port = 8082, host = '0.0.0.0')
+    application.run(port = 8084, host = '0.0.0.0')
