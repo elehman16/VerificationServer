@@ -138,8 +138,11 @@ def is_same(guess, ans):
     first = {'significantly increased': 1, 'significantly decreased': 2, 'no significant difference': 3}.get(ans, -1)
 
     second = {"b'Significantly increased'": 1,
+              "significantly increased": 1,
               "b'Significantly decreased'": 2, 
+              "significantly decreased": 2,
               "b'No significant difference'": 3, 
+              "no significant difference": 3,
               "b'Invalid Prompt'": 4}.get(guess, -1)
     
     if (second == -1 or first == -1):
@@ -178,9 +181,10 @@ def get_stats(art_id):
     doctor_agreement = {}
     data_loc = glob.glob('.//data//*.csv')
     
+    print(data_loc)
     try:
-        data_loc.remove('.//data//for-full-text-annotation.csv')
-        data_loc.remove('.//data//prompt_gen.csv')
+        data_loc.remove('.//data\\for-full-text-annotation.csv')
+        data_loc.remove('.//data\\prompt_gen.csv')
     except:
         data_loc.remove('.//data/for-full-text-annotation.csv')
         data_loc.remove('.//data/prompt_gen.csv')
