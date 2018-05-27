@@ -15,6 +15,12 @@ import glob
  
 global doctor_agreement               
 doctor_agreement = {}
+banned = [16, 17, 18, 32]
+loc_ban = set()
+names = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
+for lb in banned:
+    loc_ban.add(np.where(lb == names)[0][0])
+
 
 """
 Conver to a javascript string format for special characters.
@@ -35,7 +41,7 @@ def format_doct_answer(data_ans, loc_art):
     for data in data_ans:
         last_split = -1
         name = data[loc_art][0]
-        data[loc_art][2] = data[loc_art][2][2:-1]
+        data[loc_art][2] = data[loc_art][2]
         data[loc_art][2] = to_js(data[loc_art][2])
         all_commas = [m.start() for m in re.finditer(",", data[loc_art][2])]
         i = 0
@@ -63,7 +69,7 @@ def remove_duplicate(name, df):
     have_seen = set()
     i = 0
     for row in df:
-        key = "".join(row[4].split(" ")) + "".join(row[5].split(" ")) + "".join(row[6].split(" ")) + row[1]
+        key = "".join(row[4].split(" ")) + "".join(row[5].split(" ")) + "".join(row[6].split(" ")) + str(row[1])
         # if we haven't seen this one yet, add it to the ordering of articles
         if not(key in have_seen):
             ordering.append(key)
@@ -78,10 +84,12 @@ def remove_duplicate(name, df):
     res_ans = []
     i = 0
     for o in ordering:
-        res_option.append(np.append([name, i], data[o][0]))
-        res_ans.append(np.append([name, i], data[o][1]))
+        if not(i in loc_ban):
+            res_option.append(np.append([name, i], data[o][0]))
+            res_ans.append(np.append([name, i], data[o][1]))
         i += 1
-        
+    
+     
     return res_option, res_ans
 
 
@@ -98,7 +106,9 @@ def load_data(data_loc):
         df_opt, df_ans = remove_duplicate(loc[12:-4].capitalize(), df) 
         data_option.append(df_opt)
         data_ans.append(df_ans)
-     
+        
+    
+
     return data_option, data_ans 
 
 
@@ -123,27 +133,37 @@ def flatten(data_opt, data_ans):
 Loads in the answers.
 """   
 def load_answers():
-    location = './/data//prompt_gen.csv'
-    df = np.asarray(pd.read_csv(location, encoding = 'utf-8'))
-    data = {}
-    for f in df:
-        data[f[0]] = f[5]
+    ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
+    df = np.asarray(pd.read_csv('.//data\\prompt_gen.csv', encoding = 'utf-8'))
+    opt = [None] * (len(ordering))
+    n = -1
+    options = []
+    for i in ordering:
+        n += 1
+
+        if (i in banned):
+            continue
         
-    return data
+        opt[n] = df[i - 1][5]
+        
+    opt = [x for x in opt if x is not None]
+    options.extend(opt)
+    
+    return options
 
 """
 Determines if the answer is the same as the guess.
 """
 def is_same(guess, ans):
-    first = {'significantly increased': 1, 'significantly decreased': 2, 'no significant difference': 3}.get(ans, -1)
+    first = {"significantly increased": 1,
+             "significantly decreased": 2,
+             "no significant difference": 3,
+             "invalid prompt": 4}.get(ans.lower(), -1)
 
-    second = {"b'Significantly increased'": 1,
-              "significantly increased": 1,
-              "b'Significantly decreased'": 2, 
+    second = {"significantly increased": 1,
               "significantly decreased": 2,
-              "b'No significant difference'": 3, 
               "no significant difference": 3,
-              "b'Invalid Prompt'": 4}.get(guess, -1)
+              "invalid prompt": 4}.get(guess.lower(), -1)
     
     if (second == -1 or first == -1):
         import pdb; pdb.set_trace()
@@ -152,78 +172,112 @@ def is_same(guess, ans):
         return 1
     else:
         return 0
-   
-def find_number_correct(data, answers, ordering):
-    right_or_wrong = []
+
+""" 
+Get the correct number of correct answers.
+"""   
+def find_number_correct(data, answers):
+    accuracy = {} # mapping of doctors -> num-correct
+    answer_loc = np.full((len(answers,),), 0) # array of len(articles) -> keeps track of how many right
+    names = []
+    
     i = 0
+    last_doctor = ""
+    for d in data:
+        name = d[0]
+        guess = d[2]
+        if (last_doctor == ""):
+            accuracy[name] = 0
+            names.append(name)
+        
+        if (last_doctor != "" and last_doctor != name):
+            i = 0
+            accuracy[name] = 0
+            names.append(name)
 
-    for art in ordering:
-        ans = answers[art] # get the answer for this file
-        guess = data[i][2] # it is in the format of [name, # art, answer]
-        is_cor = is_same(guess, ans) # determine if they are the same
-        right_or_wrong.append(is_cor) # add this to our list
-        
-        # add this to the global agreement variable
-        if art in doctor_agreement:
-            doctor_agreement[int(float(art))].append([data[i][0], guess])
-        
-        else:
-            doctor_agreement[int(float(art))] = [[data[i][0], guess]]
-            
+        is_correct = is_same(guess, answers[i])
+        accuracy[name] += is_correct
+        answer_loc[i] += is_correct   
         i += 1
-
+        last_doctor = name
             
     # number in total - # you got right
-    return right_or_wrong, len(right_or_wrong) - np.sum(right_or_wrong), ans
+    return accuracy, answer_loc, names
+
+"""
+Arr is an array of -> [NAME, NUMBER, MC-GUESS]
+"""
+def convert_answer_to_num(arr):
+    for guess in arr:
+        second = {"significantly increased": 1,
+                  "significantly decreased": 2,
+                  "no significant difference": 3,
+                  "invalid prompt": 4}.get(guess[2].lower(), -1)
+                  
+        guess[2] = second
+    return arr
+
+"""
+Given a key, convert back to a string
+"""
+def convert_num_to_answer(key):
+    return {'1': "Significantly Increased",
+            '2': "Significantly Decreased",
+            '3': "No Significant Difference",
+            '4': "Invalid Prompt"}.get(key, -1)
+                          
+    
+"""
+Specifically adds my data to the bunch.
+"""
+def add_eric_option(options, answers):
+    ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
+    df = np.asarray(pd.read_csv('.//data\\prompt_gen.csv', encoding = 'utf-8'))
+    opt = [None] * (len(ordering))
+    ans = [None] * (len(ordering))
+    n = -1
+    for i in ordering:
+        n += 1
+
+        if (i in banned):
+            continue
+        
+        opt[n] = np.asarray(['Eric', str(n), df[i - 1][5]])
+        ans[n] = np.asarray(['Eric', str(n), df[i - 1][6]])
+        
+    opt = [x for x in opt if x is not None]
+    ans = [x for x in ans if x is not None]
+    options.extend(opt)
+    answers.extend(ans)
+    return options, answers   
     
 def get_stats(art_id):
     global doctor_agreement               
     doctor_agreement = {}
     data_loc = glob.glob('.//data//*.csv')
     
-    print(data_loc)
     try:
         data_loc.remove('.//data\\for-full-text-annotation.csv')
         data_loc.remove('.//data\\prompt_gen.csv')
+        #data_loc.remove('.//data\\out_lidija.csv')
+        #data_loc.remove('.//data\\out_edin.csv')
+        #data_loc.remove('.//data\\out_milorad.csv')
     except:
         data_loc.remove('.//data/for-full-text-annotation.csv')
         data_loc.remove('.//data/prompt_gen.csv')
-    """
-    data_loc = ['.//data//out_lidija.csv', './/data//out_edin.csv',
-                './/data//out_milorad.csv', './/data//out_sergii.csv',
-                './/data//out_krystie.csv']
-    """
+        
                            
     # has all information for all files
     names = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
     names = np.asarray(names, dtype = int)
-    loc_art = names.tolist().index(float(art_id))
     data_opt, data_ans = np.asarray(load_data(data_loc))
-    options, answers = flatten(data_opt, data_ans)
-    ans_dict = load_answers()
+    options, answers = flatten(data_opt, data_ans) 
     
-    all_doctor_res = [] # a list of which ones were missed and hit
-    num_missed = [] # a list of how many records each doctor missed
-    answer = -1
-    for doctor in data_opt: # for each doctor
-        # get their results - an array of 0's or 1's if they got it right, and the number missed
-        return_val = find_number_correct(doctor, ans_dict, names)
-        all_doctor_res.append(return_val[0])
-        num_missed.append(return_val[1])
-        answer = return_val[2]
+    accuracy, answer_loc, doct_name = find_number_correct(options, load_answers())
         
-        
-    # the columns = # of people who got the answer wrong   
-    how_many_correct = np.sum(all_doctor_res, axis = 0)
-    num_missed = list(map((lambda i: [data_loc[i][12:-4].capitalize(), str(len(names) - num_missed[i]) + '/' + str(len(names))]), range(len(data_loc))))    
-    
-    
-    # The texts highlighted:  
-    doctor_answer_for_loc_art = format_doct_answer(data_ans, loc_art)              
-    
-    # Get the names of the doctors.
-    doctor_names = list(map((lambda x: x[0].capitalize()), doctor_answer_for_loc_art))
-
+    # Add in my answers from prompt gen
+    options, answers = add_eric_option(options, answers)
+    options = convert_answer_to_num(options)                   
     
     # get stats for the selected options
     task = nltk.agreement.AnnotationTask(data=options)
@@ -231,34 +285,47 @@ def get_stats(art_id):
     # get stats for the reasoning
     task1 = nltk.agreement.AnnotationTask(data=answers)
     
-    """
+    how_many_correct = "\n"
+    for doc in accuracy.keys():
+        how_many_correct += doc + ": " + str(accuracy[doc]) + "/" + str(len(answer_loc)) + "\n"
+    
     print("How many correct: {}".format(how_many_correct))
-    print("Performance: {}".format(num_missed))   
     print("Achieving agreeing values for options: {}".format(np.round(task.alpha(), 3)))
     print("Achieving agreeing values for reasoning: {}".format(np.round(task1.alpha(), 3)))        
-    """  
-        
-    #print(doctor_agreement[int(names[loc_art])])
-
-    doct_answer = doctor_agreement[int(float(names[loc_art]))]
-    data = {}
-    all_answers = set()
+    
+    doct_reason = []
+    doct_ans = []
+    doct_ans_dict = {} # dictionary of answers to numbers (frequency)
     i = 0
-    for d in doct_answer:
-        ans = d[1][2:-1] # fix without "b' and '"
-        doct_answer[i][1] = ans
-        doct_answer[i][0] = str(doct_answer[i][0]).capitalize()
-        all_answers.add(ans)
-        if ans in data:
-            data[ans] = data[ans] + 1
-        else:
-            data[ans] = 1
-         
+    # for each article, check if it is equal to the article id given
+    for n in names:
+        # skip if banned
+        if (n in banned):
+            continue
+        
+        # if it is equal to the article id given
+        if (n == art_id):
+            # loop over all the dcotors
+            for j in range(len(data_opt)):
+                # append the doctor name and the doctor answer
+                doct_reason.append([data_ans[j][i][0], data_ans[j][i][2]])
+                doct_ans.append([data_opt[j][i][0], convert_num_to_answer(data_opt[j][i][2])])
+                # put into a dictionary to find frequency of answers
+                if (data_opt[j][i][2] in doct_ans_dict):
+                    doct_ans_dict[data_opt[j][i][2]] += 1
+                else: 
+                    doct_ans_dict[data_opt[j][i][2]] = 1
+            
         i += 1
+    
+    # put into a format of Array-of [option, frequency]
+    doct_ans_freq = [['Option', 'Frequency']]
+    for key in doct_ans_dict.keys():
+        doct_ans_freq.append([{'1': "Significantly Increased",
+                          '2': "Significantly Decreased",
+                          '3': "No Significant Difference",
+                          '4': "Invalid Prompt"}.get(key, -1), doct_ans_dict[key]])        
+        
+    return doct_reason, doct_ans_freq, doct_ans, doct_name 
 
-    doct_answer_n_names = [['Doctor Answer', 'Occurances']]
-    for ans in all_answers:
-          doct_answer_n_names.append([ans, data[ans]])   
-          
-    return doctor_answer_for_loc_art, doct_answer_n_names, doct_answer, doctor_names, answer
-
+get_stats(82)
