@@ -252,6 +252,7 @@ def add_eric_option(options, answers):
     return options, answers   
     
 def get_stats(art_id):
+    art_id = int(art_id)
     global doctor_agreement               
     doctor_agreement = {}
     data_loc = glob.glob('.//data//*.csv')
@@ -325,7 +326,7 @@ def get_stats(art_id):
                           '2': "Significantly Decreased",
                           '3': "No Significant Difference",
                           '4': "Invalid Prompt"}.get(key, -1), doct_ans_dict[key]])        
-        
+     
     return doct_reason, doct_ans_freq, doct_ans, doct_name 
 
 get_stats(82)
