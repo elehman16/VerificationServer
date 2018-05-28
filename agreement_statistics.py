@@ -134,7 +134,7 @@ Loads in the answers.
 """   
 def load_answers():
     ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
-    df = np.asarray(pd.read_csv('.//data\\prompt_gen.csv', encoding = 'utf-8'))
+    df = np.asarray(pd.read_csv('.//data//prompt_gen.csv', encoding = 'utf-8'))
     opt = [None] * (len(ordering))
     n = -1
     options = []
@@ -232,7 +232,7 @@ Specifically adds my data to the bunch.
 """
 def add_eric_option(options, answers):
     ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
-    df = np.asarray(pd.read_csv('.//data\\prompt_gen.csv', encoding = 'utf-8'))
+    df = np.asarray(pd.read_csv('.//data//prompt_gen.csv', encoding = 'utf-8'))
     opt = [None] * (len(ordering))
     ans = [None] * (len(ordering))
     n = -1
