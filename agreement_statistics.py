@@ -136,9 +136,9 @@ def flatten(data_opt, data_ans):
 Loads in the answers.
 """   
 def load_answers():
-    ordering = np.genfromtxt('.\\data\\ordering_list.txt', dtype = float)
+    ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
     ordering = np.asarray(ordering, int)
-    df = np.asarray(pd.read_csv('.\\data\\prompt_gen.csv', encoding = 'utf-8'))
+    df = np.asarray(pd.read_csv('.//data//prompt_gen.csv', encoding = 'utf-8'))
     opt = [None] * (len(ordering))
     n = -1
     options = []
