@@ -17,7 +17,7 @@ global doctor_agreement
 doctor_agreement = {}
 banned = [16, 17, 18, 32]
 loc_ban = set()
-names = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
+names = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
 for lb in banned:
     loc_ban.add(np.where(lb == names)[0][0])
 
@@ -87,6 +87,10 @@ def remove_duplicate(name, df):
         if not(i in loc_ban):
             res_option.append(np.append([name, i], data[o][0]))
             res_ans.append(np.append([name, i], data[o][1]))
+            
+            if (data[o][0] == "Cannot tell based on the abstract"):
+                import pdb; pdb.set_trace()
+            
         i += 1
     
      
@@ -103,12 +107,10 @@ def load_data(data_loc):
     for loc in data_loc:
         df = np.asarray(pd.read_csv(loc, encoding = 'utf-8'))
         # THIS IS WHERE THE NAMES COME FROM
-        df_opt, df_ans = remove_duplicate(loc[12:-4].capitalize(), df) 
+        df_opt, df_ans = remove_duplicate(loc[13:-4].capitalize(), df) 
         data_option.append(df_opt)
         data_ans.append(df_ans)
         
-    
-
     return data_option, data_ans 
 
 
@@ -178,31 +180,39 @@ Get the correct number of correct answers.
 """   
 def find_number_correct(data, answers):
     accuracy = {} # mapping of doctors -> num-correct
+    invalid_prompt = {} # mapping of doctors -> number selected as invalid 
     answer_loc = np.full((len(answers,),), 0) # array of len(articles) -> keeps track of how many right
     names = []
     
     i = 0
     last_doctor = ""
     for d in data:
+        if (i >= len(answers)):
+            continue
+        
         name = d[0]
         guess = d[2]
         if (last_doctor == ""):
             accuracy[name] = 0
+            invalid_prompt[name] = 0
             names.append(name)
         
         if (last_doctor != "" and last_doctor != name):
             i = 0
             accuracy[name] = 0
+            invalid_prompt[name] = 0
             names.append(name)
-
+            
         is_correct = is_same(guess, answers[i])
+        is_invalid = is_same(guess, "invalid prompt")
+        invalid_prompt[name] += is_invalid
         accuracy[name] += is_correct
         answer_loc[i] += is_correct   
         i += 1
         last_doctor = name
             
     # number in total - # you got right
-    return accuracy, answer_loc, names
+    return accuracy, answer_loc, names, invalid_prompt
 
 """
 Arr is an array of -> [NAME, NUMBER, MC-GUESS]
@@ -251,30 +261,22 @@ def add_eric_option(options, answers):
     answers.extend(ans)
     return options, answers   
     
-def get_stats(art_id):
+def get_stats(art_id, users):
     art_id = int(art_id)
     global doctor_agreement               
     doctor_agreement = {}
-    data_loc = glob.glob('.//data//*.csv')
-    
-    try:
-        data_loc.remove('.//data\\for-full-text-annotation.csv')
-        data_loc.remove('.//data\\prompt_gen.csv')
-        #data_loc.remove('.//data\\out_lidija.csv')
-        #data_loc.remove('.//data\\out_edin.csv')
-        #data_loc.remove('.//data\\out_milorad.csv')
-    except:
-        data_loc.remove('.//data/for-full-text-annotation.csv')
-        data_loc.remove('.//data/prompt_gen.csv')
+    tmp_loc = ".//data//"
+    data_loc = []
+    for u in users:
+        data_loc.append(tmp_loc + "out_" + u.lower() + ".csv") 
         
-                           
     # has all information for all files
     names = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
     names = np.asarray(names, dtype = int)
     data_opt, data_ans = np.asarray(load_data(data_loc))
     options, answers = flatten(data_opt, data_ans) 
     
-    accuracy, answer_loc, doct_name = find_number_correct(options, load_answers())
+    accuracy, answer_loc, _, num_invalid = find_number_correct(options, load_answers())
         
     # Add in my answers from prompt gen
     options, answers = add_eric_option(options, answers)
@@ -287,10 +289,13 @@ def get_stats(art_id):
     task1 = nltk.agreement.AnnotationTask(data=answers)
     
     how_many_correct = "\n"
+    number_invalid = "\n"
     for doc in accuracy.keys():
+        number_invalid += doc + ": " + str(num_invalid[doc]) + "/" + str(len(answer_loc)) + "\n" 
         how_many_correct += doc + ": " + str(accuracy[doc]) + "/" + str(len(answer_loc)) + "\n"
     
     print("How many correct: {}".format(how_many_correct))
+    print("How many invalid: {}".format(number_invalid))
     print("Achieving agreeing values for options: {}".format(np.round(task.alpha(), 3)))
     print("Achieving agreeing values for reasoning: {}".format(np.round(task1.alpha(), 3)))        
     
@@ -316,6 +321,8 @@ def get_stats(art_id):
                     doct_ans_dict[data_opt[j][i][2]] += 1
                 else: 
                     doct_ans_dict[data_opt[j][i][2]] = 1
+                    
+            
             
         i += 1
     
@@ -327,6 +334,6 @@ def get_stats(art_id):
                           '3': "No Significant Difference",
                           '4': "Invalid Prompt"}.get(key, -1), doct_ans_dict[key]])        
      
-    return doct_reason, doct_ans_freq, doct_ans, doct_name 
+    return doct_reason, doct_ans_freq, doct_ans, users 
 
-get_stats(82)
+get_stats(82, ["Lidija"])

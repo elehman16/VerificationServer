@@ -1,0 +1,5 @@
+UserID,Doctor Reviewed,PromptID,XML,Valid Prompt,Accept Label,Accept Reasoning,Outcome,Intervention,Comparator
+lehmer16,Annotator 1,104, 2871176 ,True,True,True,Postprandial plasma glucose,Liraglutide (1.2 mg) plus glimepiride,Rosiglitazone plus glimepiride
+lehmer16,Lidija,104, 2871176 ,True,True,True,Postprandial plasma glucose,Liraglutide (1.2 mg) plus glimepiride,Rosiglitazone plus glimepiride
+lehmer16,Annotator 1,105, 2871176 ,True,True,True,HbA1c level at 26 weeks,Liraglutide (1.8 mg) plus glimepiride,Placebo plus glimepiride
+lehmer16,Lidija,105, 2871176 ,True,True,True,HbA1c level at 26 weeks,Liraglutide (1.8 mg) plus glimepiride,Placebo plus glimepiride

@@ -127,6 +127,46 @@ class XMLReader(Reader):
             # Provided path has no files
             return None
         return next_file
+        
+    """
+    Given the path that leads to a folder of ONLY XML files, the function
+    will pick one and then return the name of it.
+    """
+    def _get_next_file(self, user):
+        user_progress = np.genfromtxt('.//data//user_progress.csv', delimiter = ",", dtype = str)
+        user_progress = user_progress.reshape((int(user_progress.size / 2), 2))      
+        ordering = np.loadtxt('.//data//ordering_list_' + user + '.txt', dtype = str)
+        
+
+        # Find which to take in the user progress if possible
+        i = 0
+        for row in user_progress:
+            row_val = int(float(row[1]))
+            if (row[0] == user and len(ordering) > row_val):
+                return ordering[row_val] # return their ordering here if we find it
+            elif (row[0] == user and not(len(ordering) > row_val)):
+                return None
+            i += 1
+           
+        user_progress = user_progress.tolist()
+        user_progress.append([user, 0])
+        np.savetxt('.//data//user_progress.csv', np.asarray(user_progress), delimiter = ",", fmt = "%s")
+        return ordering[0]
+        
+    """
+    Return the proper ids associated with this specific XML file.
+    
+    @param article_meta is the XML element that holds the article title.
+    """
+    def _get_PMC_ids(self, article_meta):
+        ids = article_meta.findall('article-id')
+        id_ = None # the number associated with the xml
+        for id in ids:
+            if 'pub-id-type' in id.attrib and id.attrib['pub-id-type'].lower() == 'pmc':
+                id_ = id.text
+        
+        return id_
+    
     
     """
     Return the proper ids associated with this specific XML file.
@@ -200,6 +240,8 @@ class XMLReader(Reader):
     def _init_article_(self, next_file, article_meta, body):
         id_ = self._get_ids(article_meta)
         title = self._get_title(article_meta)
+        pmc_tag = self._get_PMC_ids(article_meta)
+        pmid = self._get_ids(article_meta)
         try:
             temp = article_meta.find('abstract')
             if (temp is None):
@@ -231,13 +273,12 @@ class XMLReader(Reader):
         art.get_extra()['intervention'] = art_data['Intervention']
         art.get_extra()['reasoning'] = art_data['Reasoning']
         art.get_extra()['answer'] = art_data['Answer']
+        art.get_extra()['PMC'] = pmc_tag
                         
         # only get the abstract if the next_file is None or it doesn't exist
         if (not(abstract is None) and not(next_file is None)):
             art.get_extra()['abstract'] = abstract # add the abstract in  
             
-        
-        
         return art
     
     """
@@ -246,9 +287,16 @@ class XMLReader(Reader):
     Otherwise, it will only display the abstract.
     """
     def get_next_article(self, user, next_file=None):
+        # next file is in the form of "Person,...Person,Number".
+        # there must be at least 1 person
+        next_file = next_file or self._get_next_file(user) 
         if not next_file:
             return None
             
+        arr = next_file.split(",")
+        next_file = arr[-1]
+        users = arr[:-1]            
+        
         pmc = self.by_row_description[int(next_file)][0]['XML']
         path_to_file =  self.path + '//PMC' + str(pmc) + '.nxml' # the path to XML files
         et = ET.parse(path_to_file) 
@@ -259,7 +307,7 @@ class XMLReader(Reader):
         body = root.find('body')
 
         art = self._init_article_(next_file, article_meta, body)
-        return art
+        return art, users
         
 
 """

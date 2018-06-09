@@ -10,7 +10,8 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
-
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/post.js') }}"> </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/button.js') }}"> </script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/highlight.js') }}"> </script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/tabs.js') }}"> </script>
 
@@ -28,27 +29,6 @@
         {% endfor %}
 
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Doctors <span class="caret"></span></a>
-          <ul id = "doctors_selected" class="dropdown-menu">
-            {% for name in doctor_names %}
-              <li> <input id = '{{ name }}' onclick = "redo()" type="checkbox" style = "margin-left: 5px;" checked/>&nbsp; {{ name }} </a> </li>
-            {% endfor %}
-          </ul>
-
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Other Article <span class="caret"></span></a>
-            <ul class="dropdown-menu" style = "max-height:60vh; overflow-y: auto;">
-              {% for name in ordering %}
-              <li> <!-- http://127.0.0.1:5000/annotate_full/ -->
-                <a id = '{{ name }}' href="http://ec2-18-219-1-213.us-east-2.compute.amazonaws.com:8084/annotate_full/{{ name }}"> {{ name }} </a>
-              </li>
-              {% endfor %}
-            </ul>
-        </li>
-
-
-      </ul>
     </div>
   </nav>
 
@@ -58,7 +38,7 @@
     <div id = "Statistics" class = "tabcontent statistic_content">
 
       <div id = "all_doctor_answer" class = "column" style = "margin-left: 1%; float:left;">
-        <b> Document answer: {{ answer }} </b>
+        <b> Annotator 1:</b> {{ answer }}
         <br>
         {%for d in doct_ans_names %}
           <div id = "ans_{{ d[0] }}"> <b> {{ d[0] }}: </b> {{ d[1] }}</div>
@@ -72,23 +52,152 @@
 
   </div>
     <!-- Create a place to put content for each tab. -->
-    {%for tab in tabs %}
+    {% for tab in tabs %}
     <div id = '{{ tab[0] }}', class="tabcontent" style = "max-height: 60vh; overflow: auto;">
     </div>
     {% endfor %}
   </div>
 
+  <!-- Display the prompt -->
   <div class = "row">
     <label style = "margin-left: 45px; margin-top: 20px;">
-      With respect to <b> <i> {{ outcome }}, </i> </b> characterize the
-      reported difference between patients receiving <b> <i>
-      {{ intervention }} </i> </b> and those receiving <b> <i> {{ comparator }}.
-      </i> </b>
+      With respect to <span id = "outcome">{{ outcome }}</span>, characterize the
+      reported difference between patients receiving <span id = "intervention">
+      {{ intervention }}</span> and those receiving <span id = "comparator">{{ comparator }}</span>.
     </label>
   </div>
 
-  <a href="#" id = "previous-but" class="previous" style= "position: fixed; bottom: 0%; right: 92.5%;" onclick = "previous()">&laquo; Previous</a>
-  <a href="#" id = "next-but" class="next" style= "position: fixed; bottom: 0%; right: 1.5%;" onclick = "next()">Next &raquo;</a>
+  <!-- Display the options and a submit button -->
+  <div class = "row" style = "margin-left: 2%;">
+
+    <!-- Ask user to determine the validity of the prompt -->
+    <div id = "prompt-answer" class = "column prompt-col">
+      <b> <i> Prompt Validity </i> </b>
+      <!-- Multiple choice -->
+      <form>
+        <!-- Good answer -->
+        <div class="radio">
+          <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+            Accept
+          </label>
+        </div>
+
+        <div class="radio">
+          <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+            Reject
+          </label>
+        </div>
+
+      </form>
+    </div>
+
+
+    <div id = "answers" class = "row" style = "content: ""; display: table; clear: both; margin-left: 1%">
+
+      <div class = "column answer-col">
+        <b> <i> Annotator 1 </i>Answer: </b>
+        <!-- Multiple choice -->
+        <form>
+          <!-- Good answer -->
+          <div class="radio">
+            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+              Accept
+            </label>
+          </div>
+
+          <!-- Bad answer -->
+          <div class="radio">
+            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+              Reject
+            </label>
+          </div>
+        </form>
+
+        <!-- The last one for the answer check -->
+        <b> <i> Annotator 1 </i>Reasoning: </b>
+        <form>
+          <div class="radio">
+            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+              Accept
+            </label>
+          </div>
+
+          <div class="radio">
+            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+              Reject
+            </label>
+          </div>
+        </form>
+
+      </div>
+
+      <!-- Create a form for each doctor -->
+      {% for n in hide_names %}
+      <div class = "column answer-col">
+        <b> <i> {{ n }} </i>Answer: </b>
+        <!-- Multiple choice -->
+        <form>
+          <!-- Good answer -->
+          <div class="radio">
+            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+              Accept
+            </label>
+          </div>
+
+          <!-- Bad answer -->
+          <div class="radio">
+            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+              Reject
+            </label>
+          </div>
+        </form>
+
+        <!-- Quote selection choice -->
+        <b> <i> {{ n }} </i>Reasoning: </b>
+        <form>
+          <div class="radio">
+            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+              Accept
+            </label>
+          </div>
+
+          <div class="radio">
+            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
+              Reject
+            </label>
+          </div>
+        </form>
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <!-- Submit button -->
+    <button type="button" id= "submit-but" onclick = "submit_final()" class="btn btn-success" style = "margin-top: 20px;" disabled>
+      Submit
+    </button>
+
+  </div>
+
+  <script>
+    // Put the doctor responses into storage.
+    var elem = document.createElement('div');
+    elem.dataset.pie = {{ doct_ans|tojson }};
+    elem.id = "data-pie";
+    document.body.appendChild(elem);
+
+    // Put doctor names into storage.
+    var elem2 = document.createElement("div");
+    elem2.dataset.names = {{ doctor_names|tojson }};
+    elem2.id = "data-names";
+    document.body.appendChild(elem2);
+
+    // Put doctor names into storage.
+    var elem3 = document.createElement("div");
+    elem3.dataset.names = {{ hide_names|tojson }};
+    elem3.id = "data-hide";
+    document.body.appendChild(elem3);
+  </script>
 
   <script>
     // Put the content into the first tab.
@@ -117,7 +226,7 @@
 
       // put answer key up
       var add_to = document.getElementById("Statistics_content");
-      add_to.innerHTML += "<b>Answer-key reasoning: <span id = 'answer-key'>{{ reasoning }}</span></b> <br>";
+      add_to.innerHTML += "<b>Annotator 1:</b> <span style = 'font-weight: normal;' id = 'answer-key'>{{ reasoning }}</span> <br>";
 
       highlight_all(doct_reason, getDoctorSelected());
       reset_answer(); // reset the answer key
@@ -125,6 +234,16 @@
 
       // add in the beginnining section that has what everyone highlights
       for (var i = 0; i < doct_reason.length; i++) {
+        if (doct_reason[i][1].includes("</td>")) {
+          var data = "";
+          var tmp_arr = $(doct_reason[i][1]);
+          for (var j = 0; j < tmp_arr.length; j++) {
+            data += tmp_arr[j].innerText;
+          }
+
+          doct_reason[i][1] = data;
+        }
+
         add_to.innerHTML += "<div id = res_" + doct_reason[i][0] + "> <b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br> </div>";
       }
     }
@@ -133,25 +252,15 @@
 
   </script>
 
-  <script>
-    // Put the doctor responses into storage.
-    var elem = document.createElement('div');
-    elem.dataset.pie = {{ doct_ans|tojson }};
-    elem.id = "data-pie";
-    document.body.appendChild(elem);
+  <!-- Storing of data to be used for later when submitting -->
+  <div id="store">
+      <p id="userid">{{ userid }}</p>
+      <p id="id">{{ id }}</p>
+      <p id="artid">{{ artid }}</p>
+      <p id="pmc"> {{ pmc }} </p>
+  </div>
 
-    // put the data-ordering in the storage.
-    var elem1 = document.createElement('div');
-    elem1.dataset.ordering = {{ ordering|tojson }};
-    elem1.id = "data-ordering";
-    document.body.appendChild(elem1);
-  </script>
-
-  <div id="artid" data-id = "{{ artid }}"> </div>
-  <script text="text/javascript" src="{{ url_for('static', filename='scripts/add_keyboard_press.js') }}"> </script>
   <script text="text/javascript" src="{{ url_for('static', filename='scripts/fix_title.js') }}"> </script>
   <script type="text/javascript" src="{{ url_for('static', filename='scripts/pie_chart.js') }}"> </script>
-  <script type="text/javascript" src="{{ url_for('static', filename='scripts/next_prev_button.js') }}"> </script>
-
 </body>
 </html>

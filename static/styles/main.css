@@ -61,6 +61,26 @@ label {
 
 body {font-family: Arial;}
 
+/* CSS for the answer columns */
+.answer-col {
+  margin-top: 1%;
+  border: 1px solid grey;
+  width: 20%;
+  float: left;
+  margin-right: 1%;
+  margin-left: 1%;
+  padding: 5px;
+}
+
+/* CSS for the Prompt columns */
+.prompt-col {
+  border: 1px solid grey;
+   padding: 5px;
+   width: 42.5%;
+   margin-left: .25%;
+   margin-top: 1%;
+}
+
 /* Highlight color for doctor response in text. */
 .highlight1 {
   background-color: #CCE5FF;

@@ -63,14 +63,11 @@ function breakDownText(text, orig_tab) {
 
 }
 
+/**
+* Get the list of doctor names.
+*
+*/
 function getDoctorSelected() {
-  var doctors_selected = document.getElementById("doctors_selected").children;
-  var answer = {};
-  for (var i = 0; i < doctors_selected.length; i++) {
-    var chck = doctors_selected[i].children[0].checked;
-    var nm = doctors_selected[i].children[0].id;
-    answer[nm] = chck;
-  }
-
-  return answer;
+  var doctors_selected = document.getElementById("data-names");
+  return doctors_selected.dataset.names.split(",");
 }
