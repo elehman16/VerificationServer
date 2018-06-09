@@ -17,7 +17,8 @@ global doctor_agreement
 doctor_agreement = {}
 banned = [16, 17, 18, 32]
 loc_ban = set()
-names = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
+names = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
+names = np.asarray(names, dtype = int)
 for lb in banned:
     loc_ban.add(np.where(lb == names)[0][0])
 
