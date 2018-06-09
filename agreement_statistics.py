@@ -136,7 +136,8 @@ def flatten(data_opt, data_ans):
 Loads in the answers.
 """   
 def load_answers():
-    ordering = np.genfromtxt('.data\\ordering_list.txt', dtype = int)
+    ordering = np.genfromtxt('.\\data\\ordering_list.txt', dtype = float)
+    ordering = np.asarray(ordering, int)
     df = np.asarray(pd.read_csv('.\\data\\prompt_gen.csv', encoding = 'utf-8'))
     opt = [None] * (len(ordering))
     n = -1
@@ -242,7 +243,8 @@ def convert_num_to_answer(key):
 Specifically adds my data to the bunch.
 """
 def add_eric_option(options, answers):
-    ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
+    ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
+    ordering = np.asarray(ordering, dtype = int)
     df = np.asarray(pd.read_csv('.//data//prompt_gen.csv', encoding = 'utf-8'))
     opt = [None] * (len(ordering))
     ans = [None] * (len(ordering))
