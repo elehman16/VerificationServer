@@ -17,7 +17,7 @@ global doctor_agreement
 doctor_agreement = {}
 banned = [16, 17, 18, 32]
 loc_ban = set()
-names = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
+names = np.genfromtxt('.\\data\\ordering_list.txt', dtype = int)
 for lb in banned:
     loc_ban.add(np.where(lb == names)[0][0])
 
@@ -135,8 +135,8 @@ def flatten(data_opt, data_ans):
 Loads in the answers.
 """   
 def load_answers():
-    ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
-    df = np.asarray(pd.read_csv('.//data//prompt_gen.csv', encoding = 'utf-8'))
+    ordering = np.genfromtxt('.\\data\\ordering_list.txt', dtype = int)
+    df = np.asarray(pd.read_csv('.\\data\\prompt_gen.csv', encoding = 'utf-8'))
     opt = [None] * (len(ordering))
     n = -1
     options = []
@@ -241,8 +241,8 @@ def convert_num_to_answer(key):
 Specifically adds my data to the bunch.
 """
 def add_eric_option(options, answers):
-    ordering = np.genfromtxt('.//data//ordering_list.txt', dtype = int)
-    df = np.asarray(pd.read_csv('.//data//prompt_gen.csv', encoding = 'utf-8'))
+    ordering = np.genfromtxt('.\\data\\ordering_list.txt', dtype = int)
+    df = np.asarray(pd.read_csv('.\\data\\prompt_gen.csv', encoding = 'utf-8'))
     opt = [None] * (len(ordering))
     ans = [None] * (len(ordering))
     n = -1
@@ -265,13 +265,13 @@ def get_stats(art_id, users):
     art_id = int(art_id)
     global doctor_agreement               
     doctor_agreement = {}
-    tmp_loc = ".//data//"
+    tmp_loc = ".\\data\\"
     data_loc = []
     for u in users:
         data_loc.append(tmp_loc + "out_" + u.lower() + ".csv") 
         
     # has all information for all files
-    names = np.genfromtxt('.//data//ordering_list.txt', dtype = float)
+    names = np.genfromtxt('.\\data\\ordering_list.txt', dtype = float)
     names = np.asarray(names, dtype = int)
     data_opt, data_ans = np.asarray(load_data(data_loc))
     options, answers = flatten(data_opt, data_ans) 
