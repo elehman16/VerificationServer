@@ -21,12 +21,23 @@ def index():
     return flask.render_template('index.html')
     
 """
+Only go to this if there are no more articles to be annotated.
+"""
+@application.route('/finish/', methods=['GET'])
+def finish():
+    return flask.render_template('finish.html')
+    
+"""
 Grabs a specified article and displays the full text.
 """
 @application.route('/annotate_full/<userid>/', methods=['GET', 'POST'])
 def annotate_full(userid):
     # get the article id
-    art, users = anne.get_next_article(userid)
+    try:
+        art, users = anne.get_next_article(userid)
+    except:
+        return flask.redirect(flask.url_for('finish'))
+        
     artid = art.get_extra()['path']
     doct_reason, doct_ans, doct_ans_names, doctor_names = get_stats(artid, users)
     
@@ -94,4 +105,4 @@ def hide_names_arr(doct_ans):
 Run the application.
 """
 if __name__ == '__main__':
-    application.run()
+    application.run(host = '0.0.0.0', port = 8083)
