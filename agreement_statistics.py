@@ -157,7 +157,7 @@ Loads the names of the ordering in which the person did work.
 """
 def load_names(user):
     old = np.genfromtxt('.//data//first_ordering_list.txt', dtype = float)
-    names = np.genfromtxt('.//data//ordering_list_' + user + '.txt', dtype = float)
+    names = np.genfromtxt('.//data//ordering_list_' + user.lower() + '.txt', dtype = float)
     names = np.asarray(np.append(old, names), dtype = int)
     
     seen = set()
