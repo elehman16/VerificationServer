@@ -235,7 +235,7 @@ function highlight_all(doct_reason, can_highlight) {
 
   // get the answer and put it into our list
   var ans = document.getElementById("answer-key").innerText;
-  doct_reason.push(["Answer", ans]);
+  doct_reason.push(["Annotator 1", ans]);
 
   var tmp = data_dict_highlighting(doct_reason);
   var data = tmp[0];
@@ -257,7 +257,7 @@ function highlight_all(doct_reason, can_highlight) {
 
     // if there is nothing to highlight... don't even try...
     if (doct_hl.length !== 0) {
-      if (doct_hl.indexOf("Answer") !== -1) {
+      if (doct_hl.indexOf("Annotator 1") !== -1) {
         highlight(elem, "highlight_answer" + doct_hl.length, doct_hl.join(', '));
       } else {
         highlight(elem, "highlight" + doct_hl.length, doct_hl);

@@ -89,22 +89,32 @@ class CSVWriter(Writer):
         return '<br><br>'.join(lines)
         
     """
-    Goal is to format the data into an array.
+    Goal is to format the data into an array. In this case, it will do it into
+    multiple arrays, depending on whether or not annotations for more than one 
+    person are being done.
     """
     def __finish_data__(self, form):
+        # format the individual data
         userid = form['userid']
+        
+        # In format of "person1,person2,person3"
         dr = form['Doctors Reviewed'].split(",")
         promptid = form['PromptID']
         xml = form['XML']
+        # Load in a dictionary here that has all of the MC buttons
         label = json.loads(form["Label"])
         valid_prompt = label['Prompt Validity']
+        #  We got what we needed so remove it
         del label["Prompt Validity"]      
         o = form['Outcome']
         i = form['Intervention']
         c = form['Comparator']
         
+        # "Annotator 1 is always first."
         data = []
         dr.insert(0, "Annotator 1")
+        
+        # Go through each person and give them their own array
         for d in dr:
             lab = -1
             res = -1

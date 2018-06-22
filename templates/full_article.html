@@ -5,16 +5,15 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+    <!-- Helper functions -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/post.js') }}"> </script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/button.js') }}"> </script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/highlight.js') }}"> </script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/tabs.js') }}"> </script>
-
   </head>
 </head>
 <body style = "width: 100%; height: 100%;">
@@ -22,7 +21,7 @@
   <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-
+        <!-- Go through and add functionality to the tabs so that they work when clicked on -->
         <li id = "link_Statistics" class = "tablinks" onclick = "openTab(event, 'Statistics')"> <a href="#"> Statistics </a> </li>
         {% for tab in tabs %}
           <li id = 'link_{{ tab[0] }}' class="tablinks" onclick="openTab(event, '{{ tab[0] }}')"> <a href="#"> {{ tab[0] }} </a> </li>
@@ -34,9 +33,10 @@
 
   <!-- Initialize the tab with titles . -->
   <div style = "height: 100%; width: 100%;">
-
+    <!-- Add in the beginning tab that displays the answer -->
     <div id = "Statistics" class = "tabcontent statistic_content">
 
+      <!-- This represents the answers of the docotrs (MC). -->
       <div id = "all_doctor_answer" class = "column" style = "margin-left: 1%; float:left;">
         <b> Annotator 1:</b> {{ answer }}
         <br>
@@ -45,8 +45,10 @@
         {% endfor %}
       </div>
 
+      <!-- Pie chart for later use -->
       <div id="piechart" style = "float:left;"> </div>
 
+      <!-- The location for the reasoning to be placed in later -->
       <div id = "Statistics_content">
       </div>
 
@@ -82,6 +84,7 @@
           </label>
         </div>
 
+        <!-- Bad answer -->
         <div class="radio">
           <label> <input type="radio" name="optradio" onclick = "enable_submit()">
             Reject

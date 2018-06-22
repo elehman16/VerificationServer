@@ -17,7 +17,7 @@ function get_data() {
 
   var data = {};
   var pv = document.getElementById("prompt-answer").getElementsByTagName("input");
-  data["Prompt Validity"] = (pv[0].checked || pv[1].checked);
+  data["Prompt Validity"] = pv[0].checked;
 
   var who = 0; // each person has 4 inputs associated with it
   var names_count = 0;

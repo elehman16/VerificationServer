@@ -4,8 +4,9 @@ import writer
 import annotator
 import config
 import reader
+import numpy as np
 from functools import reduce
-from agreement_statistics import get_stats
+from agreement_statistics import get_stat
 
 
 application = flask.Flask(__name__)
@@ -42,7 +43,7 @@ def annotate_full(userid):
     doct_reason, doct_ans, doct_ans_names, doctor_names = get_stats(artid, users)
     
     # modify the pie-chart to contain the correct answer
-    tmp = " ".join(list(map((lambda x: x.capitalize()), art.get_extra()['answer'].split(" "))))
+    tmp = art.get_extra()['answer'].lower().capitalize()   
     loc = reduce((lambda y, x: y if doct_ans[x][0] != tmp else x), range(len(doct_ans)), -1)
     if (loc == -1):
         doct_ans.append([tmp, 1])
@@ -102,7 +103,43 @@ def hide_names_arr(doct_ans):
     return doct_ans
     
 """
+Gets and then formats the stats.
+"""
+def get_stats(artid, users):
+    # doctor reasoning, doctor answer, doctor names
+    doct_reason = [] 
+    # pie chart
+    doct_ans = [['Option', 'Frequency']]
+    doctor_names = []
+    doct_ans_names = []
+    pie = {}
+    for u in users:
+        # get info
+        dr, da, dan, dn = get_stat(artid, u)
+        
+        # fmt info
+        doct_reason.append(dr[0])
+        doct_ans_names.append(dan[0])
+        doctor_names.append(dn[0])
+    
+        # combine piechart
+        for i in range(1, len(da)):
+            # add it to the data
+            if (da[i][0] in pie):
+                pie[da[i][0]] += 1
+            else:
+                pie[da[i][0]] = 1
+
+    
+    # pie chart
+    for key in pie.keys():
+        doct_ans.append([key, pie[key]])
+                
+    return doct_reason, doct_ans, doct_ans_names, doctor_names    
+    
+"""
 Run the application.
 """
 if __name__ == '__main__':
+    #application.run()
     application.run(host = '0.0.0.0', port = 8083)

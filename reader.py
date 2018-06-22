@@ -4,7 +4,6 @@ import os
 import random
 import sqlite3
 import xml.etree.ElementTree as ET
-from get_file_description import get_file_description
 from data.by_row_description import by_row_description
 import numpy as np
 from functools import reduce
@@ -109,7 +108,6 @@ class XMLReader(Reader):
 
     def __init__(self, path):
         self.path = path
-        self.file_description = get_file_description()
         self.by_row_description = by_row_description()
 
         
