@@ -63,14 +63,14 @@ def remove_duplicate(name, df):
     have_seen = set()
     i = 0
     for row in df:
-        key = "".join(row[4].split(" ")) + "".join(row[5].split(" ")) + "".join(row[6].split(" ")) + str(row[1])
+        key = row[1]
         # if we haven't seen this one yet, add it to the ordering of articles
         if not(key in have_seen):
             ordering.append(key)
                      
         have_seen.add(key)
-        option = row[2]
-        reason = row[3]
+        option = row[3]
+        reason = row[4]
         data[key] = [option, reason]  
         i += 1            
     
@@ -85,8 +85,7 @@ def remove_duplicate(name, df):
             import pdb; pdb.set_trace()
         
         i += 1
-    
-     
+       
     return res_option, res_ans
 
 
@@ -200,6 +199,7 @@ def get_stat(art_id, user):
         if (n == art_id):
             # loop over all the dcotors
             for j in range(len(data_opt)):
+
                 # append the doctor name and the doctor answer
                 doct_reason.append([data_ans[j][i][0], data_ans[j][i][2]])
                 doct_ans.append([data_opt[j][i][0], data_opt[j][i][2]])
