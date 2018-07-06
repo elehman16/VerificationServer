@@ -76,10 +76,9 @@ def remove_duplicate(name, df):
     
     res_option = []
     res_ans = []
-    i = 0
     for o in ordering:
-        res_option.append(np.append([name, i], data[o][0]))
-        res_ans.append(np.append([name, i], data[o][1]))
+        res_option.append(np.append([name, o], data[o][0]))
+        res_ans.append(np.append([name, o], data[o][1]))
         
         if (data[o][0] == "Cannot tell based on the abstract"):
             import pdb; pdb.set_trace()
@@ -171,6 +170,7 @@ def load_names(user):
             seen.add(names[i])
             
     return n
+    
 """
 The main function. Also calculates the statistics of the dataset in the 
 process.
@@ -183,23 +183,15 @@ def get_stat(art_id, user):
     data_loc = []
     data_loc.append(tmp_loc + "out_" + user.lower() + ".csv") 
         
-    # has all information for all files
-    names = load_names(user)
     data_opt, data_ans = np.asarray(load_data(data_loc))
     
     doct_reason = []
     doct_ans = []
     doct_ans_dict = {} # dictionary of answers to numbers (frequency)
-    i = 0
-        
-    # for each article, check if it is equal to the article id given
-    for n in names:
-        
-        # if it is equal to the article id given
-        if (n == art_id):
-            # loop over all the dcotors
-            for j in range(len(data_opt)):
-
+    
+    for j in range(len(data_opt)):
+        for i in range(len(data_ans[j])):
+            if (int(data_ans[j][i][1]) == art_id):
                 # append the doctor name and the doctor answer
                 doct_reason.append([data_ans[j][i][0], data_ans[j][i][2]])
                 doct_ans.append([data_opt[j][i][0], data_opt[j][i][2]])
@@ -208,14 +200,14 @@ def get_stat(art_id, user):
                     doct_ans_dict[data_opt[j][i][2]] += 1
                 else: 
                     doct_ans_dict[data_opt[j][i][2]] = 1
-            
-        i += 1
+
+
     
     # put into a format of Array-of [option, frequency]
     doct_ans_freq = [['Option', 'Frequency']]
     for key in doct_ans_dict.keys():
         doct_ans_freq.append([key, doct_ans_dict[key]])
-     
+             
     return doct_reason, doct_ans_freq, doct_ans, [user]
 
 #print(get_stats(82, "Lidija"))
