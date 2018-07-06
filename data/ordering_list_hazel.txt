@@ -293,7 +293,6 @@ Lidija,333
 Lidija,335
 Lidija,390
 Lidija,359
-Lidija,246
 Lidija,425
 Lidija,348
 Lidija,330
@@ -342,7 +341,6 @@ Lidija,405
 Lidija,343
 Lidija,446
 Lidija,449
-Lidija,434
 Lidija,245
 Lidija,301
 Lidija,424
@@ -353,7 +351,6 @@ Lidija,426
 Lidija,398
 Lidija,240
 Lidija,288
-Lidija,284
 Lidija,271
 Lidija,303
 Lidija,229
@@ -372,9 +369,7 @@ Lidija,373
 Lidija,471
 Lidija,416
 Lidija,435
-Lidija,430
 Lidija,313
-Lidija,429
 Lidija,353
 Lidija,466
 Lidija,392
