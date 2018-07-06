@@ -22,6 +22,7 @@ def index():
     return flask.render_template('index.html')
     
 """
+
 Only go to this if there are no more articles to be annotated.
 """
 @application.route('/finish/', methods=['GET'])
