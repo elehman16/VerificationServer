@@ -69,8 +69,8 @@ def remove_duplicate(name, df):
             ordering.append(key)
                      
         have_seen.add(key)
-        option = row[3]
-        reason = row[4]
+        option = row[3].encode('utf-8').decode('utf-8')
+        reason = row[4].encode('utf-8').decode('utf-8')
         data[key] = [option, reason]  
         i += 1            
     
@@ -100,7 +100,8 @@ def load_data(data_loc):
         # THIS IS WHERE THE NAMES COME FROM
         df_opt, df_ans = remove_duplicate(loc[13:-4].capitalize(), df) 
         data_option.append(df_opt)
-        data_ans.append(df_ans.encode('utf-8').decode('utf-8'))
+        data_ans.append(df_ans)
+        
         
     return data_option, data_ans 
 
