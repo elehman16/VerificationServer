@@ -69,8 +69,8 @@ def remove_duplicate(name, df):
             ordering.append(key)
                      
         have_seen.add(key)
-        option = row[3].encode('utf-8').decode('utf-8')
-        reason = row[4].encode('utf-8').decode('utf-8')
+        option = str(row[3]).encode('utf-8').decode('utf-8')
+        reason = str(row[4]).encode('utf-8').decode('utf-8')
         data[key] = [option, reason]  
         i += 1            
     
