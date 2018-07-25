@@ -96,7 +96,7 @@ def load_data(data_loc):
     data_ans = []
 
     for loc in data_loc:
-        df = np.asarray(pd.read_csv(loc, encoding = 'unicode_escape', engine='python'))
+        df = np.asarray(pd.read_csv(loc, engine='python'))
         # THIS IS WHERE THE NAMES COME FROM
         df_opt, df_ans = remove_duplicate(loc[13:-4].capitalize(), df) 
         data_option.append(df_opt)
