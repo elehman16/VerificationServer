@@ -266,10 +266,27 @@ class XMLReader(Reader):
         art = article.Article(id_= id_, title=title, text=text)
         art_data = self.by_row_description[int(next_file)][0]
         art.get_extra()['path'] = next_file
-        art.get_extra()['outcome'] = art_data['Outcome']
-        art.get_extra()['comparator'] = art_data['Comparator']
-        art.get_extra()['intervention'] = art_data['Intervention']
-        art.get_extra()['reasoning'] = art_data['Reasoning']
+        
+        try:
+            art.get_extra()['outcome'] = art_data['Outcome'].encode('cp1252').decode('utf-8')
+        except:
+            art.get_extra()['outcome'] = art_data['Outcome']
+            
+        try:
+            art.get_extra()['comparator'] = art_data['Comparator'].encode('cp1252').decode('utf-8')
+        except:
+            art.get_extra()['comparator'] = art_data['Comparator']
+            
+        try: 
+            art.get_extra()['intervention'] = art_data['Intervention'].encode('cp1252').decode('utf-8')
+        except:
+            art.get_extra()['intervention'] = art_data['Intervention']
+            
+        try:
+            art.get_extra()['reasoning'] = art_data['Reasoning'].encode('cp1252').decode('utf-8')
+        except:
+            art.get_extra()['reasoning'] = art_data['Reasoning']
+            
         art.get_extra()['answer'] = art_data['Answer']
         art.get_extra()['PMC'] = pmc_tag
                         
