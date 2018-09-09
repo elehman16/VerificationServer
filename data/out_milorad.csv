@@ -1829,3 +1829,86 @@ milorad,3053,3177395,Significantly increased,"After 14 days, considerable improv
 milorad,2990,5423967,Cannot tell based on the abstract,, triacylglycerol:HDL-cholesterol ratio the MNSI score , baseline ," intensive lifestyle intervention (ILI), diabetes support and education (DSE) ",0,
 milorad,2990,5423967,Invalid Prompt,, triacylglycerol:HDL-cholesterol ratio the MNSI score , baseline ," intensive lifestyle intervention (ILI), diabetes support and education (DSE) ",1,"The outcome ""triacylglycerol:HDL-cholesterol ratio the MNSI score"" in the prompt is not one of the outcomes in the study. 
 This is probably the sentence from which the prompt's outcome is taken by mistake: ""For each unit increase in the triacylglycerol:HDL-cholesterol ratio the MNSI score increased by 0.02 (p < 0.001) in both the DSE and ILI groups.""."
+milorad,3042,3321528,Cannot tell based on the abstract,, the total MRC score of the legs , control , electrical muscle stimulation (EMS) ,0,
+milorad,3042,3321528,Significantly increased,"No significant between-group differences were observed for the MRC score of the left and the right arm either, while the MRC scores of the left and right legs were significantly higher in the EMS group. Similar between-group results were found for the total MRC score of the arms (EMS: 28 (26–30); control: 26 (22–30), P = 0.16) and the legs (EMS: 29 (26–30); control: 25 (20–28), P = 0.01).", the total MRC score of the legs , control , electrical muscle stimulation (EMS) ,0,
+milorad,3078,3650212,Cannot tell based on the abstract,, the ratio of the maxillary molar distalization movement relative to the overall opening space between the molars and second premolars , a combination of the FA with high-pull headgear worn at night , using the FA alone ,0,
+milorad,3078,3650212,Significantly decreased,"Finally, the ratio of the maxillary molar distalization movement relative to the overall opening space between the molars and second premolars was significantly lower in group 1 than in group 2 (70.74% ± 7.25% versus 90.97% ± 5.51%; p < 0.001).", the ratio of the maxillary molar distalization movement relative to the overall opening space between the molars and second premolars , a combination of the FA with high-pull headgear worn at night , using the FA alone ,0,
+milorad,3033,5864139,Cannot tell based on the abstract,, risk for acute pancreatitis , placebo , DPP-4i therapy ,0,
+milorad,3033,5864139,No significant difference,The overall rate of confirmed acute pancreatitis was low (0.095 events/100 patient-years) with a numerically increased but not statistically significant risk for acute pancreatitis with sitagliptin therapy (0.107/100 patient-years for sitagliptin treatment vs. 0.056/100 patient-years for placebo treatment)., risk for acute pancreatitis , placebo , DPP-4i therapy ,0,
+milorad,2941,2744923,Cannot tell based on the abstract,," Hemoglobin levels at days 7, 14, and 28 ", Sulphadoxine-pyrimethamine (SP)  , Chlorproguanil-dapsone (CPD) ,0,
+milorad,2941,2744923,Invalid Prompt,," Hemoglobin levels at days 7, 14, and 28 ", Sulphadoxine-pyrimethamine (SP)  , Chlorproguanil-dapsone (CPD) ,1,"According to the Table 5, statistical significance differs on day 7 and days 14 and 28,
+
+""Table 5
+
+Mean changes in Haemoglobin [Hb] after treatment with CPD and AL compared to the Hb changes in the SP treatment group on days 7, 14 and 28.
+	Treatment Group	Mean Hb(g/dl)	Contrast with SP group
+			Mean Difference	95% confidence interval	P-value
+CPD
+Day Number	Day-7	10.42	-0.32	-0.57, -0.08	0.01
+	Day-14	10.83	-0.03	-0.47, 0.41	0.9
+	Day-28	11.29	0.12	-0.18, 0.42	0.45"""
+milorad,3040,3671234,Significantly increased,We found that use of midazolam as adjuvant with the local anesthetic in spinal anaesthesia significantly increases the duration of analgesia (median 320 min versus 220 min), The duration of analgesia , hyperbaric bupivacaine 12.5 mg along with 0.4 mL of normal saline in the subarachnoid block , 12.5 mg hyperbaric bupivacaine along with preservative free midazolam 0.4 mL (2 mg) ,0,
+milorad,3014,4630743,Cannot tell based on the abstract,, Baseline cervical dilatation , 400 mg of metronidazole tablets (as a placebo) , 400 μg of misoprostol ,0,
+milorad,3014,4630743,Significantly increased,Baseline cervical dilatation of 4.6 ± 0.96 mm in the study group was significantly (P < 0.0001) higher than the control group (3.6 ± 0.82 mm)., Baseline cervical dilatation , 400 mg of metronidazole tablets (as a placebo) , 400 μg of misoprostol ,0,
+milorad,2989,5423967,Cannot tell based on the abstract,, light touch sensation in the feet , diabetes support and education (DSE) , intensive lifestyle intervention (ILI) ,0,
+milorad,2989,5423967,No significant difference,"The light touch sensation measured separately in either the right or left big toes (halluces) did not differ between ILI and DSE,The light touch sensation, measured by monofilament testing on both big toes and analysed separately, was abnormal (<8/10 pricks detected) in 28.3% of the participants in the DSE group and 25.6% of the participants in the ILI group on the right foot (difference not statistically significant) and 27.4% vs 24.4% (difference not statistically significant) of the participants, respectively, on the left foot.", light touch sensation in the feet , diabetes support and education (DSE) , intensive lifestyle intervention (ILI) ,0,
+milorad,3197,4568196,Cannot tell based on the abstract,, low-density lipoprotein-cholesterol (LDL-C) , baseline , hypocaloric diet without legumes (HDWL) ,0,
+milorad,3197,4568196,No significant difference,"HDWL marginally increased LDL-C in the first 3 weeks (8.4%, P = 0.060)", low-density lipoprotein-cholesterol (LDL-C) , baseline , hypocaloric diet without legumes (HDWL) ,0,
+milorad,3129,4078065,Cannot tell based on the abstract,, apoA-I- and HDL-mediated cholesterol efflux , placebo , 3.2&amp;amp;nbsp;g/day citrulline ,0,
+milorad,3129,4078065,Significantly increased,"Citrulline enhanced both apoA-I- and HDL-mediated cholesterol efflux from THP-1 macrophages by 96.1 ± 26.1% (p<0.05) and 14.4 ± 2.5% (p<0.05), respectively, compared to control (Fig. 3A and B).", apoA-I- and HDL-mediated cholesterol efflux , placebo , 3.2&amp;amp;nbsp;g/day citrulline ,0,
+milorad,3188,4836241,No significant difference,"At the 4th week after GnRH-a therapy, KMI and hot flash/sweating score results were as follows: Control group > Kuntai group > Tibolone group (P < 0.05); at the 8th and 12th week after GnRH-a therapy, KMI and hot flash/sweating score in Control group were significantly higher than the other two groups (P < 0.05), and no significant difference was identified between Kuntai and Tibolone group (P > 0.05).", KMI and hot flash/sweating score , Tibolone , Kuntai ,0,
+milorad,3111,3132864,Cannot tell based on the abstract,, discriminative formula ,"  DERIVATION GROUP sensitivity, specificity, PPV, NPV were 95%, 42%, 25%, and 98%  "," VALIDATION GROUP  the sensitivity, specificity, PPV, NPV were 95%, 44%, 22%, and 98% ",0,
+milorad,3111,3132864,No significant difference,"Thus, both in our derivation and validation groups, our formula had a NPV of 98%.", discriminative formula ,"  DERIVATION GROUP sensitivity, specificity, PPV, NPV were 95%, 42%, 25%, and 98%  "," VALIDATION GROUP  the sensitivity, specificity, PPV, NPV were 95%, 44%, 22%, and 98% ",0,
+milorad,3117,5516192,Cannot tell based on the abstract,," The pain score, swelling, incision redness, and discharge  at 48 hours postoperative ", traditional cold instruments (scalpel and scissors) , electrosurgical device ,0,
+milorad,3117,5516192,No significant difference,"The pain score, swelling, incision redness, and discharge were not different at 48 hours postoperative"," The pain score, swelling, incision redness, and discharge  at 48 hours postoperative ", traditional cold instruments (scalpel and scissors) , electrosurgical device ,0,
+milorad,3196,4568196,Significantly increased,HDWL significantly reduced WHR [P = 0.010 (3.2%)] and increased TC [P < 0.001 (6.3%)].,  total cholesterol (TC) , baseline , hypocaloric diet without legumes (HDWL) ,0,
+milorad,3168,3536709,Cannot tell based on the abstract,, The intake of carbohydrates ,  normally diet (ND) , low-protein vegetarian diet (LPVD) ,0,
+milorad,3168,3536709,Significantly increased,"The intake of carbohydrates was significantly higher during LPVD compared to ND (58.7 ± 2.4% vs. 49.8 ± 5.4%, p=0.003).", The intake of carbohydrates ,  normally diet (ND) , low-protein vegetarian diet (LPVD) ,0,
+milorad,3118,5516192,Cannot tell based on the abstract,," incision redness, swelling, or discharge at 10 days postoperative ", traditional cold instruments (scalpel and scissors) , electrosurgical device ,0,
+milorad,3118,5516192,No significant difference,"There was no significant difference in incision redness (P = .77), swelling (P = .33), or discharge (P = .78) at 10 days postoperative between dogs receiving cold or electroincision."," incision redness, swelling, or discharge at 10 days postoperative ", traditional cold instruments (scalpel and scissors) , electrosurgical device ,0,
+milorad,3176,3503942,No significant difference,The changes in neck ROM were also not significantly different between the groups (p>0.05)., neck range of motion ,  trigger point injections (TPI)+transcutaneous electrical nerve stimulation (TENS) , extracorporeal shock wave therapy (ESWT) ,0,
+milorad,3149,4083640,Cannot tell based on the abstract,, The mean consumption of tramadol hydrochloride , conventional thoracotomy (CT) , neurovascular bundle preservation (NBP) ,0,
+milorad,3149,4083640,No significant difference,"The mean consumption of tramadol hydrochloride was 1,025 ± 464 mg in the conventional thoracotomy group and 834 ± 568 mg in the NBP group (p = 0.22).", The mean consumption of tramadol hydrochloride , conventional thoracotomy (CT) , neurovascular bundle preservation (NBP) ,0,
+milorad,3144,5790265,Significantly decreased,"Incidence of recurrent syncope after 12 months (6.5% vs. 41.2%, P<0.01) and rate of positive HUTT after 30 days (9.7% vs.79.4%, P<0.01) were significantly lower in MVM group than in NVM group.", Incidence of recurrent syncope after 12 months , conventional treatment group (NVM) , Valsalva maneuver (MVM) ,0,
+milorad,3183,5633216,Significantly decreased,The results showed that plaque index and gingival index significantly reduced in two groups (p<0.001)., plaque index and gingival index , baseline ," Group I (CHX/thymol mouthwash-Vi-one), Group II (CHX mouthwash-Behsa) ",0,
+milorad,3177,4563303,Cannot tell based on the abstract,, Anterior (cm) , visual disuse group (VDG) , visual feedback group (VFG) ,0,
+milorad,3177,4563303,Invalid Prompt,, Anterior (cm) , visual disuse group (VDG) , visual feedback group (VFG) ,1," The outcome ""Anterior (cm)"" is very imprecise, poorly defined outcome."
+milorad,3140,3845560,Cannot tell based on the abstract,, Locoregional , flat intermittent constant rate infusion (Arm B) of DDP and 5-FU followed by radical radiotherapy , 2 cycles of sinusoidal chronomodulated infusion (Arm A) ,0,
+milorad,3140,3845560,Invalid Prompt,, Locoregional , flat intermittent constant rate infusion (Arm B) of DDP and 5-FU followed by radical radiotherapy , 2 cycles of sinusoidal chronomodulated infusion (Arm A) ,1,"""Locoregional"" is poorly defined outcome. Probably, ""locoregional recurrence"" is the right outcome.
+""Locoregional recurrence occurred in 16 (12.1%) patients: 9 (14.3%) in Arm A and 7 (11.5%) in Arm B (P = 0.539). """
+milorad,3167,3536709,Cannot tell based on the abstract,, intake of protein ,  normally diet (ND) , low-protein vegetarian diet (LPVD) ,0,
+milorad,3167,3536709,Significantly decreased,"During LPVD, the intake of protein was 10.1 ± 0.26% and during ND 17.6 ± 3.0% of the total energy intake (p=0.000).", intake of protein ,  normally diet (ND) , low-protein vegetarian diet (LPVD) ,0,
+milorad,3109,3132864,Cannot tell based on the abstract,, diagnose restriction , Glady’s algorithm , formula ,0,
+milorad,3109,3132864,Cannot tell based on the abstract,, diagnose restriction , Glady’s algorithm , formula ,0,
+milorad,3109,3132864,Invalid Prompt,, diagnose restriction , Glady’s algorithm , formula ,1,"The aim of the formula is to exclude restriction, not to diagnose restriction.
+
+Many sentences are indicative, but key statistical details are missing.
+
+""Our formula performs superior to the previously published algorithms in patients with concomitant low FVC and obstruction to exclude restriction.
+The sensitivity and NPV, important to exclude restriction, were lower in Glady’s algorithm compared to our formula.
+When we applied Glady’s algorithm to our study population, we found that our formula performed better based both on cutoffs and continuous assessment. Both sensitivity (95% vs 89%) and NPV (98% vs 96%) were found to be higher on our formula.""
+"
+milorad,3099,4830045,Cannot tell based on the abstract,, Fertilization characteristics , patients in the 20&amp;nbsp;h group , patients in the 3&amp;nbsp;h group ,0,
+milorad,3099,4830045,Cannot tell based on the abstract,, Fertilization characteristics , patients in the 20&amp;nbsp;h group , patients in the 3&amp;nbsp;h group ,0,
+milorad,3099,4830045,Invalid Prompt,, Fertilization characteristics , patients in the 20&amp;nbsp;h group , patients in the 3&amp;nbsp;h group ,1,"Elements of the fertilization characteristics show different statistical intergroup differences.
+
+""Table 1
+
+Comparison of fertilization characteristics between two groups
+	3 h group	20 h group	P
+Oocytes obtained, (n)	1139	1136	
+Metaphase II oocytes, n (%)	1066 (93.6)	1040(91.5)	0.06
+Normal fertilization (2PN), n (%)	672 (59.0)	700 (61.6)	0.20
+Polyspermy rate (>2PN), n (%)	226 (19.8)	171(15.1)	0.01"""
+milorad,3210,2784386,Significantly increased,"Renal function was significantly better in micafungin versus liposomal amphotericin B subjects: a difference (liposomal amphotericin B - micafungin in mean peak change in estimated glomerular filtration rate (ml/minute/1.73 m2) of -18.2 (P < 0.0001) and -17.7 (P = 0.0124) in non-ICU and ICU subjects, respectively.", renal function in ICU and non-ICU subjects , liposomal amphotericin B (3 mg/kg/day) , micafungin (100 mg/day for subjects 40 kg; 2 mg/kg/day for subjects ≤ 40 kg) ,0,
+milorad,3091,5800451,Cannot tell based on the abstract,, final irrigant solutions of root canal , 3 mL of 5.25% Sodium hypoclorite  with 808 nm Diode laser for 30 sec , 3 mL of 5.25% Sodium hypoclorite  with ultrasonic for 30 sec. ,0,
+milorad,3091,5800451,Invalid Prompt,, final irrigant solutions of root canal , 3 mL of 5.25% Sodium hypoclorite  with 808 nm Diode laser for 30 sec , 3 mL of 5.25% Sodium hypoclorite  with ultrasonic for 30 sec. ,1,"The outcome is problematic since the final irrigant solutions are obviously the same in the intervention and comparator (5.25% Sodium hypoclorite).
+""With respect to final irrigant solutions of root canal, characterize the reported difference between patients receiving 3 mL of 5.25% Sodium hypoclorite with ultrasonic for 30 sec. and those receiving 3 mL of 5.25% Sodium hypoclorite with 808 nm Diode laser for 30 sec. """
+milorad,3203,4787139,Cannot tell based on the abstract,, rate pressure product (RPP) , MDZ:FEN and DEX half , DEX full ,0,
+milorad,3203,4787139,Significantly decreased,"DEX full patients had significantly lower RPP as compared to MDZ:FEN and DEX half group in the intraoperative period at 5, 10, 90 and 120 min (P = 0.001). Lowest RPP in DEX full was seen at 10 min.", rate pressure product (RPP) , MDZ:FEN and DEX half , DEX full ,0,
+milorad,3147,4435250,Cannot tell based on the abstract,,  partner victimization ," Couples Health CoOp [CHC], Women’s Health CoOp ",  females in group Men’s Health CoOp/Women’s Health CoOp [MHC/WHC] ,0,
+milorad,3147,4435250,Significantly decreased,"78.6% of women in the MHC/WHC arm, compared with approximately 60% of women in the other two arms, reported no partner victimization (P=0.008).",  partner victimization ," Couples Health CoOp [CHC], Women’s Health CoOp ",  females in group Men’s Health CoOp/Women’s Health CoOp [MHC/WHC] ,0,
+milorad,3100,4830045,Cannot tell based on the abstract,, Embryo quality , Patients in the 20h group , Patients in the 3h group ,0,
+milorad,3100,4830045,Significantly increased,"When compared with the 20 h group, the 3 h group had a significantly higher polyspermy rate and percentage of optimal embryos.", Embryo quality , Patients in the 20h group , Patients in the 3h group ,0,
+milorad,3133,5156970,Cannot tell based on the abstract,, weekly consistency relief , baseline , azithromycin ,0,
+milorad,3133,5156970,No significant difference,"The proportion of weekly consistency relief was greater in azithromycin group for all weeks except for week 8; however, this difference was not significant.", weekly consistency relief , baseline , azithromycin ,0,
