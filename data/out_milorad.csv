@@ -2512,3 +2512,193 @@ The 2x2 RANOVA demonstrated a statistically significant main effect for changes 
 
 HIFT participants with higher baseline exercise enjoyment were significantly more likely to complete the study and were significantly more likely to plan to continue the same exercise than those in the prescribed intensity (ART) condition.""
 "
+milorad,4852,5425769,Cannot tell based on the abstract,, Holden Communication Scale (HCS) score  , baseline , reading group ,0,
+milorad,4852,5425769,No significant difference,"Data collection was carried out at baseline (T0) before randomization, and after 12 weeks (T1) and 24 weeks (T2), respectively.,An almost unchanged mean score of HCS was reported for the reading group (18.2 at T0 to 18.8 at T2).", Holden Communication Scale (HCS) score  , baseline , reading group ,0,
+milorad,4773,4334043,Cannot tell based on the abstract,"In group A, the total blood loss was 70 mL, when compared to 43#x2009;mL in group B (P value < 0.001).,To conclude, prior uterine artery ligation at its origin during TLH reduces the blood loss and surgical duration as well as the complications during surgery.", the total blood loss ," group B, TLH was done by ligating both uterine arteries at the beginning of the procedure "," group A, uterine arteries were ligated after the cornual pedicles ",0,
+milorad,4773,4334043,Significantly increased,"In group A, the total blood loss was 70 mL. In group B, the total blood loss was 43 mL. The comparison between the 2 groups revealed a statistically significant difference (P value < 0.001).", the total blood loss ," group B, TLH was done by ligating both uterine arteries at the beginning of the procedure "," group A, uterine arteries were ligated after the cornual pedicles ",0,
+milorad,5002,4227298,Cannot tell based on the abstract,, Efficiency , inflated estimates , use a larger pilot study ,0,
+milorad,5002,4227298,Invalid Prompt,, Efficiency , inflated estimates , use a larger pilot study ,1,"I can't find the precise statistical data.
+
+These sentences are indicative:
+""It is very much more efficient to use a larger pilot study, than to guard against the lack of precision by using inflated estimates.
+For all of the effect sizes considered, it is not efficient to use small pilots and apply the inflation adjustment, as this will result in larger sample sizes (pilot plus main study) in total"""
+milorad,4945,4120407,Cannot tell based on the abstract,, point prevalence abstinence after 6 months , no intervention , paper-based decision aid ,0,
+milorad,4945,4120407,Invalid Prompt,, point prevalence abstinence after 6 months , no intervention , paper-based decision aid ,1,"This is not an RCT but a study protocol.
+
+This study protocol material includes the results from previous RCTs. One of these RCTs is related to our prompt but does not contain all necessary statistical data:
+
+""The first study was a randomised controlled trial (RCT)12 that used a paper-based decision aid compared with no intervention. It concluded that the intervention group had more quit attempts (OR=1.52) and higher point prevalence abstinence after 6 months (20.2% vs 13.6%; OR=1.51)."""
+milorad,4781,4468068,Cannot tell based on the abstract,, Alzheimer’s Disease Assessment Scale-cognitive subscale (Chinese version) (ADAS-cog) at the follow-up at week 48 , donepezil hydrochloride (DH) group , Yishen Huazhuo decoction (YHD) group ,0,
+milorad,4781,4468068,Significantly decreased,"* indicates significance between the two study groups.,Table 2,<th colspan=""1"" rowspan=""1"" align=""left""></th><th colspan=""1"" rowspan=""1"" align=""left"">Group</th><th colspan=""1"" rowspan=""1"" align=""left"">Baseline</th><th colspan=""1"" rowspan=""1"" align=""left"">12weeks</th><th colspan=""1"" rowspan=""1"" align=""left"">24weeks</th><th colspan=""1"" rowspan=""1"" align=""left"">48weeks</th><th colspan=""1"" rowspan=""1"" align=""left"">Change 24 weeks</th><th colspan=""1"" rowspan=""1"" align=""left"">Change 48 weeks</th>,<td colspan=""1"" rowspan=""1"" align=""left"">
+<bold>ADAS-cog</bold>
+</td><td colspan=""1"" rowspan=""1"" align=""left""></td><td colspan=""1"" rowspan=""1"" align=""left""></td><td colspan=""1"" rowspan=""1"" align=""left""></td>,YHD 	22.03±9.14	20.63±9.37* 	18.18±9.79* 	19.65±10.62* 	-3.10±4.55* 	1.45±3.74*
+	DH 	24.62±8.57	24.01±8.64	22.24±8.89	25.16±11.21	-1.22±4.99	4.13±8.62,The mean scores of ADAS-cog showed a decrease of 3.10±4.55 in YHD group and a decrease of 1.22±4.99 in DH group during the 24 weeks treatment, with statistical significance. The follow-up at week 48 showed that after the treatment, compared with week 24, the scores of ADAS-cog increased 1.45±3.74 in YHD group, but less than the increase of 4.13±8.62 in DH group (p<0.05) (Fig 2).", Alzheimer’s Disease Assessment Scale-cognitive subscale (Chinese version) (ADAS-cog) at the follow-up at week 48 , donepezil hydrochloride (DH) group , Yishen Huazhuo decoction (YHD) group ,0,
+milorad,4965,5462678,Cannot tell based on the abstract,"The participants were assigned to the balance taping group, the control group, and the medication group.", effect of balance taping for prevention of menstrual pain in female middle school students after 4 hours , control , balance taping ,0,
+milorad,4965,5462678,Invalid Prompt,, effect of balance taping for prevention of menstrual pain in female middle school students after 4 hours , control , balance taping ,1,"There is a logical problem related to the outcome. The outcome ""effect of balance taping for prevention of menstrual pain in female middle school students after 4 hours"" could be related to the intervention (balance taping) but not to the comparator (control). Control group do not use balance taping.
+
+The key sentences are:
+""The participants were assigned to the balance taping group, the control group, and the medication group.
+The balance taping group showed a statistically significant difference in pain compared with the medication group from 4 hours after the taping, and it lasted until 24 hours after the taping.
+Balance taping was shown to be effective in relieving menstrual pain. Balance taping could be an effective alternative to medication in relieving menstrual pain and distress.
+In contrast, VAS score of the taping group started to decrease significantly from 1 hour after the treatment (3.94 ± 1.84), and it continued to reduce until 24 hours after (0.36 ± 0.70); the differences in the VAS scores were statistically significant compared with the other two groups (p<0.001) (Table 3Table 3.""
+"
+milorad,4894,1175929,Cannot tell based on the abstract,, mean arterial blood pressure , baseline , placebo ,0,
+milorad,4894,1175929,Significantly decreased,In the control group the mean arterial blood pressure decreased from 88 to 80 mmHg at 6 hours (P = 0.035);, mean arterial blood pressure , baseline , placebo ,0,
+milorad,5035,5106769,Cannot tell based on the abstract,, outcome measures , placebo , MPOD ,0,
+milorad,5035,5106769,Invalid Prompt,, outcome measures , placebo , MPOD ,1,"MPOD could not be an intervention compared to placebo since it's one of the secondary outcomes.
+
+The key sentences are:
+""Subjects supplemented their daily diet with either 10 mg L + 2 mg total Z (1 mg Z + 1 mg MZ; n = 24), 20 mg L + 4 mg total Z (2 mg Z + 2 mg MZ; n = 25), or placebo (n = 10) for 12 months.
+
+Secondary outcomes included MPOD and visual fatigue.""
+"
+milorad,4821,5331731,Cannot tell based on the abstract,"three groups: intervention (PBF) group, control 1 (C1; enhanced financing) group, and control 2 (C2; pure control) group.", nurses on average who left health centers , and control 2 (C2; pure control) , Performance-based financing (PBF) ,0,
+milorad,4821,5331731,Significantly decreased,"The PBF intervention group also had lower turnover of nurses, with 0.14 (p < 0.05) fewer nurses on average who left when compared with the C2 group.", nurses on average who left health centers , and control 2 (C2; pure control) , Performance-based financing (PBF) ,0,
+milorad,4916,3537701,Cannot tell based on the abstract,, Lumbar range of motion (ROM) as well as holding time during the Sorensen test and median frequency slope of all measured paravertebral muscles  , placebo US plus exercise , continuous US (1 MHz &amp;amp;amp;1.5 W/cm2) plus exercise ,0,
+milorad,4916,3537701,Invalid Prompt,, Lumbar range of motion (ROM) as well as holding time during the Sorensen test and median frequency slope of all measured paravertebral muscles  , placebo US plus exercise , continuous US (1 MHz &amp;amp;amp;1.5 W/cm2) plus exercise ,1,"The elements of the outcome ("" Lumbar range of motion (ROM) as well as holding time during the Sorensen test and median frequency slope of all measured paravertebral muscles"") statistically do not significantly differ compared to baseline, but there are not-unique intergroup statistical differences.
+
+The key sentences are:
+""Lumbar ROM as well as holding time during the Sorensen test and median frequency slope of all measured paravertebral muscles did not change significantly in either group (P > .05).
+Improvement in function and lumbar ROM as well as endurance time were significantly greater in the group receiving continuous US (P < .05).
+The study showed that adding continuous US to a semi supervised exercise program significantly improved function, lumbar ROM and endurance time.
+Although main effect of Time on holding time during Sorensen test was not significant (p = .09), the effect of Group showed statistical significance (p = .01).
+The values for median frequency slope did not show a statistically significant Time effect (p > .05); Group effect (p > .05) or Group × Time interaction (p > .05).""
+"
+milorad,4784,3457720,Cannot tell based on the abstract,," balance measure at week seven in the eyes-closed, single-leg condition ", control , therapeutic massage (TM) ,0,
+milorad,4784,3457720,No significant difference,"There were no significant group differences for any balance measure at week seven in the eyes-closed, single-leg condition."," balance measure at week seven in the eyes-closed, single-leg condition ", control , therapeutic massage (TM) ,0,
+milorad,4820,5331731,Cannot tell based on the abstract,, administrators on average who left health centers , control 1 (C1; enhanced financing) group , Performance-based financing (PBF) ,0,
+milorad,4820,5331731,Significantly decreased,There were 0.10 (p < 0.05) fewer administrators on average who left health centers in the PBF group than in the C1 group., administrators on average who left health centers , control 1 (C1; enhanced financing) group , Performance-based financing (PBF) ,0,
+milorad,4942,4907437,Significantly decreased,"Anxiety, depression, pain-related self-efficacy, pain acceptance, and social integration were better in the intervention group at 6 mo; at 12 mo, these differences remained statistically significant only for depression (−0.7, 95% CI −1.2 to −0.2) and social integration (0.8, 95% CI 0.4 to 1.2).", Depression , usual care and a relaxation CD , COPERS intervention ,0,
+milorad,5004,3682293,Significantly decreased,"Concentration of troponin T as the most sensitive marker for myocardial injury at POD1 was significantly lower in the sevoflurane group compared with the propofol group (unadjusted difference, -0.4; 95% CI, -0.7 to -0.1; P < 0.01; adjusted difference, -0.2; 95% CI, -0.4 to -0.02; P = 0.03, respectively).", Concentration of troponin T , propofol , sevoflurane ,0,
+milorad,4841,4138551,Cannot tell based on the abstract,, vertical facial dimension , group 2   treated with the Quad Pendulum (QP) and fixed appliances , group 1 treated with the Segmented Pendulum (SP) and fixed appliances; ,0,
+milorad,4841,4138551,Significantly decreased,"Overall treatment effect (T1 to T3),On the contrary, vertical facial dimension increased more in the QP (2.6° ± 0.6°) than in the SP (1.4° ± 0.7°) (p < 0.01).", vertical facial dimension , group 2   treated with the Quad Pendulum (QP) and fixed appliances , group 1 treated with the Segmented Pendulum (SP) and fixed appliances; ,0,
+milorad,4774,5119624,Significantly increased,"Among 249 evaluated patients with stage IIIB–IVM1a melanoma, DRR was higher with talimogene laherparepvec compared with GM-CSF (25.2% versus 1.2%; P<0.0001).", durable response rate (DRR) , granulocyte-macrophage colony-stimulating factor (GM-CSF) , Talimogene laherparepvec ,0,
+milorad,4877,3778569,Significantly increased,"The results showed a significant increase in the knowledge (P < 0.001), attitude (P = 0.04) and practice (P = 0.01) in the intervention group 1 month after intervention compared with that before intervention"," mean score of knowledge , attitude  and practice ", baseline , educational program on mothers for prevention of febrile seizure in children ,0,
+milorad,5045,2363617,Cannot tell based on the abstract,, requirement for the examination of nodes for N0 , 4th edition (1987) , 5th edition (1997) of the TNM classification for gastric cancer ,0,
+milorad,5045,2363617,Invalid Prompt,, requirement for the examination of nodes for N0 , 4th edition (1987) , 5th edition (1997) of the TNM classification for gastric cancer ,1,"There is only the abstract available. The statistical details are missing.
+
+These sentences are highly indicative:
+""The main change in the 5th edition (1997) of the TNM classification for gastric cancer compared to the 4th edition (1987) is the use of the number of involved nodes instead of the location of positive nodes. As a result stage grouping is also altered. A second change is the requirement for the examination of at least 15 nodes to justify the N0 status.
+The requirement for examining at least 15 nodes, however, could not be fulfilled in 38% of all node-negative patients and we found that a minimum of 5 consecutive negative lymph nodes is a reliable number for staging purposes. We conclude that the 5th edition of the TNM classification provides a better estimation of prognosis, however, examination of at least 15 negative regional lymph nodes is too high a threshold and 5 gives similar prognostic value.""
+
+"
+milorad,4988,2885597,Significantly decreased,"Ten patients (57.2±13.3 years old) with PBC and persistent elevations of liver enzymes after treatment with UDCA (600 mg/day) were randomized to continue UDCA (4 patients) or to receive micronized fenofibrate (200 mg/day) plus UDCA (6 patients) for 8 weeks. Significant reductions in total cholesterol, triglycerides and non-high density lipoprotein cholesterol were observed in the combination treatment group.", triglycerides , UDCA monotherapy , fenofibrate plus UDCA ,0,
+milorad,4803,5515881,Cannot tell based on the abstract,, spatial score , relaxation group , demanding balance training program ,0,
+milorad,4803,5515881,Significantly increased,"the balance group significantly improved in memory and spatial cognition.,The analysis of spatial score yielded a significant effect of group, F(1, 36) = 5.28, p = 0.027. After training, the adjusted spatial score was higher in the balance than in the relaxation training group (group difference = 0.31, 95% CI = [0.04, 0.58], d = 0.51, see Fig. 3).", spatial score , relaxation group , demanding balance training program ,0,
+milorad,5014,5009836,No significant difference,"There was no statistical difference between groups with regards to the incidence of hypotension (10.8% in the colloid group vs. 27.0% in the crystalloid group, P = 0.12).", elective cesarean delivery (CD) reduction in spinal-induced hypotension (SIH) , crystalloid preload - Lactated Ringer's solution (1500 ml) ," colloid preload - hydroxyethyl starch (6% in normal saline, 500 ml) ",0,
+milorad,4922,4260384,Significantly increased,"Similarly, a significant gain of CAL was seen in Group B (2.23 ± 0.75 mm, P < 0.001) as well as in group A (1.60 ± 0.86 mm, P < 0.001) showing a significant difference (P < 0.01) between the two groups.", Clinical attachment level ," Group A, which were treated with the envelope type of CAF ", Group B were treated with envelope type of CAF along with the Type I collagen membrane (NEOMEM) ,0,
+milorad,4919,4260384,Cannot tell based on the abstract,, the extent of root coverage at 6 months , baseline , Group B were treated with envelope type of CAF along with the Type I collagen membrane (NEOMEM) ,0,
+milorad,4919,4260384,Invalid Prompt,, the extent of root coverage at 6 months , baseline , Group B were treated with envelope type of CAF along with the Type I collagen membrane (NEOMEM) ,1,"The key sentence reveals that the outcome (""the extent of root coverage at 6 months"") includes the comparison between the results at 6 months and those at 3 months:
+""At six months, the extent of root coverage achieved at three months was slightly reduced in both groups, but this change was significant (P < 0.01) in group A and nonsignificant in group B.""
+
+I can't find the comparison to baseline but all these sentences are very indicative:
+The present study showed that envelope type of coronally advanced flap along with Type I collagen membrane (NEOMEM™) was more effective in producing root coverage in multiple adjacent gingival recession defects, resulting in significant root coverage at three and six months (87.17 and 77.77%, respectively) than the envelope type of CAF alone (71.22% at three months and 51.58% at six months).
+The envelope type of coronally advanced flap along with Type I collagen membrane (NEOMEM™) was more effective in producing root coverage in multiple gingival recession defects and was associated with more gain in the clinical attachment level and in the width of the keratinized tissue, than in the envelope type of coronally advanced flap alone.""
+"
+milorad,4932,4877983,Cannot tell based on the abstract,, RR for neonatal death for &amp;lt;5th percentile infants , Other site with improvement , Guatemala ,0,
+milorad,4932,4877983,Invalid Prompt,, RR for neonatal death for &amp;lt;5th percentile infants , Other site with improvement , Guatemala ,1,"The precise statistical details are missing. Words ""by far"" are not scientifically precise.
+
+These sentences are highly indicative:
+""Table 1 presents the relative risk (RR) and 95 % confidence intervals (CI) for neonatal mortality in the <5th percentile infants in the intervention compared to the control clusters during the ACT trial by site. Of the 7 sites that participated in the ACT trial, only 2 sites had significant reductions in 28 day neonatal mortality in the targeted group of <5th percentile infants, and of the two, Guatemala’s improvement was by far the largest. The RR for neonatal death for <5th percentile infants in Guatemala in the intervention clusters was 0.74 (0.68, 0.81), p = <.0001."""
+milorad,4853,5425769,Cannot tell based on the abstract,, Mini-Mental State Examination (MMSE) scores , reading group , Sonas programme ,0,
+milorad,4853,5425769,Invalid Prompt,, Mini-Mental State Examination (MMSE) scores , reading group , Sonas programme ,1,"The MMSE scores were used for stratification, they were not the outcome.
+
+The key sentences are:
+""When stratifying on MMSE (moderate and severe; cut-off of 10 points), a significant difference was found between the Sonas group and the reading group among those with an MMSE score of 0–10 at T0 (p = 0.011) and at T1 (p = 0.044), while among those with an MMSE score of 11–20, there was a significant difference between the Sonas and the reading group at baseline (p = 0.026). No difference was found between the Sonas and the control group. There was a significant reduction in mean HCS score from T0 to T1 (p = 0.015 in the group with an MMSE score of 11–20 and p = 0.017 in the group with an MMSE score of 0–10) and from T0 to T2 (p = 0.009 in the group with an MMSE score of 11–20 and p = 0.008 in the group with an MMSE score of 0–10) in the Sonas group. No significant changes were found in the other 2 groups (Table 3)."""
+milorad,4836,4138551,Cannot tell based on the abstract,, overjet in in maxillary incisors , group 2   treated with the Quad Pendulum (QP) and fixed appliances , group 1 treated with the Segmented Pendulum (SP) and fixed appliances; ,0,
+milorad,4836,4138551,No significant difference,"Overall treatment effect (T1 to T3),The overbite decreased more in the QP (−1.3 ± 0.5 mm) than in the SP (−0.7 ± 0.7 mm) (p < 0.05), whereas overjet did not show any significant difference between the groups.", overjet in in maxillary incisors , group 2   treated with the Quad Pendulum (QP) and fixed appliances , group 1 treated with the Segmented Pendulum (SP) and fixed appliances; ,0,
+milorad,4993,2360567,Cannot tell based on the abstract,, Tumour-specific survival after 1 year , immunomonitoring without immunomodulation , preoperative administration of interleukin-2 (IL-2) ,0,
+milorad,4993,2360567,Significantly increased,Tumour-specific survival in the IL-2 group and the control group was 98 vs 81% after 1 year and 86 vs 73% after 5 years (P=0.04)., Tumour-specific survival after 1 year , immunomonitoring without immunomodulation , preoperative administration of interleukin-2 (IL-2) ,0,
+milorad,4777,3466131,No significant difference,"After a median follow-up of 42 months, median PFS was 10.2 and 10.8 months (p = 0.74), while median OS was 20.0 and 25.3 months (p = 0.099), for groups A and B, respectively.", progression-free survival (PFS) ," group B (irinotecan, leucovorin, fluorouracil, bevacizumab, every 2 weeks; FOLFIRI-bevacizumab) "," group A (irinotecan, capecitabine, bevacizumab, every 3 weeks; XELIRI-bevacizumab) ",0,
+milorad,4947,4616122,Significantly decreased,Duration of pain in the good outcome group was significantly shorter than in the poor outcome group., Duration of pain , poor outcome group , good outcome group ,0,
+milorad,4899,1175929,Cannot tell based on the abstract,, Forearm blood flow , baseline , placebo ,0,
+milorad,4899,1175929,No significant difference,"Forearm blood flow increased from 3.7 ± 0.6 to 6.8 ± 1.1 ml/min per dl at 6 hours (P = 0.018) in the endotoxin group, but remained unchanged in the control group (3.8 ± 0.8 versus 4.4 ± 0.9 ml/min per dl; not significant).", Forearm blood flow , baseline , placebo ,0,
+milorad,4974,5958473,Cannot tell based on the abstract,Patients chose the smoking cessation intervention they preferred: a standard regimen of varenicline combined with post-discharge advanced behavioral support (group A) or one private consultation session during hospitalization (group B)., high abstinence rates of smoking in smokers hospitalized due to acute exacerbation of chronic obstructive pulmonary disease (COPD) , Varenicline , Varenicline in combination with behavioral support ,0,
+milorad,4974,5958473,Invalid Prompt,, high abstinence rates of smoking in smokers hospitalized due to acute exacerbation of chronic obstructive pulmonary disease (COPD) , Varenicline , Varenicline in combination with behavioral support ,1,"The study didn't compare ""Varenicline in combination with behavioral support and those receiving Varenicline"". As it could be seen from this sentence, the comparator is different: 
+""Patients chose the smoking cessation intervention they preferred: a standard regimen of varenicline combined with post-discharge advanced behavioral support (group A) or one private consultation session during hospitalization (group B).""
+
+Obviously, group B didn't receive Varenicline:
+""All patients quit smoking as advised, from day 1 of varenicline administration (group A) or from the day after the day of the initial counseling session (group B).""
+
+""The primary objective of the present study was to record smoking cessation rates induced by varenicline in combination with advanced behavioral support post-discharge in smokers hospitalized for exacerbation of COPD, bronchial asthma, or pneumonia and to compare this with the success rate of one private consultation session during hospitalization.""
+
+
+
+"
+milorad,5029,4215680,Cannot tell based on the abstract,, increased number of leukocytes (&amp;gt;10 HPF) , no treatment , rifaximin followed by the probiotic VSL#3 ,0,
+milorad,5029,4215680,Invalid Prompt,, increased number of leukocytes (&amp;gt;10 HPF) , no treatment , rifaximin followed by the probiotic VSL#3 ,1,"There is only one relevant sentence which represents the situation at the baseline, not after the treatment.
+
+""At the moment when the diagnoses of CBP and IBS were made, all patients had an increased number of leukocytes (>10 HPF) in the expressed prostatic secretion (EPS) and a positive sperm culture (with CFU > 105 ml−1)."""
+milorad,4913,400417,Cannot tell based on the abstract,," deaths, malignancies, hospitalizations, infections requiring intravenous antibiotics occurred, autoimmune events ", placebo , 30 μg IFN-β-1a by weekly self-injection for 24 weeks ,0,
+milorad,4913,400417,No significant difference,"There were no serious adverse events during the study: no deaths, malignancies, hospitalizations, or infections requiring intravenous antibiotics occurred. No autoimmune events were reported."," deaths, malignancies, hospitalizations, infections requiring intravenous antibiotics occurred, autoimmune events ", placebo , 30 μg IFN-β-1a by weekly self-injection for 24 weeks ,0,
+milorad,4818,5331731,Cannot tell based on the abstract,, compensation , control 1 (C1; enhanced financing) group , Performance-based financing (PBF) ,0,
+milorad,4818,5331731,Invalid Prompt,, compensation , control 1 (C1; enhanced financing) group , Performance-based financing (PBF) ,1,"The outcome is not ""compensation"" but ""job satisfaction with compensation"". With this later outcome, everything is pretty clear:
+
+""The PBF group had higher satisfaction with compensation than both control groups because they have higher compensation and financial autonomy, which was intended to be part of the PBF intervention.
+We thus hypothesize that PBF and enhanced financing would each have a negative effect on turnover, but enhanced financing would have a lower effect magnitude than PBF because satisfaction with compensation is a bigger determinant of turnover than other aspects of job satisfaction.
+Table 5
+Intervention v. control 1
+Compensation 8.64** (4.08)
+**p < 0.05
+As expected, we observed higher average satisfaction with compensation in the PBF group than in the C1 group, followed by C2 group.""
+
+"
+milorad,4952,4269914,Cannot tell based on the abstract,, serum lactic acid concentration , control group with Carborade Drink® alone ," experimental group was supplemented with 500 mg of SAA per kg of body mass, dissolved in 250 ml of a Carborade Drink®; ",0,
+milorad,4952,4269914,No significant difference,"For example, the change in the serum lactic acid concentration observed in the experimental group was sevenfold less than in the control group [21.8 vs. -3.7 L% for the control and experimental groups, respectively].,Table 1,Differences in physiological parameters at baseline and after 12-days training program in SAA supplemented group and a control group,Variable 	Cont (0) 	Ex (0) 	Cont (12) 	Ex (12) 	L% Cont 	L% Ex,LA	0.82 (0.76,0.9)	1.1 (0.98,1.1)	1.02 (0.92,1.15)	1.06 (0.905,1.2)	21.8	−3.7,An analysis of changes induced by SAA supplementation in experimental and control groups revealed the lack of statistically significant changes. However, the majority of changes observed in the experimental group are more pronounced than those observed in the control group.,A concentration of serum lactic acid in the control group elevated (21.8 L%), and decreased (−3.7 L%) in experiment group.", serum lactic acid concentration , control group with Carborade Drink® alone ," experimental group was supplemented with 500 mg of SAA per kg of body mass, dissolved in 250 ml of a Carborade Drink®; ",0,
+milorad,4931,4877983,Cannot tell based on the abstract,, Neonatal mortality , Standard Care , Antenatal Corticosteroids Trial (ACT) ,0,
+milorad,4931,4877983,Invalid Prompt,, Neonatal mortality , Standard Care , Antenatal Corticosteroids Trial (ACT) ,1,"The intervention (""Antenatal Corticosteroids Trial (ACT)"") is a problematic one. This is the name of the trial/study, not the intervention. The intervention in this study includes the use of ACS (antenatal corticosteroids)."
+milorad,5008,4764962,Invalid Prompt,, Efficacy of Biofeedback Therapy before and after Sphincteroplasty for Fecal Incontinence because of Obstetric Injury ," in Group III, only surgical management was performed "," Group II, biofeedback therapy was applied only 6 months after the surgery ",1,"The outcome ""Efficacy of Biofeedback Therapy before and after Sphincteroplasty for Fecal Incontinence because of Obstetric Injury"" is a problematic one. This outcome could be applied only on the group I. Group II has a biofeedback therapy only after the surgical procedure while group III don't have the biofeedback therapy at all.
+
+""In Group I, biofeedback therapy was performed 3 months before and 6 months after the surgery; in Group II, biofeedback therapy was applied only 6 months after the surgery; and in Group III, only surgical management was performed.""
+
+"
+milorad,4785,3457720,Cannot tell based on the abstract,, reflex measures , control , therapeutic massage (TM) ,0,
+milorad,4785,3457720,Invalid Prompt,, reflex measures , control , therapeutic massage (TM) ,1,"Although the majority of reflex measures do not reveal statistical significance, there are some results at 60 minutes which show a significant difference between the groups.
+
+The key sentences are:
+""An ANCOVA compared the two groups on week six and week seven reflex measures (Table 8). There were no significant group differences on any reflex variable. Thus, although the Hmax/Mmax ratio showed immediate treatment effects, there was no significant difference in baseline reflex measures over the long term.
+Reflex variables were measured pretreatment and 60-minute post-TM. Table 5 presents the ANCOVA results, assessing the treatment effects for the reflex variables. The TM group produced a significantly lower Hmax/Mmax ratio than the control group (F = 11.6, p < .05) at the 60-minute follow-up; there were no other significant effects. Pearson’s correlations between H-reflex and balance measures revealed significant relationships in the single-leg stance (Table 6).""
+
+"
+milorad,4776,5119624,Cannot tell based on the abstract,, The incidence of any grade adverse events , granulocyte-macrophage colony-stimulating factor (GM-CSF) , Talimogene laherparepvec ,0,
+milorad,4776,5119624,No significant difference,The incidence of any grade AE was similar in the two study arms, The incidence of any grade adverse events , granulocyte-macrophage colony-stimulating factor (GM-CSF) , Talimogene laherparepvec ,0,
+milorad,4827,5080766,Cannot tell based on the abstract,, the mean HDL-C level , baseline , GH doses of 0.033 (low)  for 260 weeks ,0,
+milorad,4827,5080766,Significantly increased,"In the low dose group, the mean HDL-C level after 260 weeks was significantly higher than at the start of GH therapy (p < 0.05, Fig. 1c), whereas no significant difference was found in the high dose group.", the mean HDL-C level , baseline , GH doses of 0.033 (low)  for 260 weeks ,0,
+milorad,4948,4616122,Significantly decreased,"The scores for the Visual Analogue Scale, Pain Disability Assessment Scale, and affective subscale of the Short-Form McGill Pain Questionnaire and number of nonorganic pain drawings in the good outcome group were significantly lower than those in the poor outcome group.", Visual Analogue Scale , poor outcome group , good outcome group ,0,
+milorad,4915,3537701,Cannot tell based on the abstract,," functional disability, measured by Functional Rating Index ", baseline ," continuous US (1 MHz &amp;amp;1.5 W/cm2) plus exercise , placebo US plus exercise ",0,
+milorad,4915,3537701,Significantly decreased,"Analysis showed that both groups had improved regarding function (FRI) and global pain (VAS) (P < .001).,Bonferroni post-hoc test revealed that FRI scores had improved significantly after 10 treatment sessions (p < .001) and over time after one month follow-up in both groups (p < .001)."," functional disability, measured by Functional Rating Index ", baseline ," continuous US (1 MHz &amp;amp;1.5 W/cm2) plus exercise , placebo US plus exercise ",0,
+milorad,5048,4461930,Cannot tell based on the abstract,, amyloid peptides , Semagacestat 140&amp;nbsp;mg , Semagacestat 100&amp;nbsp;mg ,0,
+milorad,5048,4461930,Cannot tell based on the abstract,, amyloid peptides , Semagacestat 140&amp;nbsp;mg , Semagacestat 100&amp;nbsp;mg ,0,
+milorad,5048,4461930,Invalid Prompt,, amyloid peptides , Semagacestat 140&amp;nbsp;mg , Semagacestat 100&amp;nbsp;mg ,1,"There is a difference in the impact of the drug on plasma amyloid peptides and CSF amyloid peptides. Additionally, I can't find relevant comparisons between the two treatment groups.
+
+These sentences are indicative:
+""Assignment to the active treatment arms was associated with reduction in plasma amyloid-β (Aβ) peptides
+plasma Aβ peptides (dose-related reduction in active arms)
+Levels of both species of amyloid peptide had declined in both active treatment arms by week 6, and the reductions were sustained until week 52 (the final analysis time point for plasma amyloid peptides).Table 1
+drug exposure and change in plasma Aβ40 are strongly correlated
+Semagacestat reduced plasma levels of Aβ peptides, consistent with γ-secretase inhibition in the periphery
+The absence of an effect on CSF Aβ peptide levels
+Exposure to drug was associated with reduction in plasma Aβ peptides,
+Placebo LY 100 mg LY 140 mg P -value
+Annualized change in CSF Aβ40 87.66 ± 847 (n = 10) −10.96 ± 1151 (n = 19) −599 ± 1786 (n = 18) 0.328
+Annualized change in CSF Aβ42 10.96 ± 87.66 (n = 10) −40.18 ± 109.6 (n = 19) −36.5 ± 182.7 (n = 18) 0.619
+Percentage change in plasma Aβ40 at week 52 4.77 ± 26.67 (n = 307) −37.54 ± 109.3 (n = 264) −47.76 ± 32.06 (n = 243) <0.001
+Percentage change in plasma Aβ42 at week 52 3.82 ± 20.75 (n = 309) −5.4 ± 53.1 (n = 265) −18.14 ± 33.0 (n = 245) <0.001""
+
+
+"
+milorad,4928,4331939,Cannot tell based on the abstract,, visual analog scale [VAS] , normal saline-pharmacopuncture-treated group , Chukyu (spinehealing)- pharmacopuncture-treated group  ,0,
+milorad,4928,4331939,Significantly decreased,"The differences in the VAS values between pre-pharmacopuncture treatment and post-pharmacopuncture treatment were obtained for both the experimental and the control groups. The VAS value for the experimental group went down 3.35 ± 1.99 points from 7.17 ± 1.78 at pre-treatment to 3.83 ± 2.04 posttreatment, and the value for the control group went down 1.82 ± 2.11 points from 7.05 ± 1.86 to 5.23 ± 2.29. This difference showed statistical meaning (t= -2.50, p〈 0.05) (see Table3)", visual analog scale [VAS] , normal saline-pharmacopuncture-treated group , Chukyu (spinehealing)- pharmacopuncture-treated group  ,0,
+milorad,5041,5309308,Cannot tell based on the abstract,, anxiety level , Rigid cystoscopy (CS) , Flexible cystoscopy (CS) ,0,
+milorad,5041,5309308,Significantly decreased,"The mean anxiety HADS score provided 7–10 days after rigid CS was 7.4 ± 3.2 points, range 0 ÷ 15 and was similar to pre-CS result. In the case of flexible CS, the mean anxiety HADS score reported 7–10 days post-CS was 5.9 ± 3.1 points, range 0 ÷ 11, and was lower when compared to pre-CS level (p < 0.001,,One point decrease in anxiety level was observed after flexible CS (p < 0.001).", anxiety level , Rigid cystoscopy (CS) , Flexible cystoscopy (CS) ,0,
+milorad,4819,5331731,Cannot tell based on the abstract,, compensation ,  and control 2 (C2; pure control) , control 1 (C1; enhanced financing) group ,0,
+milorad,4819,5331731,No significant difference,"For compensation, respondents in the C1 group reported an average of 8.64% (p < 0.05) lower between baseline and endline for being rewarded for their hard work than their counterparts in the PBF group. Likewise, respondents in the C2 group reported 3.88% (p < 0.1) lower points between baseline and endline for compensation than those in the C1 group. There was not a statistically significant difference between the C1 and C2 groups.", compensation ,  and control 2 (C2; pure control) , control 1 (C1; enhanced financing) group ,0,
+milorad,4878,3778569,Cannot tell based on the abstract,"The results showed a significant increase in the knowledge (P < 0.001), attitude (P = 0.04) and practice (P = 0.01) in the intervention group 1 month after intervention compared with that before intervention, while such an increase was not seen in the control group."," mean score of knowledge , attitude  and practice ", baseline , control ,0,
+milorad,4878,3778569,No significant difference,"After the educational intervention, a significant increase was established in the mean score of knowledge (P < 0.001), attitude (P = 0.04) and practice (P = 0.01) of mothers in the intervention group compared with the pre-intervention time, while there was no significant change in the mean score of the mentioned variables before and after the intervention in the control group.,The results showed a significant increase in the knowledge (P < 0.001), attitude (P = 0.04) and practice (P = 0.01) in the intervention group 1 month after intervention compared with that before intervention, while such an increase was not seen in the control group."," mean score of knowledge , attitude  and practice ", baseline , control ,0,
+milorad,4865,5450983,Cannot tell based on the abstract,, heart rate , control , Job Interview Simulation Training (JIST) ,0,
+milorad,4865,5450983,Invalid Prompt,, heart rate , control , Job Interview Simulation Training (JIST) ,1,"Both groups are compared to baseline but intergroup statistical difference related to heart rate is missing (Figure 2).
+
+The key sentences are:
+""After finishing JIST-sessions the experimental group had significant decrease in heart rate during the post-intervention role-play and demonstrated significant increase in their self-rated psychological readiness, whereas the control group did not have changes in these variables.
+Figure 2 Between-group differences in heart rate data.""
+"
