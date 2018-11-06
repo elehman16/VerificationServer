@@ -1,5 +1,393 @@
 UserID,Doctor Reviewed,PromptID,XML,Valid Prompt,Accept Label,Accept Reasoning,Outcome,Intervention,Comparator
-lehmer16,Annotator 1,104, 2871176 ,True,True,True,Postprandial plasma glucose,Liraglutide (1.2 mg) plus glimepiride,Rosiglitazone plus glimepiride
-lehmer16,Lidija,104, 2871176 ,True,True,True,Postprandial plasma glucose,Liraglutide (1.2 mg) plus glimepiride,Rosiglitazone plus glimepiride
-lehmer16,Annotator 1,105, 2871176 ,True,True,True,HbA1c level at 26 weeks,Liraglutide (1.8 mg) plus glimepiride,Placebo plus glimepiride
-lehmer16,Lidija,105, 2871176 ,True,True,True,HbA1c level at 26 weeks,Liraglutide (1.8 mg) plus glimepiride,Placebo plus glimepiride
+lehmer16,Annotator 1,2,3298351,True,True,True,venous ulcer healing,four-layer bandage,compression stocking
+lehmer16,Edin,2,3298351,True,True,True,venous ulcer healing,four-layer bandage,compression stocking
+lehmer16,Milorad,2,3298351,True,True,True,venous ulcer healing,four-layer bandage,compression stocking
+lehmer16,Lidija,2,3298351,True,True,True,venous ulcer healing,four-layer bandage,compression stocking
+lehmer16,Annotator 1,3,3298351,True,True,True,venous ulcer healing,compression therapy,no treatment
+lehmer16,Edin,3,3298351,True,True,True,venous ulcer healing,compression therapy,no treatment
+lehmer16,Milorad,3,3298351,True,True,True,venous ulcer healing,compression therapy,no treatment
+lehmer16,Lidija,3,3298351,True,False,False,venous ulcer healing,compression therapy,no treatment
+lehmer16,Annotator 1,4,3298351,True,True,True,venous ulcer healing,four-layer bandage,two-layer bandage
+lehmer16,Edin,4,3298351,True,True,True,venous ulcer healing,four-layer bandage,two-layer bandage
+lehmer16,Milorad,4,3298351,True,True,True,venous ulcer healing,four-layer bandage,two-layer bandage
+lehmer16,Lidija,4,3298351,True,True,True,venous ulcer healing,four-layer bandage,two-layer bandage
+lehmer16,Annotator 1,5,3298351,True,True,True,CEAP scores,four-layer bandage,two-layer bandage
+lehmer16,Edin,5,3298351,True,True,True,CEAP scores,four-layer bandage,two-layer bandage
+lehmer16,Milorad,5,3298351,True,True,True,CEAP scores,four-layer bandage,two-layer bandage
+lehmer16,Lidija,5,3298351,True,False,False,CEAP scores,four-layer bandage,two-layer bandage
+lehmer16,Annotator 1,6,3298351,True,True,True,CEAP scores,four-layer bandage,compression stocking
+lehmer16,Edin,6,3298351,True,True,True,CEAP scores,four-layer bandage,compression stocking
+lehmer16,Milorad,6,3298351,True,True,True,CEAP scores,four-layer bandage,compression stocking
+lehmer16,Lidija,6,3298351,True,True,True,CEAP scores,four-layer bandage,compression stocking
+lehmer16,Annotator 1,7,3298351,True,True,True,CEAP scores,two-layer bandage,compression stocking
+lehmer16,Edin,7,3298351,True,True,True,CEAP scores,two-layer bandage,compression stocking
+lehmer16,Milorad,7,3298351,True,True,True,CEAP scores,two-layer bandage,compression stocking
+lehmer16,Lidija,7,3298351,True,True,True,CEAP scores,two-layer bandage,compression stocking
+lehmer16,Annotator 1,8,3298351,True,True,True,venous ulcer healing,ProGuide system,Profore compression
+lehmer16,Edin,8,3298351,True,True,True,venous ulcer healing,ProGuide system,Profore compression
+lehmer16,Milorad,8,3298351,True,True,True,venous ulcer healing,ProGuide system,Profore compression
+lehmer16,Lidija,8,3298351,True,True,True,venous ulcer healing,ProGuide system,Profore compression
+lehmer16,Annotator 1,9,3298351,True,True,True,faster healing dynamics,layer compression,Compression stocking
+lehmer16,Edin,9,3298351,True,True,True,faster healing dynamics,layer compression,Compression stocking
+lehmer16,Milorad,9,3298351,True,True,True,faster healing dynamics,layer compression,Compression stocking
+lehmer16,Lidija,9,3298351,True,True,True,faster healing dynamics,layer compression,Compression stocking
+lehmer16,Annotator 1,10,3298351,True,True,True,higher percentage of healed area,layer compression,Compression stocking
+lehmer16,Edin,10,3298351,True,False,False,higher percentage of healed area,layer compression,Compression stocking
+lehmer16,Milorad,10,3298351,True,True,True,higher percentage of healed area,layer compression,Compression stocking
+lehmer16,Lidija,10,3298351,True,False,False,higher percentage of healed area,layer compression,Compression stocking
+lehmer16,Annotator 1,11,2366143,True,True,True,interval to delivery,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Edin,11,2366143,True,True,True,interval to delivery,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Milorad,11,2366143,True,True,True,interval to delivery,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Lidija,11,2366143,True,True,True,interval to delivery,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Annotator 1,12,2366143,True,True,True,birth weight,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Edin,12,2366143,True,True,True,birth weight,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Milorad,12,2366143,True,True,True,birth weight,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Lidija,12,2366143,True,True,True,birth weight,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Annotator 1,13,2366143,True,True,True,neonatal outcomes,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Edin,13,2366143,True,True,True,neonatal outcomes,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Milorad,13,2366143,True,True,True,neonatal outcomes,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Lidija,13,2366143,True,True,True,neonatal outcomes,tocolysis,antibiotic therapy and tocolysis
+lehmer16,Annotator 1,14,2366143,True,True,True,infection,antibiotic therapy,placebo
+lehmer16,Edin,14,2366143,True,True,True,infection,antibiotic therapy,placebo
+lehmer16,Milorad,14,2366143,True,True,True,infection,antibiotic therapy,placebo
+lehmer16,Lidija,14,2366143,True,True,True,infection,antibiotic therapy,placebo
+lehmer16,Annotator 1,15,2366143,True,True,True,gestational age,antibiotic therapy,placebo
+lehmer16,Edin,15,2366143,True,True,True,gestational age,antibiotic therapy,placebo
+lehmer16,Milorad,15,2366143,True,True,True,gestational age,antibiotic therapy,placebo
+lehmer16,Lidija,15,2366143,True,True,True,gestational age,antibiotic therapy,placebo
+lehmer16,Annotator 1,16,2366143,True,True,True,frequency of contractions,antibiotic therapy,placebo
+lehmer16,Edin,16,2366143,True,True,True,frequency of contractions,antibiotic therapy,placebo
+lehmer16,Milorad,16,2366143,True,False,False,frequency of contractions,antibiotic therapy,placebo
+lehmer16,Lidija,16,2366143,True,False,False,frequency of contractions,antibiotic therapy,placebo
+lehmer16,Annotator 1,17,2366143,False,False,False,cervical Bishop's score,antibiotic therapy,placebo
+lehmer16,Edin,17,2366143,False,False,False,cervical Bishop's score,antibiotic therapy,placebo
+lehmer16,Milorad,17,2366143,False,False,False,cervical Bishop's score,antibiotic therapy,placebo
+lehmer16,Lidija,17,2366143,False,False,False,cervical Bishop's score,antibiotic therapy,placebo
+lehmer16,Annotator 1,18,2366143,False,False,False,white blood cell count,antibiotic therapy,placebo
+lehmer16,Edin,18,2366143,False,False,False,white blood cell count,antibiotic therapy,placebo
+lehmer16,Milorad,18,2366143,False,False,False,white blood cell count,antibiotic therapy,placebo
+lehmer16,Lidija,18,2366143,False,False,False,white blood cell count,antibiotic therapy,placebo
+lehmer16,Annotator 1,19,3233526,False,False,False,pregnancy,twice weekly single iron tablet,weekly supplements of two iron tablets
+lehmer16,Edin,19,3233526,False,False,False,pregnancy,twice weekly single iron tablet,weekly supplements of two iron tablets
+lehmer16,Milorad,19,3233526,False,False,False,pregnancy,twice weekly single iron tablet,weekly supplements of two iron tablets
+lehmer16,Lidija,19,3233526,False,False,False,pregnancy,twice weekly single iron tablet,weekly supplements of two iron tablets
+lehmer16,Annotator 1,20,3233526,True,True,True,pregnancy,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Edin,20,3233526,True,True,True,pregnancy,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Milorad,20,3233526,True,True,True,pregnancy,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Lidija,20,3233526,True,True,True,pregnancy,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Annotator 1,21,3233526,True,True,True,pregnancy,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Edin,21,3233526,True,True,True,pregnancy,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Milorad,21,3233526,True,True,True,pregnancy,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Lidija,21,3233526,True,True,True,pregnancy,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Annotator 1,22,3233526,True,True,True,birth outcome,twice weekly single iron tablet,weekly supplements of two iron tablets
+lehmer16,Edin,22,3233526,True,True,True,birth outcome,twice weekly single iron tablet,weekly supplements of two iron tablets
+lehmer16,Milorad,22,3233526,True,True,True,birth outcome,twice weekly single iron tablet,weekly supplements of two iron tablets
+lehmer16,Lidija,22,3233526,True,True,True,birth outcome,twice weekly single iron tablet,weekly supplements of two iron tablets
+lehmer16,Annotator 1,23,3233526,True,True,True,birth outcome,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Edin,23,3233526,True,True,True,birth outcome,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Milorad,23,3233526,True,True,True,birth outcome,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Lidija,23,3233526,True,True,True,birth outcome,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Annotator 1,24,3233526,True,True,True,birth outcome,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Edin,24,3233526,True,True,True,birth outcome,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Milorad,24,3233526,True,True,True,birth outcome,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Lidija,24,3233526,True,True,True,birth outcome,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Annotator 1,25,3233526,True,True,True,side effects,weekly supplements of two iron tablets,no treatment
+lehmer16,Edin,25,3233526,True,True,True,side effects,weekly supplements of two iron tablets,no treatment
+lehmer16,Milorad,25,3233526,True,True,True,side effects,weekly supplements of two iron tablets,no treatment
+lehmer16,Lidija,25,3233526,True,True,True,side effects,weekly supplements of two iron tablets,no treatment
+lehmer16,Annotator 1,26,3233526,True,True,True,side effects,daily single iron tablets,no treatment
+lehmer16,Edin,26,3233526,True,True,True,side effects,daily single iron tablets,no treatment
+lehmer16,Milorad,26,3233526,True,True,True,side effects,daily single iron tablets,no treatment
+lehmer16,Lidija,26,3233526,True,True,True,side effects,daily single iron tablets,no treatment
+lehmer16,Annotator 1,27,3233526,True,True,True,side effects,twice weekly single iron tablet,no treatment
+lehmer16,Edin,27,3233526,True,True,True,side effects,twice weekly single iron tablet,no treatment
+lehmer16,Milorad,27,3233526,True,True,True,side effects,twice weekly single iron tablet,no treatment
+lehmer16,Lidija,27,3233526,True,True,True,side effects,twice weekly single iron tablet,no treatment
+lehmer16,Annotator 1,28,3233526,True,True,True,hemoglobin levels at week 28,weekly supplements of two iron tablets,no treatment
+lehmer16,Edin,28,3233526,True,True,True,hemoglobin levels at week 28,weekly supplements of two iron tablets,no treatment
+lehmer16,Milorad,28,3233526,True,False,False,hemoglobin levels at week 28,weekly supplements of two iron tablets,no treatment
+lehmer16,Lidija,28,3233526,True,True,True,hemoglobin levels at week 28,weekly supplements of two iron tablets,no treatment
+lehmer16,Annotator 1,29,3233526,True,True,True,hemoglobin levels at week 28,daily single iron tablets,no treatment
+lehmer16,Edin,29,3233526,True,True,True,hemoglobin levels at week 28,daily single iron tablets,no treatment
+lehmer16,Milorad,29,3233526,True,False,False,hemoglobin levels at week 28,daily single iron tablets,no treatment
+lehmer16,Lidija,29,3233526,True,False,False,hemoglobin levels at week 28,daily single iron tablets,no treatment
+lehmer16,Annotator 1,30,3233526,True,True,True,hemoglobin levels at week 28,twice weekly single iron tablet,no treatment
+lehmer16,Edin,30,3233526,True,True,True,hemoglobin levels at week 28,twice weekly single iron tablet,no treatment
+lehmer16,Milorad,30,3233526,True,False,False,hemoglobin levels at week 28,twice weekly single iron tablet,no treatment
+lehmer16,Lidija,30,3233526,True,False,False,hemoglobin levels at week 28,twice weekly single iron tablet,no treatment
+lehmer16,Annotator 1,31,3233526,True,True,True,hemoglobin levels at week 38,weekly supplements of two iron tablets,twice weekly single iron tablet
+lehmer16,Edin,31,3233526,True,False,False,hemoglobin levels at week 38,weekly supplements of two iron tablets,twice weekly single iron tablet
+lehmer16,Milorad,31,3233526,True,False,False,hemoglobin levels at week 38,weekly supplements of two iron tablets,twice weekly single iron tablet
+lehmer16,Lidija,31,3233526,True,False,False,hemoglobin levels at week 38,weekly supplements of two iron tablets,twice weekly single iron tablet
+lehmer16,Annotator 1,32,3233526,False,False,False,hemoglobin levels at week 38,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Edin,32,3233526,False,False,False,hemoglobin levels at week 38,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Milorad,32,3233526,False,False,False,hemoglobin levels at week 38,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Lidija,32,3233526,False,False,False,hemoglobin levels at week 38,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Annotator 1,33,3233526,True,True,True,ferritin levels at week 28,daily single iron tablets,weekly supplements of two iron tablets
+lehmer16,Edin,33,3233526,True,True,True,ferritin levels at week 28,daily single iron tablets,weekly supplements of two iron tablets
+lehmer16,Milorad,33,3233526,True,True,True,ferritin levels at week 28,daily single iron tablets,weekly supplements of two iron tablets
+lehmer16,Lidija,33,3233526,True,True,True,ferritin levels at week 28,daily single iron tablets,weekly supplements of two iron tablets
+lehmer16,Annotator 1,34,3233526,True,True,True,ferritin levels at week 28,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Edin,34,3233526,True,True,True,ferritin levels at week 28,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Milorad,34,3233526,True,True,True,ferritin levels at week 28,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Lidija,34,3233526,True,True,True,ferritin levels at week 28,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Annotator 1,35,3233526,True,True,True,ferritin levels at week 38,weekly supplements of two iron tablets,twice weekly single iron tablet
+lehmer16,Edin,35,3233526,True,True,True,ferritin levels at week 38,weekly supplements of two iron tablets,twice weekly single iron tablet
+lehmer16,Milorad,35,3233526,True,True,True,ferritin levels at week 38,weekly supplements of two iron tablets,twice weekly single iron tablet
+lehmer16,Lidija,35,3233526,True,True,True,ferritin levels at week 38,weekly supplements of two iron tablets,twice weekly single iron tablet
+lehmer16,Annotator 1,36,3233526,True,True,True,ferritin levels at week 38,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Edin,36,3233526,True,True,True,ferritin levels at week 38,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Milorad,36,3233526,True,True,True,ferritin levels at week 38,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Lidija,36,3233526,True,True,True,ferritin levels at week 38,weekly supplements of two iron tablets,daily single iron tablets
+lehmer16,Annotator 1,37,3233526,True,True,True,ferritin levels at week 38,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Edin,37,3233526,True,True,True,ferritin levels at week 38,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Milorad,37,3233526,True,True,True,ferritin levels at week 38,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Lidija,37,3233526,True,True,True,ferritin levels at week 38,daily single iron tablets,twice weekly single iron tablet
+lehmer16,Annotator 1,38,2674549,True,True,True,symptoms of RA,golimumab and methotrexate,methotrexate
+lehmer16,Edin,38,2674549,True,True,True,symptoms of RA,golimumab and methotrexate,methotrexate
+lehmer16,Milorad,38,2674549,True,True,True,symptoms of RA,golimumab and methotrexate,methotrexate
+lehmer16,Lidija,38,2674549,True,True,True,symptoms of RA,golimumab and methotrexate,methotrexate
+lehmer16,Annotator 1,39,2674549,True,True,True,physical function,golimumab and methotrexate,methotrexate
+lehmer16,Edin,39,2674549,True,True,True,physical function,golimumab and methotrexate,methotrexate
+lehmer16,Milorad,39,2674549,True,True,True,physical function,golimumab and methotrexate,methotrexate
+lehmer16,Lidija,39,2674549,True,True,True,physical function,golimumab and methotrexate,methotrexate
+lehmer16,Annotator 1,40,2674549,True,True,True,ACR20 ,placebo and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Edin,40,2674549,True,True,True,ACR20 ,placebo and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Milorad,40,2674549,True,True,True,ACR20 ,placebo and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Lidija,40,2674549,True,True,True,ACR20 ,placebo and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Annotator 1,41,2674549,True,True,True,Median HAQ-DI score,placebo and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Edin,41,2674549,True,True,True,Median HAQ-DI score,placebo and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Milorad,41,2674549,True,True,True,Median HAQ-DI score,placebo and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Lidija,41,2674549,True,True,True,Median HAQ-DI score,placebo and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Annotator 1,42,2674549,True,True,True,HAQ-DI score,50mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Edin,42,2674549,True,True,True,HAQ-DI score,50mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Milorad,42,2674549,True,True,True,HAQ-DI score,50mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Lidija,42,2674549,True,True,True,HAQ-DI score,50mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Annotator 1,43,2674549,True,True,True,HAQ-DI score,100mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Edin,43,2674549,True,True,True,HAQ-DI score,100mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Milorad,43,2674549,True,True,True,HAQ-DI score,100mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Lidija,43,2674549,True,True,True,HAQ-DI score,100mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Annotator 1,44,2674549,True,True,True,serious adverse events,100mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Edin,44,2674549,True,False,False,serious adverse events,100mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Milorad,44,2674549,True,False,False,serious adverse events,100mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Lidija,44,2674549,True,True,True,serious adverse events,100mg of Golimumab and methotrexate,placebo and methotrexate
+lehmer16,Annotator 1,45,2674549,True,True,True,serious adverse events,100mg of Golimumab and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Edin,45,2674549,True,False,False,serious adverse events,100mg of Golimumab and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Milorad,45,2674549,True,False,False,serious adverse events,100mg of Golimumab and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Lidija,45,2674549,True,True,True,serious adverse events,100mg of Golimumab and methotrexate,Golimumab 100 mg and placebo
+lehmer16,Annotator 1,46,2674549,True,True,True,serious adverse events,100mg of Golimumab and methotrexate,50mg of Golimumab and methotrexate
+lehmer16,Edin,46,2674549,True,False,False,serious adverse events,100mg of Golimumab and methotrexate,50mg of Golimumab and methotrexate
+lehmer16,Milorad,46,2674549,True,False,False,serious adverse events,100mg of Golimumab and methotrexate,50mg of Golimumab and methotrexate
+lehmer16,Lidija,46,2674549,True,False,False,serious adverse events,100mg of Golimumab and methotrexate,50mg of Golimumab and methotrexate
+lehmer16,Annotator 1,47,524504,True,True,True,induction-delivery interval,misoprostol,dinoprostone
+lehmer16,Edin,47,524504,True,True,True,induction-delivery interval,misoprostol,dinoprostone
+lehmer16,Milorad,47,524504,True,True,True,induction-delivery interval,misoprostol,dinoprostone
+lehmer16,Lidija,47,524504,True,True,True,induction-delivery interval,misoprostol,dinoprostone
+lehmer16,Annotator 1,48,524504,True,True,True,number of women who deliver within 12 hours,misoprostol,dinoprostone
+lehmer16,Edin,48,524504,True,True,True,number of women who deliver within 12 hours,misoprostol,dinoprostone
+lehmer16,Milorad,48,524504,True,True,True,number of women who deliver within 12 hours,misoprostol,dinoprostone
+lehmer16,Lidija,48,524504,True,True,True,number of women who deliver within 12 hours,misoprostol,dinoprostone
+lehmer16,Annotator 1,49,524504,True,True,True,number of women who deliver within 24 hours,misoprostol,dinoprostone
+lehmer16,Edin,49,524504,True,True,True,number of women who deliver within 24 hours,misoprostol,dinoprostone
+lehmer16,Milorad,49,524504,True,True,True,number of women who deliver within 24 hours,misoprostol,dinoprostone
+lehmer16,Lidija,49,524504,True,True,True,number of women who deliver within 24 hours,misoprostol,dinoprostone
+lehmer16,Annotator 1,50,524504,True,True,True,spontaneous rupture of membranes,misoprostol,dinoprostone
+lehmer16,Edin,50,524504,True,True,True,spontaneous rupture of membranes,misoprostol,dinoprostone
+lehmer16,Milorad,50,524504,True,True,True,spontaneous rupture of membranes,misoprostol,dinoprostone
+lehmer16,Lidija,50,524504,True,True,True,spontaneous rupture of membranes,misoprostol,dinoprostone
+lehmer16,Annotator 1,51,524504,True,True,True,administration of oxytocin augmentation,misoprostol,dinoprostone
+lehmer16,Edin,51,524504,True,True,True,administration of oxytocin augmentation,misoprostol,dinoprostone
+lehmer16,Milorad,51,524504,True,True,True,administration of oxytocin augmentation,misoprostol,dinoprostone
+lehmer16,Lidija,51,524504,True,True,True,administration of oxytocin augmentation,misoprostol,dinoprostone
+lehmer16,Annotator 1,52,524504,True,True,True,Caesarean section rate,dinoprostone,misoprostol
+lehmer16,Edin,52,524504,True,True,True,Caesarean section rate,dinoprostone,misoprostol
+lehmer16,Milorad,52,524504,True,True,True,Caesarean section rate,dinoprostone,misoprostol
+lehmer16,Lidija,52,524504,True,True,True,Caesarean section rate,dinoprostone,misoprostol
+lehmer16,Annotator 1,53,524504,True,True,True,abnormal fetal heart rate,dinoprostone,misoprostol
+lehmer16,Edin,53,524504,True,True,True,abnormal fetal heart rate,dinoprostone,misoprostol
+lehmer16,Milorad,53,524504,True,True,True,abnormal fetal heart rate,dinoprostone,misoprostol
+lehmer16,Lidija,53,524504,True,True,True,abnormal fetal heart rate,dinoprostone,misoprostol
+lehmer16,Annotator 1,54,524504,True,True,True,uterine tachysystole,misoprostol,dinoprostone
+lehmer16,Edin,54,524504,True,True,True,uterine tachysystole,misoprostol,dinoprostone
+lehmer16,Milorad,54,524504,True,True,True,uterine tachysystole,misoprostol,dinoprostone
+lehmer16,Lidija,54,524504,True,True,True,uterine tachysystole,misoprostol,dinoprostone
+lehmer16,Annotator 1,55,524504,True,True,True,Uterine Hyperstimulation,misoprostol,dinoprostone
+lehmer16,Edin,55,524504,True,True,True,Uterine Hyperstimulation,misoprostol,dinoprostone
+lehmer16,Milorad,55,524504,True,True,True,Uterine Hyperstimulation,misoprostol,dinoprostone
+lehmer16,Lidija,55,524504,True,True,True,Uterine Hyperstimulation,misoprostol,dinoprostone
+lehmer16,Annotator 1,56,524504,True,True,True,Meconium stained AF,dinoprostone,misoprostol
+lehmer16,Edin,56,524504,True,True,True,Meconium stained AF,dinoprostone,misoprostol
+lehmer16,Milorad,56,524504,True,True,True,Meconium stained AF,dinoprostone,misoprostol
+lehmer16,Lidija,56,524504,True,True,True,Meconium stained AF,dinoprostone,misoprostol
+lehmer16,Annotator 1,57,524504,True,True,True,perinatal death,dinoprostone,misoprostol
+lehmer16,Edin,57,524504,True,True,True,perinatal death,dinoprostone,misoprostol
+lehmer16,Milorad,57,524504,True,True,True,perinatal death,dinoprostone,misoprostol
+lehmer16,Lidija,57,524504,True,True,True,perinatal death,dinoprostone,misoprostol
+lehmer16,Annotator 1,58,524504,True,True,True,Neonatal resuscitation,dinoprostone,misoprostol
+lehmer16,Edin,58,524504,True,True,True,Neonatal resuscitation,dinoprostone,misoprostol
+lehmer16,Milorad,58,524504,True,True,True,Neonatal resuscitation,dinoprostone,misoprostol
+lehmer16,Lidija,58,524504,True,True,True,Neonatal resuscitation,dinoprostone,misoprostol
+lehmer16,Annotator 1,59,524504,True,True,True,Core blood pH,dinoprostone,misoprostol
+lehmer16,Edin,59,524504,True,True,True,Core blood pH,dinoprostone,misoprostol
+lehmer16,Milorad,59,524504,True,True,True,Core blood pH,dinoprostone,misoprostol
+lehmer16,Lidija,59,524504,True,True,True,Core blood pH,dinoprostone,misoprostol
+lehmer16,Annotator 1,60,524504,True,True,True,Hyperbilirubinemia,dinoprostone,misoprostol
+lehmer16,Edin,60,524504,True,True,True,Hyperbilirubinemia,dinoprostone,misoprostol
+lehmer16,Milorad,60,524504,True,True,True,Hyperbilirubinemia,dinoprostone,misoprostol
+lehmer16,Lidija,60,524504,True,True,True,Hyperbilirubinemia,dinoprostone,misoprostol
+lehmer16,Annotator 1,61,524504,True,True,True,Birth trauma,dinoprostone,misoprostol
+lehmer16,Edin,61,524504,True,True,True,Birth trauma,dinoprostone,misoprostol
+lehmer16,Milorad,61,524504,True,True,True,Birth trauma,dinoprostone,misoprostol
+lehmer16,Lidija,61,524504,True,True,True,Birth trauma,dinoprostone,misoprostol
+lehmer16,Annotator 1,62,1764008,True,True,True,rates of vacuum-assisted delivery rate,Meperidine analgesia,epidural analgesia
+lehmer16,Edin,62,1764008,True,True,True,rates of vacuum-assisted delivery rate,Meperidine analgesia,epidural analgesia
+lehmer16,Milorad,62,1764008,True,True,True,rates of vacuum-assisted delivery rate,Meperidine analgesia,epidural analgesia
+lehmer16,Lidija,62,1764008,True,True,True,rates of vacuum-assisted delivery rate,Meperidine analgesia,epidural analgesia
+lehmer16,Annotator 1,63,1764008,True,True,True,c-section,Meperidine analgesia,epidural analgesia
+lehmer16,Edin,63,1764008,True,True,True,c-section,Meperidine analgesia,epidural analgesia
+lehmer16,Milorad,63,1764008,True,True,True,c-section,Meperidine analgesia,epidural analgesia
+lehmer16,Lidija,63,1764008,True,True,True,c-section,Meperidine analgesia,epidural analgesia
+lehmer16,Annotator 1,64,1764008,True,True,True,duration of labor stages,Meperidine analgesia,epidural analgesia
+lehmer16,Edin,64,1764008,True,True,True,duration of labor stages,Meperidine analgesia,epidural analgesia
+lehmer16,Milorad,64,1764008,True,True,True,duration of labor stages,Meperidine analgesia,epidural analgesia
+lehmer16,Lidija,64,1764008,True,True,True,duration of labor stages,Meperidine analgesia,epidural analgesia
+lehmer16,Annotator 1,65,1764008,True,True,True,oxytocin augmentation,Meperidine analgesia,epidural analgesia
+lehmer16,Edin,65,1764008,True,True,True,oxytocin augmentation,Meperidine analgesia,epidural analgesia
+lehmer16,Milorad,65,1764008,True,True,True,oxytocin augmentation,Meperidine analgesia,epidural analgesia
+lehmer16,Lidija,65,1764008,True,True,True,oxytocin augmentation,Meperidine analgesia,epidural analgesia
+lehmer16,Annotator 1,66,1764008,True,True,True,preanalgesic visual analog pain,Meperidine analgesia,epidural analgesia
+lehmer16,Edin,66,1764008,True,True,True,preanalgesic visual analog pain,Meperidine analgesia,epidural analgesia
+lehmer16,Milorad,66,1764008,True,False,False,preanalgesic visual analog pain,Meperidine analgesia,epidural analgesia
+lehmer16,Lidija,66,1764008,True,True,True,preanalgesic visual analog pain,Meperidine analgesia,epidural analgesia
+lehmer16,Annotator 1,67,1764008,True,True,True,pain levels during first stage labor,epidural analgesia,Meperidine analgesia
+lehmer16,Edin,67,1764008,True,False,False,pain levels during first stage labor,epidural analgesia,Meperidine analgesia
+lehmer16,Milorad,67,1764008,True,True,True,pain levels during first stage labor,epidural analgesia,Meperidine analgesia
+lehmer16,Lidija,67,1764008,True,True,True,pain levels during first stage labor,epidural analgesia,Meperidine analgesia
+lehmer16,Annotator 1,68,1764008,True,True,True,pain levels during second stage labor,epidural analgesia,Meperidine analgesia
+lehmer16,Edin,68,1764008,True,True,True,pain levels during second stage labor,epidural analgesia,Meperidine analgesia
+lehmer16,Milorad,68,1764008,True,True,True,pain levels during second stage labor,epidural analgesia,Meperidine analgesia
+lehmer16,Lidija,68,1764008,True,False,False,pain levels during second stage labor,epidural analgesia,Meperidine analgesia
+lehmer16,Annotator 1,69,1764008,True,True,True,hypotension,epidural analgesia,Meperidine analgesia
+lehmer16,Edin,69,1764008,True,True,True,hypotension,epidural analgesia,Meperidine analgesia
+lehmer16,Milorad,69,1764008,True,True,True,hypotension,epidural analgesia,Meperidine analgesia
+lehmer16,Lidija,69,1764008,True,True,True,hypotension,epidural analgesia,Meperidine analgesia
+lehmer16,Annotator 1,70,1764008,True,True,True,nausea and vomiting,Meperidine analgesia,epidural analgesia
+lehmer16,Edin,70,1764008,True,True,True,nausea and vomiting,Meperidine analgesia,epidural analgesia
+lehmer16,Milorad,70,1764008,True,True,True,nausea and vomiting,Meperidine analgesia,epidural analgesia
+lehmer16,Lidija,70,1764008,True,True,True,nausea and vomiting,Meperidine analgesia,epidural analgesia
+lehmer16,Annotator 1,71,1764008,True,True,True,obstetric outcome,Meperidine analgesia,epidural analgesia
+lehmer16,Edin,71,1764008,True,True,True,obstetric outcome,Meperidine analgesia,epidural analgesia
+lehmer16,Milorad,71,1764008,True,True,True,obstetric outcome,Meperidine analgesia,epidural analgesia
+lehmer16,Lidija,71,1764008,True,True,True,obstetric outcome,Meperidine analgesia,epidural analgesia
+lehmer16,Annotator 1,72,1764008,True,True,True,obstetric intervention,Meperidine analgesia,epidural analgesia
+lehmer16,Edin,72,1764008,True,True,True,obstetric intervention,Meperidine analgesia,epidural analgesia
+lehmer16,Milorad,72,1764008,True,True,True,obstetric intervention,Meperidine analgesia,epidural analgesia
+lehmer16,Lidija,72,1764008,True,True,True,obstetric intervention,Meperidine analgesia,epidural analgesia
+lehmer16,Annotator 1,73,1764008,True,True,True,neonatal outcome,Meperidine analgesia,epidural analgesia
+lehmer16,Edin,73,1764008,True,True,True,neonatal outcome,Meperidine analgesia,epidural analgesia
+lehmer16,Milorad,73,1764008,True,True,True,neonatal outcome,Meperidine analgesia,epidural analgesia
+lehmer16,Lidija,73,1764008,True,True,True,neonatal outcome,Meperidine analgesia,epidural analgesia
+lehmer16,Annotator 1,74,3281242,True,True,True,continuous abstienence at week 12,varenicline,placebo
+lehmer16,Edin,74,3281242,True,True,True,continuous abstienence at week 12,varenicline,placebo
+lehmer16,Milorad,74,3281242,True,True,True,continuous abstienence at week 12,varenicline,placebo
+lehmer16,Lidija,74,3281242,True,True,True,continuous abstienence at week 12,varenicline,placebo
+lehmer16,Annotator 1,75,3281242,True,True,True,continuous abstienence at 24 week follow up,varenicline,placebo
+lehmer16,Edin,75,3281242,True,True,True,continuous abstienence at 24 week follow up,varenicline,placebo
+lehmer16,Milorad,75,3281242,True,True,True,continuous abstienence at 24 week follow up,varenicline,placebo
+lehmer16,Lidija,75,3281242,True,True,True,continuous abstienence at 24 week follow up,varenicline,placebo
+lehmer16,Annotator 1,76,3281242,True,True,True,frequency of quit events by day 35,varenicline,placebo
+lehmer16,Edin,76,3281242,True,True,True,frequency of quit events by day 35,varenicline,placebo
+lehmer16,Milorad,76,3281242,True,True,True,frequency of quit events by day 35,varenicline,placebo
+lehmer16,Lidija,76,3281242,True,True,True,frequency of quit events by day 35,varenicline,placebo
+lehmer16,Annotator 1,77,3281242,True,True,True,time to make first quit attempt,varenicline,placebo
+lehmer16,Edin,77,3281242,True,False,False,time to make first quit attempt,varenicline,placebo
+lehmer16,Milorad,77,3281242,True,True,True,time to make first quit attempt,varenicline,placebo
+lehmer16,Lidija,77,3281242,True,False,False,time to make first quit attempt,varenicline,placebo
+lehmer16,Annotator 1,78,2875419,True,True,True,improved A1C,detemir,glargine
+lehmer16,Edin,78,2875419,True,True,True,improved A1C,detemir,glargine
+lehmer16,Milorad,78,2875419,True,True,True,improved A1C,detemir,glargine
+lehmer16,Lidija,78,2875419,True,True,True,improved A1C,detemir,glargine
+lehmer16,Annotator 1,79,2875419,True,True,True,number of patients with A1C <7%,detemir,glargine
+lehmer16,Edin,79,2875419,True,True,True,number of patients with A1C <7%,detemir,glargine
+lehmer16,Milorad,79,2875419,True,True,True,number of patients with A1C <7%,detemir,glargine
+lehmer16,Lidija,79,2875419,True,True,True,number of patients with A1C <7%,detemir,glargine
+lehmer16,Annotator 1,80,2875419,True,True,True,number of patients with A1C <6.5%,detemir,glargine
+lehmer16,Edin,80,2875419,True,True,True,number of patients with A1C <6.5%,detemir,glargine
+lehmer16,Milorad,80,2875419,True,True,True,number of patients with A1C <6.5%,detemir,glargine
+lehmer16,Lidija,80,2875419,True,True,True,number of patients with A1C <6.5%,detemir,glargine
+lehmer16,Annotator 1,81,2875419,True,True,True,Hypoglycemia,detemir,glargine
+lehmer16,Edin,81,2875419,True,True,True,Hypoglycemia,detemir,glargine
+lehmer16,Milorad,81,2875419,True,True,True,Hypoglycemia,detemir,glargine
+lehmer16,Lidija,81,2875419,True,True,True,Hypoglycemia,detemir,glargine
+lehmer16,Annotator 1,82,2875419,True,True,True,Weight Gain,glargine,detemir
+lehmer16,Edin,82,2875419,True,True,True,Weight Gain,glargine,detemir
+lehmer16,Milorad,82,2875419,True,True,True,Weight Gain,glargine,detemir
+lehmer16,Lidija,82,2875419,True,True,True,Weight Gain,glargine,detemir
+lehmer16,Annotator 1,83,2875419,True,True,True,frequency of insulin doses,glargine,detemir
+lehmer16,Edin,83,2875419,True,True,True,frequency of insulin doses,glargine,detemir
+lehmer16,Milorad,83,2875419,True,True,True,frequency of insulin doses,glargine,detemir
+lehmer16,Lidija,83,2875419,True,True,True,frequency of insulin doses,glargine,detemir
+lehmer16,Annotator 1,84,2875419,True,True,True,drop-out rate,detemir,glargine
+lehmer16,Edin,84,2875419,True,True,True,drop-out rate,detemir,glargine
+lehmer16,Milorad,84,2875419,True,False,False,drop-out rate,detemir,glargine
+lehmer16,Lidija,84,2875419,True,False,False,drop-out rate,detemir,glargine
+lehmer16,Annotator 1,85,2944158,True,True,True,IVD comlication rates,routine replacement,staff inclination replacement
+lehmer16,Edin,85,2944158,True,True,True,IVD comlication rates,routine replacement,staff inclination replacement
+lehmer16,Milorad,85,2944158,True,True,True,IVD comlication rates,routine replacement,staff inclination replacement
+lehmer16,Lidija,85,2944158,True,True,True,IVD comlication rates,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,86,2944158,True,True,True,time until first complication,routine replacement,staff inclination replacement
+lehmer16,Edin,86,2944158,True,True,True,time until first complication,routine replacement,staff inclination replacement
+lehmer16,Milorad,86,2944158,True,True,True,time until first complication,routine replacement,staff inclination replacement
+lehmer16,Lidija,86,2944158,True,True,True,time until first complication,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,87,2944158,True,True,True,infections,routine replacement,staff inclination replacement
+lehmer16,Edin,87,2944158,True,True,True,infections,routine replacement,staff inclination replacement
+lehmer16,Milorad,87,2944158,True,True,True,infections,routine replacement,staff inclination replacement
+lehmer16,Lidija,87,2944158,True,True,True,infections,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,88,2944158,True,True,True,therapy duration,routine replacement,staff inclination replacement
+lehmer16,Edin,88,2944158,True,True,True,therapy duration,routine replacement,staff inclination replacement
+lehmer16,Milorad,88,2944158,True,True,True,therapy duration,routine replacement,staff inclination replacement
+lehmer16,Lidija,88,2944158,True,True,True,therapy duration,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,89,2944158,True,True,True,frequency of replacements,routine replacement,staff inclination replacement
+lehmer16,Edin,89,2944158,True,True,True,frequency of replacements,routine replacement,staff inclination replacement
+lehmer16,Milorad,89,2944158,True,True,True,frequency of replacements,routine replacement,staff inclination replacement
+lehmer16,Lidija,89,2944158,True,True,True,frequency of replacements,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,90,2944158,True,True,True,cost per patient,routine replacement,staff inclination replacement
+lehmer16,Edin,90,2944158,True,True,True,cost per patient,routine replacement,staff inclination replacement
+lehmer16,Milorad,90,2944158,True,True,True,cost per patient,routine replacement,staff inclination replacement
+lehmer16,Lidija,90,2944158,True,True,True,cost per patient,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,91,2944158,True,True,True,IVD complications per person,routine replacement,staff inclination replacement
+lehmer16,Edin,91,2944158,True,True,True,IVD complications per person,routine replacement,staff inclination replacement
+lehmer16,Milorad,91,2944158,True,True,True,IVD complications per person,routine replacement,staff inclination replacement
+lehmer16,Lidija,91,2944158,True,True,True,IVD complications per person,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,92,2944158,True,True,True,phlebitis,routine replacement,staff inclination replacement
+lehmer16,Edin,92,2944158,True,True,True,phlebitis,routine replacement,staff inclination replacement
+lehmer16,Milorad,92,2944158,True,True,True,phlebitis,routine replacement,staff inclination replacement
+lehmer16,Lidija,92,2944158,True,True,True,phlebitis,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,93,2944158,True,True,True,infiltration,routine replacement,staff inclination replacement
+lehmer16,Edin,93,2944158,True,True,True,infiltration,routine replacement,staff inclination replacement
+lehmer16,Milorad,93,2944158,True,True,True,infiltration,routine replacement,staff inclination replacement
+lehmer16,Lidija,93,2944158,True,True,True,infiltration,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,94,2944158,True,True,True,occlusion,routine replacement,staff inclination replacement
+lehmer16,Edin,94,2944158,True,True,True,occlusion,routine replacement,staff inclination replacement
+lehmer16,Milorad,94,2944158,True,True,True,occlusion,routine replacement,staff inclination replacement
+lehmer16,Lidija,94,2944158,True,True,True,occlusion,routine replacement,staff inclination replacement
+lehmer16,Annotator 1,95,2944158,True,True,True,IVD dwell times,staff inclination replacement,routine replacement
+lehmer16,Edin,95,2944158,True,True,True,IVD dwell times,staff inclination replacement,routine replacement
+lehmer16,Milorad,95,2944158,True,True,True,IVD dwell times,staff inclination replacement,routine replacement
+lehmer16,Lidija,95,2944158,True,True,True,IVD dwell times,staff inclination replacement,routine replacement
+lehmer16,Annotator 1,96,2858204,True,True,True,frequency of healed index ucler after 1 year,HBOT ,placebo
+lehmer16,Edin,96,2858204,True,True,True,frequency of healed index ucler after 1 year,HBOT ,placebo
+lehmer16,Milorad,96,2858204,True,True,True,frequency of healed index ucler after 1 year,HBOT ,placebo
+lehmer16,Lidija,96,2858204,True,True,True,frequency of healed index ucler after 1 year,HBOT ,placebo
+lehmer16,Annotator 1,97,2858204,True,True,True,hypoglycemia occuring after treatment,HBOT ,placebo
+lehmer16,Edin,97,2858204,True,True,True,hypoglycemia occuring after treatment,HBOT ,placebo
+lehmer16,Milorad,97,2858204,True,True,True,hypoglycemia occuring after treatment,HBOT ,placebo
+lehmer16,Lidija,97,2858204,True,True,True,hypoglycemia occuring after treatment,HBOT ,placebo
+lehmer16,Annotator 1,98,2858204,True,True,True,downsizing of ucler area 2 weeks after treatment,HBOT ,placebo
+lehmer16,Edin,98,2858204,True,True,True,downsizing of ucler area 2 weeks after treatment,HBOT ,placebo
+lehmer16,Milorad,98,2858204,True,True,True,downsizing of ucler area 2 weeks after treatment,HBOT ,placebo
+lehmer16,Lidija,98,2858204,True,True,True,downsizing of ucler area 2 weeks after treatment,HBOT ,placebo
+lehmer16,Annotator 1,99,2871176,True,True,True,HbA1c level at 26 weeks,Liraglutide (1.2 mg) plus glimepiride,Placebo plus glimepiride
+lehmer16,Edin,99,2871176,True,True,True,HbA1c level at 26 weeks,Liraglutide (1.2 mg) plus glimepiride,Placebo plus glimepiride
+lehmer16,Milorad,99,2871176,True,True,True,HbA1c level at 26 weeks,Liraglutide (1.2 mg) plus glimepiride,Placebo plus glimepiride
+lehmer16,Lidija,99,2871176,True,True,True,HbA1c level at 26 weeks,Liraglutide (1.2 mg) plus glimepiride,Placebo plus glimepiride
