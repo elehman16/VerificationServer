@@ -38,13 +38,17 @@ def annotate_full(userid):
     try:
         art, users = anne.get_next_article(userid)
     except:
+
         return flask.redirect(flask.url_for('finish'))
         
+    
     artid = art.get_extra()['path']
     doct_reason, doct_ans, doct_ans_names, doctor_names = get_stats(artid, users)
     
     # modify the pie-chart to contain the correct answer
-    tmp = art.get_extra()['answer'].lower().capitalize()   
+    tmp = art.get_extra()['answer'].lower().capitalize()
+    print("attempt")
+
     loc = reduce((lambda y, x: y if doct_ans[x][0] != tmp else x), range(len(doct_ans)), -1)
     if (loc == -1):
         doct_ans.append([tmp, 1])
@@ -58,9 +62,9 @@ def annotate_full(userid):
                                   userid = userid,
                                   pmc = art.get_extra()['PMC'],
                                   tabs = art.text,
-                                  outcome = art.get_extra()['outcome'],
-                                  intervention = art.get_extra()['intervention'],
-                                  comparator = art.get_extra()['comparator'],
+                                  outcome = art.get_extra()['outcome'].replace('&lt;', '<').replace('&gt;', '>'),
+                                  intervention = art.get_extra()['intervention'].replace('&lt;', '<').replace('&gt;', '>'),
+                                  comparator = art.get_extra()['comparator'].replace('&lt;', '<').replace('&gt;', '>'),
                                   doct_reason = hide_names_arr(doct_reason),
                                   doct_ans = doct_ans,
                                   hide_names = hide_names(doctor_names),
@@ -143,4 +147,4 @@ Run the application.
 """
 if __name__ == '__main__':
     #application.run()
-    application.run(host = '0.0.0.0', port = 8083)
+    application.run(host = '0.0.0.0', port = 8083, threaded = True)
