@@ -3387,3 +3387,52 @@ milorad,8940,4624894,Invalid Prompt,, relapse rates - patients with chronic hepa
 
 
  "
+milorad,8769,4545275,Cannot tell based on the abstract,, intervention group's cortisol levels , 3 weeks after the intervention , baseline ,0,
+milorad,8769,4545275,Cannot tell based on the abstract,, intervention group's cortisol levels , 3 weeks after the intervention , baseline ,0,
+milorad,8769,4545275,Significantly decreased,"Intervention group's cortisol levels before the intervention (0.30 ± 0.25) gradually decreased up to week 3 (0.16 ± 0.18), whilst the control group's cortisol levels before the intervention (0.21 ± 0.22) gradually increased up to week 3 (0.44 ± 0.35). The same interaction appears for the Amylase levels (p < 0.001).,There is an interaction between treatment group (intervention/control) and the weekly average cortisol level (p < 0.001) (Table 3) (Figure 2). Specifically, the intervention group's cortisol levels before the intervention (0.30 ± 0.25) gradually decreased up to week 3 (0.16 ± 0.18).", intervention group's cortisol levels , 3 weeks after the intervention , baseline ,0,
+milorad,8788,5861900,Cannot tell based on the abstract,, incidence of treatment-emergent serious adverse events (TE-SAEs) at 1-month postinfusion , placebo , I/V Human allogeneic mesenchymal stem cells (allo-hMSCs) 100M ,0,
+milorad,8788,5861900,No significant difference,No TE-SAEs occurred in any of the three groups in the first 30 days., incidence of treatment-emergent serious adverse events (TE-SAEs) at 1-month postinfusion , placebo , I/V Human allogeneic mesenchymal stem cells (allo-hMSCs) 100M ,0,
+milorad,8816,4445854,Cannot tell based on the abstract,, degree of conversion (DC %) , Filtek Silorane System , Clearfil SE Bond ,0,
+milorad,8816,4445854,Significantly increased,The DC% of Clearfil SE Bond was significantly greater than the Filtek Silorane System (p= 0.001)., degree of conversion (DC %) , Filtek Silorane System , Clearfil SE Bond ,0,
+milorad,8876,4546110,Cannot tell based on the abstract,, levels of anxiety , healthy subjects , sleepwalkers ,0,
+milorad,8876,4546110,Significantly increased,"Moreover, as compared to norms for healthy subjects (i.e. mean STAI-T ± SD: 35.5 ± 9.4 for working adults between 19–39 and 40–49 as reported in [51]), sleepwalkers displayed significantly higher anxiety (p = .00008),", levels of anxiety , healthy subjects , sleepwalkers ,0,
+milorad,8824,4696975,Invalid Prompt,, longer procedure time , those who did not , immediate recurrence of atrial premature beats (IRAPB) - after Catheter Ablation for Atrial Fibrillation ,1,"The prompt's outcome should be ""procedure time"", not ""longer procedure time"". It would be pretty awkward if the answer would be ""significantly decreased longer procedure time"".
+
+The groups and subgroups are not clearly marked in the prompt. The prompt is probably related to ""post-procedural IRAPB provocation group"" and its subgroups, but it could also be applied to the comparison between ""post-procedural IRAPB provocation group"" and ""No-Test group"".
+
+The key sentences are:
+""Among the post-procedural IRAPB provocation group, 33% showed IRAPB and required additional ablation with a longer procedure time (p=0.001) than those without IRAPB, without increasing the complication rate.
+
+the clinical recurrence rate was significantly lower in the IRAPB provocation group (15.0%) than in the No-Test group (28.0%; p=0.025) without lengthening of the procedure time or raising complication rate""
+"
+milorad,8783,5609346,Cannot tell based on the abstract,, exploitation to exploration , control , thinking protocol ,0,
+milorad,8783,5609346,Invalid Prompt,, exploitation to exploration , control , thinking protocol ,1,"Even if the key sentences are highly indicative, I can't find direct comparisons between the groups.
+
+The key sentences are:
+""The two groups with the thinking protocol leaped from exploitation to exploration (p<0.0001); the other two groups remained in exploitation (p=0.1173, p=0.0758)."""
+milorad,8936,4143738,Significantly increased,The mean volume of suction fluid was higher in the AM group (P=0.01)., suction fluid during the procedure , previous-evening (PM) PEG solutio , morning (AM) PEG (polyethylene glycol) solution ,0,
+milorad,8784,5609346,Cannot tell based on the abstract,, exploitation to exploration , control , thinking protocol + GPP ,0,
+milorad,8784,5609346,Cannot tell based on the abstract,, exploitation to exploration , control , thinking protocol + GPP ,0,
+milorad,8784,5609346,Invalid Prompt,, exploitation to exploration , control , thinking protocol + GPP ,1,"I can't find the direct comparison between "" thinking protocol + GPP"" group and control group. Nevertheless, these sentences are highly indicative:
+""Three groups received the thinking protocol, the GPP, or both, and the fourth group served as control.
+The two groups with the thinking protocol leaped from exploitation to exploration (p<0.0001)""
+"
+milorad,8799,2581757,Cannot tell based on the abstract,, Elevated Plasma lipid peroxides (MDA) levels , preeclamptics without vitamin supplements (group A) , preeclamptics with vitamin supplements (group B) ,0,
+milorad,8799,2581757,Significantly decreased,"Plasma lipid peroxides (MDA) levels were found to be elevated in preeclamptics with and without vitamin supplements. Moreover, the increase was significantly higher in Group A (p = 0.0013) than in Group B (p = 0.0184) as compared to placebo-P (Fig. 1).", Elevated Plasma lipid peroxides (MDA) levels , preeclamptics without vitamin supplements (group A) , preeclamptics with vitamin supplements (group B) ,0,
+milorad,8947,2755037,Cannot tell based on the abstract,, cranial nerve palsies - patients with carotid artery stenosis , endarterectomy , endovascular treatment ,0,
+milorad,8947,2755037,Invalid Prompt,, cranial nerve palsies - patients with carotid artery stenosis , endarterectomy , endovascular treatment ,1,"Even if the available details are highly indicative, the precise statistical outcome is missing. The key sentences are:
+""There were more minor strokes that lasted fewer than 7 days within 30 days of treatment in the endovascular group than in the endarterectomy group (8 vs 1), but there were more cranial nerve palsies in the endarterectomy group than in the endovascular group (0 vs 22). Most cranial nerve palsies were transient, but the symptoms were still present in one patient 1 month after treatment and had resolved by the 6-month follow-up."""
+milorad,8939,4624894,Cannot tell based on the abstract,, sustained virological response (SVR) Rates - patients with chronic hepatitis C with HCV genotype 6 , PEG-IFN α-2a - 48 weeks , PEG-IFN α-2a - 24 weeks ,0,
+milorad,8939,4624894,Invalid Prompt,, sustained virological response (SVR) Rates - patients with chronic hepatitis C with HCV genotype 6 , PEG-IFN α-2a - 48 weeks , PEG-IFN α-2a - 24 weeks ,1,"The important problem in this prompt is related to the therapy used in the study. The study examined the impact of a combination therapy ( PEG-IFN α-2a + RBV), not just of  PEG-IFN α-2a.
+
+Otherwise, the solution is pretty clear:
+""The SVR rates in the 24- and 48-week groups were 90.8% (69/76) and 88.2% (67/76), respectively; there was no significant difference between the groups (P = 0.597).
+
+For PP analysis, the primary endpoint was analyzed in the 70 and 66 patients in the 24- and 48-week groups, respectively, who completed the planned treatment duration and follow-up. The SVR rates in the 24- and 48-week groups were 95.7% (67/70) and 97.0% (64/66), respectively (P = 0.697) (Table 2).""
+"
+milorad,8782,5609346,No significant difference,"Three groups received the thinking protocol, the GPP, or both, and the fourth group served as control.,The two groups with the thinking protocol leaped from exploitation to exploration (p<0.0001); the other two groups remained in exploitation (p=0.1173, p=0.0758).", exploitation to exploration , control , GPP ,0,
+milorad,8907,2687939,Cannot tell based on the abstract,, 5-year metastasis-free survival rates (early breast cancer) , control FEC (fluorouracil) or E-CMF (epirubicin plus cyclophosphamide) , experimental FEC-D (fluorouracil-docetaxel) ,0,
+milorad,8907,2687939,No significant difference,"No evidence was found to suggest a difference in metastasis-free survival between experimental and control groups (446 vs 465 events; HR 0·96, 0·84–1·09; p=0·52). 5-year metastasis-free survival rates were 78·8% (95% CI 76·9–80·5) for the experimental group and 77·7% (75·8–79·5) for controls.", 5-year metastasis-free survival rates (early breast cancer) , control FEC (fluorouracil) or E-CMF (epirubicin plus cyclophosphamide) , experimental FEC-D (fluorouracil-docetaxel) ,0,
+milorad,8850,5702366,Cannot tell based on the abstract,, range of compliance (patients with COPD) , tiotropium/olodaterol (TIO/OLO) , umeclidinium/vilanterol (UMEC/VI) ,0,
+milorad,8850,5702366,Invalid Prompt,, range of compliance (patients with COPD) , tiotropium/olodaterol (TIO/OLO) , umeclidinium/vilanterol (UMEC/VI) ,1,"The key sentence is indicative, but precise statistical details are missing.
+""Most patients in both groups fell within the 80–120% range of compliance [UMEC/VI, 227 (97.8%); TIO/OLO, 208 (95.4%)]."""
