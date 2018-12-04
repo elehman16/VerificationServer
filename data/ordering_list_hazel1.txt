@@ -1,4 +1,4 @@
-Edin,130
+Edin,Lidija,Milorad,130
 Lidija,375
 Milorad,470
 Edin,937
