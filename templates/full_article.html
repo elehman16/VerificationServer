@@ -16,6 +16,7 @@
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/tabs.js') }}"> </script>
   </head>
 </head>
+
 <body style = "width: 100%; height: 100%;">
 
   <nav class="navbar navbar-inverse navbar-static-top">
@@ -32,36 +33,43 @@
   </nav>
 
   <!-- Initialize the tab with titles . -->
-  <div style = "height: 100%; width: 100%;">
-    <!-- Add in the beginning tab that displays the answer -->
-    <div id = "Statistics" class = "tabcontent statistic_content">
+  <div style = "height: 100%; width: 95%;">
 
-      <!-- This represents the answers of the docotrs (MC). -->
-      <div id = "all_doctor_answer" class = "column" style = "margin-left: 1%; float:left;">
-        <b> Annotator 1:</b> {{ answer }}
-        <br>
-        {%for d in doct_ans_names %}
-          <div id = "ans_{{ d[0] }}"> <b> {{ d[0] }}: </b> {{ d[1] }}</div>
-        {% endfor %}
+    <div class="answer-row">
+
+      <div id = "Statistics" class = "tabcontent statistic_content">
+        <!-- This represents the answers of the docotrs (MC). -->
+        <div id = "all_doctor_answer" class = "column" style = "margin-left: 1%; float:left;">
+          <b>Overall Answer:</b>
+          {%for ans in answer %}
+            <div> <b> {{ "Annotator " + loop.index|string }}: </b> {{ ans }} </div>
+          {% endfor %}
+        </div>
+
+        <br></br>
+        <br></br>
+
+        <!-- This represents the answers of the docotrs (MC). -->
+        <div class = "column" style = "margin-left: 1%; float:left;">
+          <b>Reasoning Given:</b>
+          {%for ans in reasoning %}
+            <div> <b> {{ "Annotator " + loop.index|string }}: </b> {{ ans }} </div>
+          {% endfor %}
+        </div>
       </div>
+    </div>
 
-      <!-- Pie chart for later use -->
-      <div id="piechart" style = "float:left;"> </div>
-
-      <!-- The location for the reasoning to be placed in later -->
-      <div id = "Statistics_content">
-      </div>
-
-  </div>
     <!-- Create a place to put content for each tab. -->
     {% for tab in tabs %}
-    <div id = '{{ tab[0] }}', class="tabcontent" style = "max-height: 60vh; overflow: auto;">
-    </div>
+      <div id = '{{ tab[0] }}', class="tabcontent" style = "max-height: 60vh; overflow: auto;">
+      </div>
     {% endfor %}
+
   </div>
 
+
   <!-- Display the prompt -->
-  <div class = "row">
+  <div class = "row" style="width: 90%">
     <label style = "margin-left: 45px; margin-top: 20px;">
       With respect to <span id = "outcome">{{ outcome }}</span>, characterize the
       reported difference between patients receiving <span id = "intervention">
@@ -97,47 +105,10 @@
 
     <div id = "answers" class = "row" style = "content: ""; display: table; clear: both; margin-left: 1%">
 
-      <div class = "column answer-col">
-        <b> <i> Annotator 1 </i>Answer: </b>
-        <!-- Multiple choice -->
-        <form>
-          <!-- Good answer -->
-          <div class="radio">
-            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
-              Accept
-            </label>
-          </div>
-
-          <!-- Bad answer -->
-          <div class="radio">
-            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
-              Reject
-            </label>
-          </div>
-        </form>
-
-        <!-- The last one for the answer check -->
-        <b> <i> Annotator 1 </i>Reasoning: </b>
-        <form>
-          <div class="radio">
-            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
-              Accept
-            </label>
-          </div>
-
-          <div class="radio">
-            <label> <input type="radio" name="optradio" onclick = "enable_submit()">
-              Reject
-            </label>
-          </div>
-        </form>
-
-      </div>
-
       <!-- Create a form for each doctor -->
-      {% for n in hide_names %}
+      {% for n in answer %}
       <div class = "column answer-col">
-        <b> <i> {{ n }} </i>Answer: </b>
+        <b> <i> {{ "Annotator " + loop.index|string }} </i>Answer: </b>
         <!-- Multiple choice -->
         <form>
           <!-- Good answer -->
@@ -156,7 +127,7 @@
         </form>
 
         <!-- Quote selection choice -->
-        <b> <i> {{ n }} </i>Reasoning: </b>
+        <b> <i> {{ "Annotator " + loop.index|string }} </i>Reasoning: </b>
         <form>
           <div class="radio">
             <label> <input type="radio" name="optradio" onclick = "enable_submit()">
@@ -183,76 +154,13 @@
   </div>
 
   <script>
-    // Put the doctor responses into storage.
-    var elem = document.createElement('div');
-    elem.dataset.pie = {{ doct_ans|tojson }};
-    elem.id = "data-pie";
-    document.body.appendChild(elem);
-
-    // Put doctor names into storage.
-    var elem2 = document.createElement("div");
-    elem2.dataset.names = {{ doctor_names|tojson }};
-    elem2.id = "data-names";
-    document.body.appendChild(elem2);
-
-    // Put doctor names into storage.
-    var elem3 = document.createElement("div");
-    elem3.dataset.names = {{ hide_names|tojson }};
-    elem3.id = "data-hide";
-    document.body.appendChild(elem3);
-  </script>
-
-  <script>
     // Put the content into the first tab.
+
     var tab = {{ tabs|tojson }};
     breakDownText(tab);
     // Open the first tab.
     var tablinks = document.getElementsByClassName("tablinks");
     tablinks[0].click();
-  </script>
-
-  <script>
-
-    function highlight_main() {
-
-      // get the data and store it
-      var doct_reason = {{ doct_reason|tojson }};
-      var elem = document.createElement('div');
-      var saved = [];
-      for (var i = 0; i < doct_reason.length; i++) {
-        saved = saved.concat(doct_reason[i]);
-      }
-
-      elem.dataset.doct_reason = saved.slice().join("!!!");
-      elem.id = "data-doct-reason";
-      document.body.appendChild(elem);
-
-      // put answer key up
-      var add_to = document.getElementById("Statistics_content");
-      add_to.innerHTML += "<b>Annotator 1:</b> <span style = 'font-weight: normal;' id = 'answer-key'>{{ reasoning }}</span> <br>";
-
-      highlight_all(doct_reason, getDoctorSelected());
-      reset_answer(); // reset the answer key
-
-
-      // add in the beginnining section that has what everyone highlights
-      for (var i = 0; i < doct_reason.length; i++) {
-        if (doct_reason[i][1].includes("</td>")) {
-          var data = "";
-          var tmp_arr = $(doct_reason[i][1]);
-          for (var j = 0; j < tmp_arr.length; j++) {
-            data += tmp_arr[j].innerText;
-          }
-
-          doct_reason[i][1] = data;
-        }
-
-        add_to.innerHTML += "<div id = res_" + doct_reason[i][0] + "> <b>" + doct_reason[i][0] +  "</b>" + ": " + doct_reason[i][1] + "<br> </div>";
-      }
-    }
-
-    highlight_main();
-
   </script>
 
   <!-- Storing of data to be used for later when submitting -->

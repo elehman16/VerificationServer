@@ -59,6 +59,10 @@ label {
     text-align: center;
 }
 
+title {
+  font-weight: bold;
+}
+
 body {font-family: Arial;}
 
 /* CSS for the answer columns */
@@ -74,7 +78,7 @@ body {font-family: Arial;}
 
 /* CSS for the Prompt columns */
 .prompt-col {
-  border: 1px solid grey;
+   border: 1px solid grey;
    padding: 5px;
    width: 42.5%;
    margin-left: .25%;

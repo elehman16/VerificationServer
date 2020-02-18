@@ -11,32 +11,16 @@ function enable_submit() {
 * Gets the data from the inputs and puts them into a dictionary.
 */
 function get_data() {
-  var ans = document.getElementById("answers").getElementsByTagName("input");
-  var names = document.getElementById("data-names").dataset.names.split(",");
-  names.splice(0, 0, "Annotator 1"); // insert into the beginning of the array
-
   var data = {};
+  var ans = document.getElementById("answers").getElementsByTagName("input");
   var pv = document.getElementById("prompt-answer").getElementsByTagName("input");
-  data["Prompt Validity"] = pv[0].checked;
-
-  var who = 0; // each person has 4 inputs associated with it
-  var names_count = 0;
-  for (var i = 0; i < ans.length; i += 2) {
-    if (who == 0) {
-      data[names[names_count] + " answer"] = ans[i].checked;
-    }
-
-    if (who == 1) {
-      data[names[names_count] + " reasoning"] = ans[i].checked;
-    }
-
-    who += 1;
-    if (who == 2) {
-      who = 0;
-      names_count += 1
-    }
+  var num_annotators = 0;
+  for (var i = 0; i < ans.length; i += 4) {
+    data["Annotator " + num_annotators] = [ans[i].checked, ans[i + 2].checked];
+    num_annotators++;
   }
 
+  data["Prompt Validity"] = pv[0].checked;
   return data;
 }
 
@@ -57,8 +41,7 @@ function all_checked() {
 */
 function submit_final() {
   post("/submit/", {"userid": document.getElementById("userid").innerHTML,
-                    "Doctors Reviewed": document.getElementById("data-names").dataset.names,
-                    "PromptID": document.getElementById("artid").innerHTML,
+                    "PromptID": document.getElementById("id").innerHTML,
                     "XML": document.getElementById("pmc").innerHTML,
                     "Label": JSON.stringify(get_data()),
                     "Outcome": document.getElementById("outcome").innerText,

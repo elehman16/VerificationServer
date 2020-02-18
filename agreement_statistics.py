@@ -8,10 +8,8 @@ Created on Fri Apr 13 09:11:36 2018
 #!/usr/bin/env python
 import pandas as pd
 import numpy as np
-import nltk
 import re
 import codecs
-import glob
  
 global doctor_agreement               
 doctor_agreement = {}
@@ -201,8 +199,6 @@ def get_stat(art_id, user):
                     doct_ans_dict[data_opt[j][i][2]] += 1
                 else: 
                     doct_ans_dict[data_opt[j][i][2]] = 1
-
-
     
     # put into a format of Array-of [option, frequency]
     doct_ans_freq = [['Option', 'Frequency']]
