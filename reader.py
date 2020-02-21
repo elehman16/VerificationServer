@@ -134,15 +134,16 @@ class XMLReader(Reader):
         df_ans = pd.read_csv('./data/prompt_gen_data/out_sergii.csv')
         row = df[df['PromptID'] == int(prompt)].iloc[0]
         
-        # these are still flipped by accident
+        # these are still flipped by accident (in out_sergii)
         cmp, out, itv = row['Intervention'], row['Outcome'], row['Comparator']
         row_ans = df_ans[(df_ans['Intervention'] == itv) & 
                          (df_ans['Outcome'] == out) & 
                          (df_ans['Comparator'] == cmp)].iloc[0]
         
-        return {'intervention': itv,
+        # flip them back here. 
+        return {'intervention': cmp,
                 'outcome': out, 
-                'comparator': cmp,
+                'comparator': itv,
                 'reason': row_ans['Reasoning'],
                 'answer': row_ans['Answer'],
                 'offset': [[int(x) for x in row_ans['xml_offsets'].split(':')]]}
