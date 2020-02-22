@@ -132,6 +132,7 @@ class XMLReader(Reader):
         """ @return the prompt generated, and the answer given. """
         df = pd.read_csv('./data/prompt_gen_data/prompts_merged.csv')
         df_ans = pd.read_csv('./data/prompt_gen_data/out_sergii.csv')
+        df_ans = df_ans.fillna('')
         row = df[df['PromptID'] == int(prompt)].iloc[0]
         
         # these are still flipped by accident (in out_sergii)
@@ -146,7 +147,7 @@ class XMLReader(Reader):
                 'comparator': itv,
                 'reason': row_ans['Reasoning'],
                 'answer': row_ans['Answer'],
-                'offset': [[int(x) for x in row_ans['xml_offsets'].split(':')]]}
+                'offset': [[int(x) if x != '' else 0 for x in row_ans['xml_offsets'].split(':')]]}
         
     def _fix_text_(self, text):
         new_text = []
