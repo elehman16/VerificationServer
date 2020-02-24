@@ -147,7 +147,7 @@ class XMLReader(Reader):
                 'comparator': itv,
                 'reason': row_ans['Reasoning'],
                 'answer': row_ans['Answer'],
-                'offset': [[int(x) if x != '' else 0 for x in row_ans['xml_offsets'].split(':')]]}
+                'offset': [[int(x) if x.isdigit()  else 0 for x in row_ans['xml_offsets'].split(':')]]}
         
     def _fix_text_(self, text):
         new_text = []
