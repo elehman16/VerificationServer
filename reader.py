@@ -9,6 +9,7 @@ import numpy as np
 from functools import reduce
 import article
 import pandas as pd 
+import ftfy
 
 class Reader(object, metaclass=abc.ABCMeta):
     """Read article information.
@@ -142,12 +143,12 @@ class XMLReader(Reader):
                          (df_ans['Comparator'] == cmp)].iloc[0]
         
         # flip them back here. 
-        return {'intervention': cmp,
-                'outcome': out, 
-                'comparator': itv,
-                'reason': row_ans['Reasoning'],
-                'answer': row_ans['Answer'],
-                'offset': [[int(x) if x.isdigit()  else 0 for x in row_ans['xml_offsets'].split(':')]]}
+        return {'intervention': ftfy.fix_text(cmp),
+                'outcome': ftfy.fix_text(out), 
+                'comparator': ftfy.fix_text(itv),
+                'reason': ftfy.fix_text(row_ans['Reasoning']),
+                'answer': ftfy.fix_text(row_ans['Answer']),
+                'offset': [[int(x) if x.isdigit() else 0 for x in row_ans['xml_offsets'].split(':')]]}
         
     def _fix_text_(self, text):
         new_text = []
