@@ -11286,7 +11286,7 @@ PromptID,PMCID,Outcome,Intervention,Comparator
 12311,5741924,weight gain,exercise,no exercise
 12312,5741924,proportion of newborns small-for-gestational age and large-for-gestational age,exercise,no exercise
 12313,5741924,"mean birth weight, length, and head circumference ",exercise,no exercise
-12314,3549213,agitation,"Professional ‘ElderClowns’ provided 9–12 weekly humour therapy sessions, augmented by resident engagement by trained staff ‘LaughterBosse 5980378 ,Median and IQR of peak increment of plasma Pi concentrations (ΔPi‐C Max),NaH2PO4 or Na2HPO4 or MgHPO4,control,Significantly increased,ΔPi‐C Max 	mg/dL	0.06a [0.03–0.25]	3.19b [2.11–4.04]	5.33b [5.26–5.35]	4.3b [3.59–4.68],28720:29169, 5980378 ,29572937,Unavailable
+12314,3549213,agitation,"Professional ‘ElderClowns’ provided 9–12 weekly humour therapy sessions, augmented by resident engagement by trained staff ‘LaughterBosse 5980378 ,Median and IQR of peak increment of plasma Pi concentrations (ΔPi‐C Max),NaH2PO4 or Na2HPO4 or MgHPO4,control,Significantly increased,ΔPi‐C Max 	mg/dL	0.06a [0.03–0.25]	3.19b [2.11–4.04]	5.33b [5.26–5.35]	4.3b [3.59–4.68],28720:29169, 5980378 ,29572937,Unavailable
  5980378 ,area under the concentration‐time curve of plasma Pi concentration increment (ΔPi‐AUC),NaH2PO4 or Na2HPO4 or MgHPO4,control,Significantly increased,Pi‐AUC	mg*h/L	0.68a [–0.68‐3.5]	54.17b [37.54–66.96]	93.48c [82.07–101.04]	78.94a","b [74.73–85.97]"""
 12315,5980378,area under the concentration‐time curve of plasma Pi concentration increment (ΔPi‐AUC),NaH2PO4 or Na2HPO4,MgHPO4
 12316,3590691,percentage of arterial blood oxygen saturation,"open suctioning was carried out and after three hours of cleaning, closed suctioning was done","closed suctioning was firstly done and following three hours of cleaning, open suctioning was implemented"
@@ -12386,3 +12386,483 @@ PromptID,PMCID,Outcome,Intervention,Comparator
 13410,1065104,specific gravity,750 μmol/kg magnesium sulfate was given intramuscularly immediately after surgery.,equal volume of saline
 13411,5873829,clinical recovery at eight weeks,gluten-free diet (GFD),GFD with prednisolone (GFD+P)
 13412,5873829,improvement in histology by at least one grade at 12 months,gluten-free diet (GFD),GFD with prednisolone (GFD+P)
+13413,3549213,agitation,"Professional ‘ElderClowns’ provided 9–12 weekly humour therapy sessions, augmented by resident engagement by trained staff ‘LaughterBosse 5980378 ,Median and IQR of peak increment of plasma Pi concentrations (ΔPi‐C Max),NaH2PO4 or Na2HPO4 or MgHPO4,control,Significantly increased,ΔPi‐C Max 	mg/dL	0.06a [0.03–0.25]	3.19b [2.11–4.04]	5.33b [5.26–5.35]	4.3b [3.59–4.68],28720:29169, 5980378 ,29572937,Unavailable
+ 5980378 ,area under the concentration‐time curve of plasma Pi concentration increment (ΔPi‐AUC),NaH2PO4 or Na2HPO4 or MgHPO4,control,Significantly increased,Pi‐AUC	mg*h/L	0.68a [–0.68‐3.5]	54.17b [37.54–66.96]	93.48c [82.07–101.04]	78.94a","b [74.73–85.97]"""
+13414,5862001,Smoothness indexes and treatment-on-variability indexes,dual combination [DCCB + thiazide diuretic (TD)] or olmesartan dual combination (DCCB or TD) or triple combination therapy (DCCB+TD),placebo or angiotensin-converting enzyme inhibitors (ACEIs) or angiotensin II receptor blockers (ARBs) or dihydropyridine calcium channel blockers (DCCBs) or olmesartan 
+13415,5862001,24-h blood pressure,olmesartan dual combination (olmesartan and DCCB),olmesartan dual combination (olmesartan and TD
+13416,5735484,Time for the first analgesic request ,oral midazolam with oral clonidine and regional bupivacaine or oral midazolam and regional clonidine with bupivacaine,oral midazolam and regional bupivacaine
+13417,5735484,parental separation and sedation score,oral midazolam with oral clonidine and regional bupivacaine ,oral midazolam and regional bupivacaine or oral midazolam and regional clonidine with bupivacaine
+13418,5819581,BCSS and CAT scores,the best pharmacological therapy (PT) and Intrapulmonary percussive ventilation (IPV)  ,PT group with high-frequency chest wall oscillation (HFCWO)
+13419,5819581,"TLC and TLC%, RV and RV%, and DLCO, MIP, and MEP",the best pharmacological therapy (PT) and Intrapulmonary percussive ventilation (IPV),PT group with high-frequency chest wall oscillation (HFCWO) 
+13420,5819581,"total cell count and neutrophil, lymphocyte, and macrophage counts in sputum samples",the best pharmacological therapy (PT) and Intrapulmonary percussive ventilation (IPV) or PT group with high-frequency chest wall oscillation (HFCWO) ,PT alone
+13421,5819581,neutrophil count,"the best pharmacological therapy (PT) and Intrapulmonary percussive ventilation (IPV)  , ",PT group with high-frequency chest wall oscillation (HFCWO) 
+13422,5819581,"mMRC, BCSS, and CAT scores",the best pharmacological therapy (PT) and Intrapulmonary percussive ventilation (IPV) or PT group with high-frequency chest wall oscillation (HFCWO) ,PT alone
+13423,5599826,eye open center of pressure-x (EO CoP-x),augmented reality (AR)-based otago exercise or yoga group ,self-exercise group 
+13424,5599826,"eye close center of pressure (EC COP-x), eye open standard deviation-x (EO SD-x), and eye open height of ellipse (EO HoE)",augmented reality (AR)-based otago exercise ,self-exercise group or yoga group 
+13425,5599826,morse fall scale,augmented reality (AR)-based otago exercise ,self-exercise group or yoga group 
+13426,5388709,"voluntary or electrically evoked isometric force production, or twitch electromechanical delay and time-to-peak tension",β-alanine (BA),placebo
+13427,5388709,percentage change in fresh muscle HRT,β-alanine (BA),placebo
+13428,5388709,percentage change in fatigued muscle HRT,β-alanine (BA),placebo
+13429,2556743,amount of HES and the total amount of fluid,minimizing the variation in arterial pulse pressure (ΔPP) induced by mechanical ventilation.,control
+13430,2556743,"duration of mechanical ventilation, stay in the ICU, stay in hospital ",minimizing the variation in arterial pulse pressure (ΔPP) induced by mechanical ventilation.,control
+13431,2556743,The number of patients with postoperative complications,minimizing the variation in arterial pulse pressure (ΔPP) induced by mechanical ventilation.,control
+13432,5966929,The proportion of accurate trials ,received four 30-min robot-based gestural training sessions,received the gestural training after the completion of research
+13433,3499555,IncellDx positivity,mRNA testing,DNA testing
+13434,3499555,inadequate samples,mRNA testing,DNA testing
+13435,3499555,specificity and PPV ,mRNA testing,DNA testing
+13436,5440036,The nausea severity,7.5 μg/kg palonosetron or 2.5 μg/kg palonosetron and 15 μg/kg droperidol ,"2.5 μg/kg palonosetron, "
+13437,5440036,the vomiting scores,7.5 μg/kg palonosetron or 2.5 μg/kg palonosetron and 15 μg/kg droperidol ,"2.5 μg/kg palonosetron, "
+13438,5440036,The CR rate,2.5 μg/kg palonosetron,2.5 μg/kg palonosetron and 15 μg/kg droperidol 
+13439,5440036,The recovery time,7.5 μg/kg palonosetron or 2.5 μg/kg palonosetron and 15 μg/kg droperidol ,"2.5 μg/kg palonosetron, "
+13440,4710520,The difference of IOP,"dorzolamide-timolol fixed combination (DTFC) and lubricant, and latanoprost for 4 weeks each","latanoprost, lubricant, and DTFC for 4 weeks each"
+13441,4710520,Fluctuation in IOP,"dorzolamide-timolol fixed combination (DTFC) and lubricant, and latanoprost for 4 weeks each","latanoprost, lubricant, and DTFC for 4 weeks each"
+13442,4710520,Diurnal systolic and diastolic BP,"dorzolamide-timolol fixed combination (DTFC) and lubricant, and latanoprost for 4 weeks each","latanoprost, lubricant, and DTFC for 4 weeks each"
+13443,4710520,The heart rate,"dorzolamide-timolol fixed combination (DTFC) and lubricant, and latanoprost for 4 weeks each","latanoprost, lubricant, and DTFC for 4 weeks each"
+13444,4710520,Diurnal OPP and DOPP,"dorzolamide-timolol fixed combination (DTFC) and lubricant, and latanoprost for 4 weeks each","latanoprost, lubricant, and DTFC for 4 weeks each"
+13445,4360612,Six-month satisfaction rates,minimally invasive SI joint fusion with triangular titanium implants ,non-surgical management
+13446,4360612,The mean number of adverse events per subject,minimally invasive SI joint fusion with triangular titanium implants ,non-surgical management
+13447,4360612,number of patient exhibited pain improvement of ≥20 points,minimally invasive SI joint fusion with triangular titanium implants ,non-surgical management
+13448,4360612,success rates,minimally invasive SI joint fusion with triangular titanium implants ,non-surgical management
+13449,4360612,number of patient that had ODI improvement of ≥15 points,minimally invasive SI joint fusion with triangular titanium implants ,non-surgical management
+13450,5852933,the shear bond strength of the composite resin with dentin,dentin pretreatment with 10% sodium ascorbate for 5 min (IIa) or 10 min (IIb),no dentin pretreatment done or dentin pretreatment with 6.5% proanthocyanidin (PA) for 5 min (IIIa) or 10 min (IIIb).
+13451,2365957,proportion of patients achieving HIV-1 RNA &lt; 50 copies/mL in the ITT,Once-daily (QD) ritonavir 100 mg-boosted fosamprenavir 1400 mg (FPV/r100),"atazanavir 300 mg (ATV/r100), plus tenofovir/emtricitabine (TDF/FTC) 300 mg/200 mg"
+13452,2365957,magnitude of CD4+ count,Once-daily (QD) ritonavir 100 mg-boosted fosamprenavir 1400 mg (FPV/r100),"atazanavir 300 mg (ATV/r100), plus tenofovir/emtricitabine (TDF/FTC) 300 mg/200 mg"
+13453,2365957,Fasting total/LDL/HDL-cholesterol,Once-daily (QD) ritonavir 100 mg-boosted fosamprenavir 1400 mg (FPV/r100),"atazanavir 300 mg (ATV/r100), plus tenofovir/emtricitabine (TDF/FTC) 300 mg/200 mg"
+13454,5066860,MRS score,"probiotics plus NUT for 4 weeks, followed by a 4-week treatment with probiotics plus placebo ","probiotics plus placebo over 4 weeks, followed by a 4-week treatment with probiotics plus NUT"
+13455,5066860,high-density lipoprotein cholesterol plasma concentration,"probiotics plus NUT for 4 weeks, followed by a 4-week treatment with probiotics plus placebo ","probiotics plus placebo over 4 weeks, followed by a 4-week treatment with probiotics plus NUT"
+13456,5066860,triglycerides and total and low-density lipid (LDL)-cholesterol plasma levels,"probiotics plus NUT for 4 weeks, followed by a 4-week treatment with probiotics plus placebo ","probiotics plus placebo over 4 weeks, followed by a 4-week treatment with probiotics plus NUT"
+13457,4360719,"CRQ dyspnoea score, the ESWT distance between the two groups, BMI, body fat EQ5D, MET-minutes, activity rating, HADS, exacerbations or admissions",2 h (1 h individually tailored exercise training and 1 h education programme) every 3 months for 1 year.,standard care
+13458,4210953,"PHQ, GAD, or WSAS scores",short message service (SMS),control
+13459,4210953,"treatment completion, treatment length, number of sessions attended, or DNA rate",short message service (SMS),control
+13460,3258215,the frequency of providing EAFD and EASD of statins in community pharmacies,intensive support for the implementation,a written manual on the implementation of EAFD and EASD 
+13461,4769147,"rates of exclusive as well as any breastfeeding at discharge, 3 months and 6 months of infants’ age ","controlled limited formula (CLF) intervention (10 ml formula by syringe after each breastfeeding, discontinued at onset of lactation) ","control group (standard approach, SA)."
+13462,4769147,maximal body weight loss,"controlled limited formula (CLF) intervention (10 ml formula by syringe after each breastfeeding, discontinued at onset of lactation) ","control group (standard approach, SA)."
+13463,4769147,Levels of bilirubin above 200 umol/l,"controlled limited formula (CLF) intervention (10 ml formula by syringe after each breastfeeding, discontinued at onset of lactation) ","control group (standard approach, SA)."
+13464,3659156,blood pressure values,"hemodynamic, in which treatment choice considered impedance cardiography results",empiric
+13465,3770450,Serum P1NP,2-hour session of Thai traditional massage twice a week for 4 weeks,"4-week control period after a 2-week washout, or vice versa"
+13466,3770450,serum osteocalcin or CTX,2-hour session of Thai traditional massage twice a week for 4 weeks,"4-week control period after a 2-week washout, or vice versa"
+13467,3611074,median preoperative anxiety score in the pediatric ward and in the operating room,1 mg/kg ketorolac,control
+13468,3611074,"the incidence of EA  at 5, 20 min ",1 mg/kg ketorolac,control
+13469,3611074,The total number of patients displaying EA,1 mg/kg ketorolac,control
+13470,3611074,the number of children who received fentanyl for analgesia after 20 min in the PACU,1 mg/kg ketorolac,control
+13471,5654748,"average number of days per week with a step entry, average time per week on the website and average number of website visits per week",Web 2.0-based intervention on physical activity behaviour,10 000 Steps programme
+13472,5654748,average number of days per week with a step comment at 0–3 months;,Web 2.0-based intervention on physical activity behaviour,10 000 Steps programme
+13473,5654748,average number of days per week with a step comment at 3–12 and 12–18 months.,Web 2.0-based intervention on physical activity behaviour,10 000 Steps programme
+13474,4768925,The NIHSS score and levels of ACTH and COR,intravenous drips of butylphthalide,control
+13475,3622018,sleep disturbance symptoms,Mind–Body Bridging (MBB) and Mindfulness Meditation (MM) ,sleep hygiene education (SHE)
+13476,3622018,"overall levels of mindfulness, self-compassion, well-being",Mind–Body Bridging (MBB) ,sleep hygiene education (SHE)
+13477,3622018,self-reported depression symptoms,Mind–Body Bridging (MBB) ,sleep hygiene education (SHE)
+13478,3622018,Positive and Negative Affect,Mind–Body Bridging (MBB)  and Mindfulness Meditation (MM) ,sleep hygiene education (SHE)
+13479,5055753,The percentages of patients in the calm and sedated scale,0.2 mg oral clonidine ,2 mg oral midazolam
+13480,5055753,the percentages of patients in the agitated and heavily sedated,0.2 mg oral clonidine ,2 mg oral midazolam
+13481,5055753,The mean ± SD of intraoperatively administered fentany,0.2 mg oral clonidine ,2 mg oral midazolam
+13482,5055753,Mean ± SD of heart rate,0.2 mg oral clonidine ,2 mg oral midazolam
+13483,5055753,VAS scores at one and two hours after operation,0.2 mg oral clonidine ,2 mg oral midazolam
+13484,4815896,MMP-8 levels,Low-dose methylprednisolone therapy ,placebo
+13485,4815896,soluble intercellular adhesion molecule-1 (sICAM-1),Low-dose methylprednisolone therapy ,placebo
+13486,4815896,sRAGE levels,Low-dose methylprednisolone therapy ,placebo
+13487,2826289,the Patient Pain Assessment score ,"Bacillus coagulans GBI-30, 6086",placebo
+13488,2826289,Pain Scale ,"Bacillus coagulans GBI-30, 6086",placebo
+13489,2826289,physician global assessment or physician assessment of painful and swollen joints,"Bacillus coagulans GBI-30, 6086",placebo
+13490,2826289,the ability to walk 2 miles and the ability to reach,"Bacillus coagulans GBI-30, 6086",placebo
+13491,4218766,risk of 1-year CV morbidity and mortality ,zofenopril 60 mg/day,placebo
+13492,3575612,adverse drug reactions,pterostilbene 125 mg twice daily or pterostilbene 50 mg twice daily or pterostilbene 50 mg + grape extract (GE) 100 mg twice daily  ,matching placebo twice daily for 6–8 weeks.
+13493,3575612,bicarbonate ,pterostilbene 125 mg twice daily ,matching placebo twice daily for 6–8 weeks.
+13494,3575612,BUN,pterostilbene 50 mg twice daily or pterostilbene 50 mg + grape extract (GE) 100 mg twice daily  ,matching placebo twice daily for 6–8 weeks.
+13495,4525725,The mean number of topics discussed,tailored health risk feedback,generic health risk feedback
+13496,4525725,the average number of additional actions related to survey health risks taken by the GP,tailored health risk feedback,generic health risk feedback
+13497,4525725,participants who show report to their GP,tailored health risk feedback,generic health risk feedback
+13498,4525725,Participants who agree that the feedback was ‘relevant to me’ ,tailored health risk feedback,generic health risk feedback
+13499,5799986,extruded debris,EndoIrrigator Plus,conventional syringe or PUI
+13500,5799986,extruded debris,PUI,conventional syringe 
+13501,5827507,Dentinal hypersensitivity (DH),"combined 5% KNO3 and the diode laser or  gallium-aluminum-arsenide diode laser (62.2 J/cm2, wavelength - 980 nm, noncontact pulse mode, and power wattage - 0.5 W);",5% potassium nitrate (KNO3) 
+13502,4170701,"ESR, CRP, Hb, grip strength, BAS-G, BASFI, and BASDAI, either at baseline or after 3-month exercise",combined home exercise (COMB),range-of-motion home exercise (ROM)
+13503,4170701,variables of pulmonary function test,combined home exercise (COMB),range-of-motion home exercise (ROM)
+13504,5815237,CHI3L1 concentration decline,inhaled nitric oxide (iNO),placebo
+13505,5777419,the total cultivable microbiota,probiotic or antibiotic,placebo 
+13506,5777419,"attachment gain, reduction of PPD, and reduction of plaque",probiotic or antibiotic,placebo 
+13507,3881817,Specimens not leaking,irrigation with a final application of EC40TM,irrigation with 10 mL 2.0% chlorhexidine (CHX)
+13508,3881817,Specimens not leaking,irrigation with a final application of EC40TM,without final irrigation or irrigation with the combination (1:1) of 0.2% CHX + 0.1% cetrimide (CTR).
+13509,3881817,Specimens not leaking,without final irrigation,irrigation with 10 mL 2.0% chlorhexidine (CHX) or irrigation with the combination (1:1) of 0.2% CHX + 0.1% cetrimide (CTR).
+13510,4717613,reduction of the albumin levels,"preoperative nutrition program with immune modulating formulae (enriched with arginine, omega-3 fatty acids and nucleotides)",normal diet
+13511,4717613,complication development rate,"preoperative nutrition program with immune modulating formulae (enriched with arginine, omega-3 fatty acids and nucleotides)",normal diet
+13512,4717613,The mean tube drainage times,"preoperative nutrition program with immune modulating formulae (enriched with arginine, omega-3 fatty acids and nucleotides)",normal diet
+13513,5845721,number of days the nurses wore the activity monitor,individual or friend ,team
+13514,5845721, Weekly moderate-to-vigorous intensity PA (MVPA) levels,individual or friend ,team
+13515,5845721,daily steps,individual or friend ,team
+13516,5845721,cardiovascular health indicators,individual or friend ,team
+13517,3494227,"depression, anxiety, and worry symptoms",mindfulness based stress reduction program,control
+13518,1522015,The mean log retinal area,lutein supplementation (10 mg/d for 12 wks followed by 30 mg/d) for the first 24 weeks and then placebo for the following 24 weeks,placebo (24 weeks) was administered prior to lutein
+13519,1522015,the average log CS at normal illumination,lutein supplementation (10 mg/d for 12 wks followed by 30 mg/d) for the first 24 weeks and then placebo for the following 24 weeks,placebo (24 weeks) was administered prior to lutein
+13520,1913939,change in weight,the Web-based condition,condition that provided print materials on the same topics
+13521,1913939,Physical Activity,the Web-based condition,condition that provided print materials on the same topics
+13522,1913939,Attitudes Toward a Healthful Diet*,the Web-based condition,condition that provided print materials on the same topics
+13523,1913939,Dietary Stage of Change,the Web-based condition,condition that provided print materials on the same topics
+13524,1913939,Stress Management,the Web-based condition,condition that provided print materials on the same topics
+13525,3616693,The survival period of the bleb,membrane containing MMC treatment ,glaucoma filtration operation with no implantation of chitosan membrane (as control) // or drug-free chitosan membrane implantation (blank/placebo group) // or membrane containing 5-FU treatment (5-FU group) 
+13526,3616693,IOP-decrease period,membrane containing MMC treatment ,glaucoma filtration operation with no implantation of chitosan membrane (as control) // or drug-free chitosan membrane implantation (blank/placebo group) // or membrane containing 5-FU treatment (5-FU group) 
+13527,4756971,The average VAS pain at 1 and 4 hours,peritubal analgesic infiltration ,control 
+13528,4756971,"The postoperative VAS pain at 12, 24 and 48 hours",peritubal analgesic infiltration ,control 
+13529,4756971,Doses of morphine usage for controlling postoperative pain,peritubal analgesic infiltration ,control 
+13530,4756971,The first analgesic demand (minutes),peritubal analgesic infiltration ,control 
+13531,1201139,response rate,receive a five-pound voucher (redeemable at many high street shops) with their mailed questionnaire,control
+13532,3409545,"salivary cortisol, negative affect, positive affect, and pain",20 minutes of Swedish Massage Therapy to the lower extremities,"20 minute Reflexology, using highly specified protocols"
+13533,5822856,Berg Balance Scale (BBS) and the Timed Up and Go test (TUG),flat insoles or textured insoles ,without insoles
+13534,5822856,Berg Balance Scale (BBS) and the Timed Up and Go test (TUG),flat insoles, textured insoles 
+13535,5822856,Insole wearing time,flat insoles, textured insoles 
+13536,3695249,number of patients requested disconnection of the IV-PCA pumps because of intractable nausea and/or vomiting after surgery mostly within 12 h,intravenous 75 µg palonosetron ,intravenous 4 mg ondansetron or 0.3 mg ramosetron 
+13537,3695249,Pain scores and the total amounts of fentanyl administered via IV-PCA,intravenous 75 µg palonosetron ,intravenous 4 mg ondansetron or 0.3 mg ramosetron 
+13538,3695249,the time to use a rescue emetic,intravenous 75 µg palonosetron ,intravenous 4 mg ondansetron or 0.3 mg ramosetron 
+13539,3695249,The number of nausea-free patients,intravenous 75 µg palonosetron ,intravenous 4 mg ondansetron or 0.3 mg ramosetron 
+13540,4649576,the severity of nausea and vomiting,vitamin B6 or ginger,placebo
+13541,4173571,required rescue antiemetic (RAE),single dose of dexamethasone 8 mg with granisetron 1 mg or  with ondansetron 4 mg,single dose of dexamethasone 8 mg with normal saline 2 ml
+13542,4173571,A complete response (no PONV or RAE requirement),single dose of dexamethasone 8 mg with granisetron 1 mg or  with ondansetron 4 mg,single dose of dexamethasone 8 mg with normal saline 2 ml
+13543,4173571,Post-operative vomiting,single dose of dexamethasone 8 mg with granisetron 1 mg or  with ondansetron 4 mg,single dose of dexamethasone 8 mg with normal saline 2 ml
+13544,4173571,Excessive vomiting (more than equal to two) and frequent RAE (more than equal to two),single dose of dexamethasone 8 mg with granisetron 1 mg or  with ondansetron 4 mg,single dose of dexamethasone 8 mg with normal saline 2 ml
+13545,4173571,Post-operative sedation,single dose of dexamethasone 8 mg with granisetron 1 mg or  with ondansetron 4 mg,single dose of dexamethasone 8 mg with normal saline 2 ml
+13546,5827476,duration of analgesia,20 ml of 0.5% (100 mg) bupivacaine was added to 480 ml of normal saline for intraperitoneal irrigation during and after surgery,intraperitoneal irrigation was done with 500 ml of normal saline
+13547,5827476,Cumulative requirement of tramadol in 24 h ,20 ml of 0.5% (100 mg) bupivacaine was added to 480 ml of normal saline for intraperitoneal irrigation during and after surgery,intraperitoneal irrigation was done with 500 ml of normal saline
+13548,5827476,numeric pain rating scale (NRS),20 ml of 0.5% (100 mg) bupivacaine was added to 480 ml of normal saline for intraperitoneal irrigation during and after surgery,intraperitoneal irrigation was done with 500 ml of normal saline
+13549,5827476,Incidence of shoulder pain or nausea and vomiting,20 ml of 0.5% (100 mg) bupivacaine was added to 480 ml of normal saline for intraperitoneal irrigation during and after surgery,intraperitoneal irrigation was done with 500 ml of normal saline
+13550,5860698,number of CVD events,CVD risk strategy,SBP strategy
+13551,3793517,Eradication rate,sequential eradication therapy,standard eradication therapy
+13552,3793517,serum ferritin,sequential eradication therapy,standard eradication therapy
+13553,4687062,Troponin release,bone marrow mononuclear cell (BMMNC) transplantation,saline
+13554,4687062,The mean absolute change of the global LVEF,bone marrow mononuclear cell (BMMNC) transplantation,saline
+13555,4687062,cytokines,bone marrow mononuclear cell (BMMNC) transplantation,saline
+13556,3664406,transepidermal water loss.,bathing with a wash product ,bathing with water alone
+13557,3664406,skin surface pH,bathing with a wash product ,bathing with water alone
+13558,3664406,satisfaction scores,bathing with a wash product ,bathing with water alone
+13559,3664406,left their neonate smelling good,bathing with a wash product ,bathing with water alone
+13560,4113172,CRP,lifestyle or metformin,placebo
+13561,4113172,Fibrinogen,lifestyle or metformin,placebo
+13562,4113172,tissue plasminogen activator (tPA),lifestyle or metformin,placebo
+13563,3757635,The medians of the VAS values,autologous cryoprecipitate,absorbable sutures
+13564,3757635,The median surgical time,autologous cryoprecipitate,absorbable sutures
+13565,3757635,intraoperative or post-operative complications,autologous cryoprecipitate,absorbable sutures
+13566,3687098,adverse event of constipation,sitagliptin 100 mg/day,comparator agent
+13567,3687098,The incidence rates of malignancy,sitagliptin 100 mg/day,comparator agent
+13568,3687098,The incidence rates of pancreatitis,sitagliptin 100 mg/day,comparator agent
+13569,3687098,The incidence of the composite endpoint of rash,sitagliptin 100 mg/day,comparator agent
+13570,1578575,"the mean percentage of nuclei stained by Ki-67 (MIB-1) , estrogen receptor (1D5) and progesterone receptor positivity (PgR 636)",tamoxifen/10 mg/day for 14 days,control group-without medication
+13571,4265717,urogenital distress inventory (UDI) and the incontinence impact questionnaire (IIQ) scores,undergoing office evaluation with a preoperative urodynamic work-up,undergoing office evaluation
+13572,4265717,rate of positive provocative stress test,undergoing office evaluation with a preoperative urodynamic work-up,undergoing office evaluation
+13573,4265717,treatment outcomes with stratified preoperative values for VLPP and MUCP at both 6 and 12 months,undergoing office evaluation with a preoperative urodynamic work-up,undergoing office evaluation
+13574,3590692,"mean scores of depression, anxiety and stress",combined medical-relaxation therapy,usual medical therapy
+13575,3781573,incidence rate of diabetic peripheral neuropathy (DPN),insulin-sensitizing (IS) treatment,insulin-providing (IP) treatment
+13576,3781573,HbA1c,insulin-sensitizing (IS) treatment,insulin-providing (IP) treatment
+13577,4588430,mean consultation time,telephone consultation,face-to-face consultation
+13578,4588430,NHS costs,telephone consultation,face-to-face consultation
+13579,4588430,QOL score,telephone consultation,face-to-face consultation
+13580,4162033,ALT/AST changes,atorvastatin (40 mg/d),atorvastatin (5 mg/d)
+13581,3525031,Pain severity,0.7 mg/kg pethidine every 6 hour IM,0.07 mg/kg oral methadone every 6 hour.
+13582,3525031,terms of complications and supplementary analgesic use,0.7 mg/kg pethidine every 6 hour IM,0.07 mg/kg oral methadone every 6 hour.
+13583,4757000,mean daily pad usage,transobturator midurethral sling (TOS) ,single-incision sling
+13584,4757000,subjective cure rates,transobturator midurethral sling (TOS) ,single-incision sling
+13585,4757000,scores achieved in ICIQ-SF,transobturator midurethral sling (TOS) ,single-incision sling
+13586,4757000,scores achieved in I–QOL,transobturator midurethral sling (TOS) ,single-incision sling
+13587,4757000,Mean operation time,transobturator midurethral sling (TOS) ,single-incision sling
+13588,5873437,mortality,3‐5 days of continuous ELAD treatment plus SOC ,standard of care (SOC) only
+13589,5873437,Lille score,3‐5 days of continuous ELAD treatment plus SOC ,standard of care (SOC) only
+13590,5873437,IL1Ra levels,3‐5 days of continuous ELAD treatment plus SOC ,standard of care (SOC) only
+13591,5873437,positive postdischarge PEth,3‐5 days of continuous ELAD treatment plus SOC ,standard of care (SOC) only
+13592,5440059,urinary incontinence (UI) ,"usual care plus management by health professionals, with need-based referrals",usual care (UC) only
+13593,5440059,presence of nocturia,"usual care plus management by health professionals, with need-based referrals",usual care (UC) only
+13594,3695250,The total amount of fentanyl consumption during the 48 h after surgery,ketamine infusion of 2 µg/kg/min following bolus 0.5 mg/kg ,saline infusion following bolus of saline or ketamine infusion of 1 µg/kg/min following bolus 0.5 mg/kg
+13595,3695250,"VAS scores for pain at rest or with movement at 1, 6, 24 and 48 h postoperatively",ketamine infusion of 2 µg/kg/min following bolus 0.5 mg/kg ,saline infusion following bolus of saline or ketamine infusion of 1 µg/kg/min following bolus 0.5 mg/kg
+13596,3695250,The patient satisfaction rate,ketamine infusion of 2 µg/kg/min following bolus 0.5 mg/kg ,saline infusion following bolus of saline or ketamine infusion of 1 µg/kg/min following bolus 0.5 mg/kg
+13597,3695250,The incidence of adverse events,ketamine infusion of 2 µg/kg/min following bolus 0.5 mg/kg ,saline infusion following bolus of saline or ketamine infusion of 1 µg/kg/min following bolus 0.5 mg/kg
+13598,5030453,functional activity,patients used the mobile app and reviewed the reported data with the treating physician at scheduled visits (C),eceived regular physician support (A) or patients were instructed to use the mobile app without physician review (B)
+13599,5030453,concentration issues,patients were instructed to use the mobile app without physician review (B),eceived regular physician support (A)
+13600,5030453,number of patient confirmed use of the Internet for obtain further information about their disease,patients were instructed to use the mobile app without physician review (B) or patients used the mobile app and reviewed the reported data with the treating physician at scheduled visits (C),eceived regular physician support (A)
+13601,2797956,percentage of time between 4.4 and 6.6 mmol/l,Two-day closed-loop therapy (except for a 15-min premeal manual bolus),1-day control phase with intraperitoneal open-loop insulin delivery
+13602,2797956,plasma insulin peak levels,Two-day closed-loop therapy (except for a 15-min premeal manual bolus),1-day control phase with intraperitoneal open-loop insulin delivery
+13603,2797956,mean blood glucose levels,Two-day closed-loop therapy (except for a 15-min premeal manual bolus),1-day control phase with intraperitoneal open-loop insulin delivery
+13604,31579,"mean pulmonary artery pressure, pulmonary vascular resistance index and central venous pressure ",inhalation of nitric oxide (NO) (20 ppm for 1 hour) ,atrial natriuretic peptide (ANP)  infusion (10 ng/kg/min for 1 hour)
+13605,4733105,task accuracy or reaction time,trained in a vehicle with a newly developed onboard cognitive training program (V) or trained with a similar program but on a personal computer (P) ,trained to solve a crossword puzzle (C)
+13606,4733105,high‐gamma power in the left thalamus from 0 to 100 msec and from 200 to 300 msec in the nontarget condition.,trained in a vehicle with a newly developed onboard cognitive training program (V) or trained with a similar program but on a personal computer (P) ,trained to solve a crossword puzzle (C)
+13607,3511174,improvements in AHA and Melbourne,Botulinum Toxin-A (BoNT-A) treatment (B),BoNT-A plus eight weeks resistance training (BT)
+13608,3511174,The muscle tone,Botulinum Toxin-A (BoNT-A) treatment (B),BoNT-A plus eight weeks resistance training (BT)
+13609,3511174,Forearm supination resistance,Botulinum Toxin-A (BoNT-A) treatment (B),BoNT-A plus eight weeks resistance training (BT)
+13610,3511174,muscle strength in injected muscles nd non-injected muscles,Botulinum Toxin-A (BoNT-A) treatment (B),BoNT-A plus eight weeks resistance training (BT)
+13611,4358417,body weight and BMI,100 mg of rosehip extract ,placebo
+13612,4358417,the abdominal total fat area,100 mg of rosehip extract ,placebo
+13613,4358417,the abdominal subcutaneous fat area,100 mg of rosehip extract ,placebo
+13614,5789502,"heart rates at 5, 10, and 15 min",dexmedetomidine 0.30 μg/kg (Group D0.3) ,dexmedetomidine 0.15 μg/kg (Group D0.15)
+13615,5789502,Pain scores,dexmedetomidine 0.30 μg/kg (Group D0.3) ,dexmedetomidine 0.15 μg/kg (Group D0.15)
+13616,5789502,The time to discharge,dexmedetomidine 0.30 μg/kg (Group D0.3) ,dexmedetomidine 0.15 μg/kg (Group D0.15)
+13617,5561588,time to maximum block,endotracheal intubation after onset of the neuromuscular block at the adductor pollicis muscle (A)  ,endotracheal intubation after onset at the trapezius muscle (B)
+13618,3635594,"erythrocyte acetylcholinesterase (AChE),  percent AChE","methanesulfonyl fluoride (MSF, SNX-001)",placebo
+13619,5769191,rate of pregnancy,"in addition to their routine treatment, received auriculotherapy for 8–10 sessions during menstrual cycle.",routine treatments
+13620,5769191,the frequency of clinical pregnancy,"in addition to their routine treatment, received auriculotherapy for 8–10 sessions during menstrual cycle.",routine treatments
+13621,1208905,score at follow-up,receive a single session of true acupuncture,receive a single session of placebo acupuncture
+13622,1208905,Breathlessness,receive a single session of true acupuncture,receive a single session of placebo acupuncture
+13623,3931289,time to first pulmonary exacerbation,esomeprazole 40 mg twice daily,placebo
+13624,3931289,exacerbation rate,esomeprazole 40 mg twice daily,placebo
+13625,3931289,change in FEV1 percent or FVC percent,esomeprazole 40 mg twice daily,placebo
+13626,3931289,GSAS and CFQ-R score,esomeprazole 40 mg twice daily,placebo
+13627,5866733,"Serum AST, ALT, ALP, CK-MB, and TnI levels",n-acetylcysteine for 7 days before the operation,nothing
+13628,5866733,Serum BUN level after cardiopulmonary bypass ,n-acetylcysteine for 7 days before the operation,nothing
+13629,5866733,ammonia (NH3) after cardiopulmonary bypass and at 24th hour and at 48th hour,n-acetylcysteine for 7 days before the operation,nothing
+13630,5866733,Serum BUN level at 24th and 48 postoperative hour ,n-acetylcysteine for 7 days before the operation,nothing
+13631,5866733,Lactate levels at 24th and 48th,n-acetylcysteine for 7 days before the operation,nothing
+13632,3664374,percentage of nr-axSpA patients achieved the primary endpoint of ASAS40 response at week 12,adalimumab,placebo
+13633,3664374,number of patients who had BASFI &lt;2 at week 12,adalimumab,placebo
+13634,3636850,The mean Streptococcus mutans and Lactobacillus,fluoridated dentifrices,non-fluoridated dentifrices
+13635,3636850,The OHI-S,fluoridated dentifrices,non-fluoridated dentifrices
+13636,3636850,mean DMFT and deft,fluoridated dentifrices,non-fluoridated dentifrices
+13637,5827042,treatment failure,the combination of fentanyl-midazolam,dexmedetomidine-fentanyl
+13638,5827042,time to recovery,the combination of fentanyl-midazolam,dexmedetomidine-fentanyl
+13639,3606612,hemoglobin,11 mg of Heme Iron Polypeptide (HIP) orally 3 times per day,IV iron sucrose 200 mg monthly 
+13640,3606612,TSAT,11 mg of Heme Iron Polypeptide (HIP) orally 3 times per day,IV iron sucrose 200 mg monthly 
+13641,3606612,serum ferritin,11 mg of Heme Iron Polypeptide (HIP) orally 3 times per day,IV iron sucrose 200 mg monthly 
+13642,3606612,adverse effects,11 mg of Heme Iron Polypeptide (HIP) orally 3 times per day,IV iron sucrose 200 mg monthly 
+13643,5745479,proportion of any AE,amoxicillin,placebo
+13644,5745479,diarrhoea,amoxicillin,placebo
+13645,5745479,Nausea,amoxicillin,placebo
+13646,5745479,rash in males,amoxicillin,placebo
+13647,4753023,The mean Hb concentration,one ferrous sulfate tablet containing 50 mg of elemental iron daily,placebo
+13648,4753023,the mean of birth weight,one ferrous sulfate tablet containing 50 mg of elemental iron daily,placebo
+13649,4753023,ferritin,one ferrous sulfate tablet containing 50 mg of elemental iron daily,placebo
+13650,3714385,"HOMA-IR before induction of anaesthesia, 60 min after the start of surgery, and at the start of skin closure",remifentanil at infusion rates of 0.1 μg·kg-1·min-1 (L),remifentanil at infusion rates of 0.5 μg·kg-1·min-1 (H)
+13651,3714385,HOMA-β values at 60 min after the start of surgery and skin closure,remifentanil at infusion rates of 0.1 μg·kg-1·min-1 (L),remifentanil at infusion rates of 0.5 μg·kg-1·min-1 (H)
+13652,3714385,3-MH/Cr values,remifentanil at infusion rates of 0.1 μg·kg-1·min-1 (L),remifentanil at infusion rates of 0.5 μg·kg-1·min-1 (H)
+13653,3751503,IKDC or KT-1000 results,aseptic bone-patellar tendon-bone (BTB) allografts,BioCleanse-sterilized allografts
+13654,3751503,Active flexion ROM,aseptic bone-patellar tendon-bone (BTB) allografts,BioCleanse-sterilized allografts
+13655,3751503,Active extension ROM,aseptic bone-patellar tendon-bone (BTB) allografts,BioCleanse-sterilized allografts
+13656,5319516,triglycerides,zhibitai 480 mg + atorvastatin 10 mg (ZA10 group),atorvastatin 20 mg (A20 group) or atorvastatin 40 mg (A40 group)
+13657,5319516,cardiotrophin-1 (CT-1) and high sensitivity-C reactive protein (hs-CRP),zhibitai 480 mg + atorvastatin 10 mg (ZA10 group),atorvastatin 20 mg (A20 group) or atorvastatin 40 mg (A40 group)
+13658,5319516,creatine kinase,zhibitai 480 mg + atorvastatin 10 mg (ZA10 group),atorvastatin 20 mg (A20 group) or atorvastatin 40 mg (A40 group)
+13659,5976302,stair ascent time,arch support insoles for 12 weeks,did not wear the insoles
+13660,5976302,transfer and basic mobility measured by PODCI and physical health assessed by PedsQL ,arch support insoles for 12 weeks,did not wear the insoles
+13661,5976302,physical health by PedsQL,arch support insoles for 12 weeks,did not wear the insoles
+13662,5516151,time to death or graft loss,belatacept  (more intense [MI] or less intense [LI]),cyclosporine
+13663,5516151,Mean estimated GFR (eGFR),belatacept  (more intense [MI] or less intense [LI]),cyclosporine
+13664,5516151,Acute rejection rates and safety profiles,belatacept  (more intense [MI] or less intense [LI]),cyclosporine
+13665,3664320,Median progression-free survival,axitinib,sorafenib
+13666,3664320,The objective response rate,axitinib,sorafenib
+13667,1550956,protein C levels,treatment with drotrecogin alfa (activated) (DrotAA),placebo
+13668,1550956,protein S and antithrombin III,"treatment with drotrecogin alfa (activated) (DrotAA) in  severe deficiency, protein C levels ≤ 40% of normal protein C activity (n = 615, 39% of patients); deficient, protein C levels 41–80% of normal protein C activity (n = 764, 48.5% of patients);","treatment with drotrecogin alfa (activated) (DrotAA) in  &gt;80% of normal protein C activity (n = 195, 12.4% of patients)"
+13669,3258705,The mean duration of infertility,"oestradiol group, 2 mg of oestradiol valerate was initiated orally with progesterone",the control group received vaginal administration of progesterone supplementation alone starting on the day after oocyte retrieval and continued until the tenth week if the chemical pregnancy test was positive
+13670,3258705,luteinizing hormone (LH),"oestradiol group, 2 mg of oestradiol valerate was initiated orally with progesterone",the control group received vaginal administration of progesterone supplementation alone starting on the day after oocyte retrieval and continued until the tenth week if the chemical pregnancy test was positive
+13671,3258705,serum level of progesterone and oestradiol,"oestradiol group, 2 mg of oestradiol valerate was initiated orally with progesterone",the control group received vaginal administration of progesterone supplementation alone starting on the day after oocyte retrieval and continued until the tenth week if the chemical pregnancy test was positive
+13672,3258705,"The mean number of retrieved oocytes, number of transferred embryos, and chemical and clinical pregnancy rate","oestradiol group, 2 mg of oestradiol valerate was initiated orally with progesterone",the control group received vaginal administration of progesterone supplementation alone starting on the day after oocyte retrieval and continued until the tenth week if the chemical pregnancy test was positive
+13673,5827507,Dentinal hypersensitivity (DH),combined 5% KNO3 and the diode laser,1-5% potassium nitrate (KNO3)
+13674,5827507,Dentinal hypersensitivity (DH), gallium-aluminum-arsenide diode laser,1-5% potassium nitrate (KNO3)
+13675,4588672, mini-Communicative Abilities Log (mini-CAL) score at 12 weeks,constraint-induced aphasia therapy (CIAT),no intervention
+13676,4588672, the Semantic Fluency Test (SFT) score,constraint-induced aphasia therapy (CIAT),no intervention
+13677,4951149,faecal consistency,low-fibre Western-style diet (WSD) ,healthy-carbohydrate diet (HCD)
+13678,4951149,number of observed species (alpha-diversity) in the stools ,healthy-carbohydrate diet (HCD), low-fibre Western-style diet (WSD) 
+13679,3560577,The mean time for pH &gt;4 and pH &gt;6,Lansoprazole 30 mg intravenously ,pantoprazole 40 mg intravenously 
+13680,3681405,The median survival time (MST) for patients with non-small cell lung cancer (NSCLC),preoperative chemotherapy plus surgery,surgery-alone arm
+13681,3681405,The MST of stage II non-small cell lung cancer (NSCLC),preoperative chemotherapy plus surgery,surgery-alone arm
+13682,3681405,survival rates of stage I and stage IIIA non-small cell lung cancer (NSCLC),preoperative chemotherapy plus surgery,surgery-alone arm
+13683,3681405,Progression-free survival for patients with non-small cell lung cancer (NSCLC),preoperative chemotherapy plus surgery,surgery-alone arm
+13684,3685700,hunger, total sleep deprivation (TSD) + six yogurt probes with varying sucrose concentrations (2–29 %),sleep (permitted between 22:30 and 06:30&nbsp;h)+ six orally presented yogurt probes with varying sucrose concentrations (2–29 %)
+13685,3685700,ratings of sweet intensity or pleasantness of the yogurt samples with varying sucrose concentrations, total sleep deprivation (TSD) + six yogurt probes with varying sucrose concentrations (2–29 %),sleep (permitted between 22:30 and 06:30&amp;nbsp;h)+ six orally presented yogurt probes with varying sucrose concentrations (2–29 %)
+13686,3685700,Plasma glucose measurements, total sleep deprivation (TSD) + six yogurt probes with varying sucrose concentrations (2–29 %),sleep (permitted between 22:30 and 06:30&amp;amp;nbsp;h)+ six orally presented yogurt probes with varying sucrose concentrations (2–29 %)
+13687,3685700,Plasma concentrations of total ghrelin, total sleep deprivation (TSD) + six yogurt probes with varying sucrose concentrations (2–29 %),sleep (permitted between 22:30 and 06:30&amp;amp;amp;nbsp;h)+ six orally presented yogurt probes with varying sucrose concentrations (2–29 %)
+13688,5737953,The median time to complete encrustation/epithelialization,lip balm with propolis special extract GH 2002 ,lip balm with aciclovir cream
+13689,5737953,pain reduction,lip balm with propolis special extract GH 2002 ,lip balm with aciclovir cream
+13690,5737953,severe tension and swelling,lip balm with propolis special extract GH 2002 ,lip balm with aciclovir cream
+13691,5737953,itching or burning,lip balm with propolis special extract GH 2002 ,lip balm with aciclovir cream
+13692,5737953,"assessment of global efficacy by the physicians ""good"" to ""very good""""",lip balm with propolis special extract GH 2002 ,lip balm with aciclovir cream
+13693,4354432,Mean plasma concentration–time curves for R- and S-warfarin,lobeglitazone (0.5 mg) for 1–12 days with warfarin (25 mg),warfarin (25 mg) alone
+13694,4354432,findings for vital signs or physical examination results,lobeglitazone (0.5 mg) for 1–12 days with warfarin (25 mg),warfarin (25 mg) alone
+13695,3558647,The best time to laryngoscopy,Rocuronium 0.9 mg/kg (R group),cisatracurium 0.15 mg/kg (C group)
+13696,3476989,The pain level in the active side of the shoulder/neck,coffee (1/2 -1 cup) on average 1 h 18 min before start,abstained from coffee intake
+13697,3770494,recalled the last five words,methylphenidate (MPH) 20 mg,placebo
+13698,3770494,anger and fatigue,methylphenidate (MPH) 20 mg,placebo
+13699,4161875,daily nursing workload for glucose control,intervention group these data were used to feed a computerized glucose regulation algorithm,continuous glucose monitoring (CGM) data were blinded in the control group
+13700,4161875,Mean daily costs per patient,intervention group these data were used to feed a computerized glucose regulation algorithm,continuous glucose monitoring (CGM) data were blinded in the control group
+13701,4710815,incidence of cardiac disorders,"Respimat 2.5 µg (R 2.5),  Respimat 5 µg(R5)",HandiHaler 18 µg (HH18)
+13702,4710815,number of cardiac deaths,"Respimat 2.5 µg (R 2.5),  Respimat 5 µg(R5)",HandiHaler 18 µg (HH18)
+13703,4710815,"cardiac arrhythmia  or cardiac history defined as history of MI, ischaemic heart disease/coronary artery disease, cardiac arrhythmia or heart failure","Respimat 2.5 µg (R 2.5),  Respimat 5 µg(R5)",HandiHaler 18 µg (HH18)
+13704,4710815,"safety,The risk of exacerbation and major adverse cardiovascular (CV) events (MACEs)","Respimat 2.5 µg (R 2.5),  Respimat 5 µg(R5)",HandiHaler 18 µg (HH18)
+13705,3747889,carotid intima-media thickness (CIMT),insulin glargine and n-3 polyunsaturated fatty acid (n-3FA) supplements,standard glycemic care and double-blind therapy with a 1-g capsule of n-3FA;  
+13706,3747889,change in maximum CIMT for the common carotid and the common carotid plus bifurcation,insulin glargine and n-3 polyunsaturated fatty acid (n-3FA) supplements,standard glycemic care and double-blind therapy with a 1-g capsule of n-3FA;  
+13707,3747889,"carotid intima-media thickness (CIMT), change in maximum CIMT for the common carotid and the common carotid plus bifurcation",insulin glargine and n-3 polyunsaturated fatty acid (n-3FA) supplements,placebo
+13708,3666925,postoperative peak cTnI release,morphine (0.1 mg/kg) injected via a cardioplegia needle into the aortic root,control group (the same protocol was performed as in the postconditioning group except that patients received the same volume of saline instead
+13709,3666925,peak inotropic score ; duration of mechanical ventilation as well as ICU stay,morphine (0.1 mg/kg) injected via a cardioplegia needle into the aortic root,control group (the same protocol was performed as in the postconditioning group except that patients received the same volume of saline instead
+13710,3666925,left ventricular ejection fraction; cardiac output,morphine (0.1 mg/kg) injected via a cardioplegia needle into the aortic root,control group (the same protocol was performed as in the postconditioning group except that patients received the same volume of saline instead
+13711,5725027,quality of recovery (QoR),group D received dexmedetomidine 0.04 ug/(kg·h) plus sufentanil 0.02 ug/(kg·h),control group S received sufentanil 0.04 ug/(kg·h) 
+13712,5725027,The pressing times of analgesic pump and rescue tramadol,group D received dexmedetomidine 0.04 ug/(kg·h) plus sufentanil 0.02 ug/(kg·h),control group S received sufentanil 0.04 ug/(kg·h) 
+13713,5725027,incidence of nausea,group D received dexmedetomidine 0.04 ug/(kg·h) plus sufentanil 0.02 ug/(kg·h),control group S received sufentanil 0.04 ug/(kg·h) 
+13714,5725027,Vomiting,group D received dexmedetomidine 0.04 ug/(kg·h) plus sufentanil 0.02 ug/(kg·h),control group S received sufentanil 0.04 ug/(kg·h) 
+13715,2365983,Median operating time,total laparoscopic restorative proctocolectomy,hand-assisted laparoscopic restorative proctocolectomy and open restorative proctocolectomy
+13716,2365983,Morbidity and reoperation rates,total laparoscopic restorative proctocolectomy,"hand-assisted laparoscopic restorative proctocolectomy, and open restorative proctocolectomy"
+13717,2365983,daily and total morphine requirement,total laparoscopic restorative proctocolectomy,hand-assisted laparoscopic restorative proctocolectomy and open restorative proctocolectomy
+13718,2365983,costs,total laparoscopic restorative proctocolectomy,hand-assisted laparoscopic restorative proctocolectomy 
+13719,5807510,the rate of genetic diagnosis within 28 days,rWGS plus standard genetic tests,standard genetic tests alone
+13720,5807510,the rate of neonatal diagnosis,rWGS plus standard genetic tests,standard genetic tests alone
+13721,5807510,Median age at diagnosis and median time to diagnosis,rWGS plus standard genetic tests,standard genetic tests alone
+13722,4364332,positive response to the first invitation letter,trial invitation letter containing an incentive offer of £100,standard trial invitation letter
+13723,5842245,GSI from Symptoms Checklist-90 or PSS Perceived Stress Scale-14 or PSQI Pittsburgh Sleep Quality Index,Music therapy intervention (iMT),"The iMBI (In Swedish: Mindfulness Grundkurs 2.0 from Mindfulnesscenter AB, Sweden)"
+13724,5863299,Circulating nitric oxide levels,Danhong injection combined with Naoxintong capsule for 12 weeks,placebo
+13725,5863299,Circulating levels of endothelin-1 (ET-1) and von Willebrand factor (VWF),Danhong injection combined with Naoxintong capsule for 12 weeks,placebo
+13726,5863299, left ventricular ejection fraction,Danhong injection combined with Naoxintong capsule for 12 weeks,placebo
+13727,5863299,The overall response rate,Danhong injection combined with Naoxintong capsule for 12 weeks,placebo
+13728,5659607,risk of asthma/recurrent wheeze,"vitamin D3 (4,000 IU/d)",control
+13729,5741948,adjusted health and social care costs,treatment as usual with an integrated health promotion intervention (IMPaCT),standard community mental health team care (treatment as usual)
+13730,5741948,societal costs,treatment as usual with an integrated health promotion intervention (IMPaCT),standard community mental health team care (treatment as usual)
+13731,5741948,"SF-36 mental component or SF-36 physical component  or , QALYs estimated from the SF-36 or QALYs estimated from the EQ-5D-3 L (",treatment as usual with an integrated health promotion intervention (IMPaCT),standard community mental health team care (treatment as usual)
+13732,4734805,The central retinal thickness,bromfenac 0.09% ophthalmic solution,nepafenac 0.1%
+13733,3656395,"diabetes outcome measures (HbA1c, blood pressure, cholesterol, BMI).",a comprehensive programme,usual care
+13734,5850768,Immunogenicity,3 mg/kg of SB2 ,3 mg/kg of infliximab
+13735,5850768,The overall efficacy,3 mg/kg of SB2 ,3 mg/kg of infliximab
+13736,5850768,the safety profile,3 mg/kg of SB2 ,3 mg/kg of infliximab
+13737,3643086,"temporal variation of biomarker levels (IL-6, VCAM-1, ET-1)",atorvastatin 80 mg/day,placebo
+13738,3643086,intrahospital mortality rate,atorvastatin 80 mg/day,placebo
+13739,5866333,growth hormone (GH),sitagliptin,placebo
+13740,5866333,Vasodilation and tissue plasminogen activator (tPA) activity in women,sitagliptin,placebo
+13741,5866333,"free insulin–like growth factor‐1, GH",sitagliptin,placebo
+13742,5866333,vascular resistance,sitagliptin,placebo
+13743,3680603,Cardiac markers (isoenzyme creatine kinase with muscle and brain subunits [CK-MB] or troponin-I) and the brain natriuretic peptide,"5,000 U/kg ulinastatin",normal saline
+13744,3680603,"fibrinogen, creatinine, lactate, and aspartate aminotransferase (AST)","5,000 U/kg ulinastatin",normal saline
+13745,3680603,"duration of mechanical ventilator support, ICU stay, chest tube drainage for postoperative 6 hours, chest tube indwelling time, hospital stay, transfusion amounts, or postoperative complications","5,000 U/kg ulinastatin",normal saline
+13746,3634976,quadrivalent meningococcal serogroups A -  vaccine response (VR) rate,"MenACWY-TT, Nimenrix™","GlaxoSmithKline, Belgium"
+13747,5805261,"number of ablation, ablation time, and energy delivery",switching bipolar (SB) radiofrequency ablation (RFA),switching monopolar (SM) separable clustered (SC) electrodes
+13748,5805261,Ablation volume,switching bipolar (SB) radiofrequency ablation (RFA),switching monopolar (SM) separable clustered (SC) electrodes
+13749,5805261,free survival rates,switching bipolar (SB) radiofrequency ablation (RFA),switching monopolar (SM) separable clustered (SC) electrodes
+13750,3668104,bispectral index (BIS) at 90 min," Group B dexmedetomidine 0.2 µg/kg/hr,  Group C dexmedetomidine 0.4 µg/kg/hr",Group A - normal saline
+13751,3668104,bispectral index (BIS),Group C dexmedetomidine 0.4 µg/kg/hr,"Group A - normal saline, dexmedetomidine 0.2 µg/kg/hr - Group B"
+13752,3668104,heart rate and mean arterial pressure,Group C dexmedetomidine 0.4 µg/kg/hr,"Group A - normal saline, dexmedetomidine 0.2 µg/kg/hr - Group B"
+13753,3668104,"post anesthetic care unit (PACU), modified aldrete score (MAS) for 30 min"," Group B dexmedetomidine 0.2 µg/kg/hr,  Group C dexmedetomidine 0.4 µg/kg/hr",Group A - normal saline
+13754,3702091,"anxiety by 27%, depression by 37%  and C-reactive proteins",strength and endurance training,experimental and control
+13755,5985618,Mean rank of pain score,temperature-controlled radiofrequency (TC-RF) tonsil ablation - Group A,CO2-laser cryptolysis (CO2-LC) - Group B
+13756,5985618,The amount of bleeding,temperature-controlled radiofrequency (TC-RF) tonsil ablation - Group A,CO2-laser cryptolysis (CO2-LC) - Group B
+13757,5985618,duration of procedure,temperature-controlled radiofrequency (TC-RF) tonsil ablation - Group A,CO2-laser cryptolysis (CO2-LC) - Group B
+13758,3641305,INH-related drug-induced liver injury,STD-treatment: approx. 5&nbsp;mg/kg of isoniazid for all),NAT2 genotype-guided treatment (PGx-treatment)
+13759,3641305,combined unfavorable events,STD-treatment: approx. 5&amp;nbsp;mg/kg of isoniazid for all),NAT2 genotype-guided treatment (PGx-treatment)
+13760,2836833,Fecal fat loss,1500 mg calcium,500 mg calcium
+13761,2836833,Urinary calcium excretion,1500 mg calcium,500 mg calcium
+13762,2836833,weight loss,1500 mg calcium,500 mg calcium
+13763,2836833,systolic or diastolic blood pressure,1500 mg calcium,500 mg calcium
+13764,5789501,range of motion and SPADI at 4-week,anatomical landmark-guided (LMG) technique,Suprascapular nerve block (SSNB) using the ultrasound guidance
+13765,4748460,"visual analogue pain score (VAS), the Knee Osteoarthritis Outcome Score (KOOS), Knee Quality of Life (KQoL) scale, maximum hopping distance and number of knee bends",photo-activated (PA) platelet-rich plasma (PRP),hyaluronic acid (HA)
+13766,4028193,Depression (Beck Depression Inventory II; BDI-II),Internet-based computerized cognitive behavior therapy (iCBT) program in Manga format,control
+13767,4028193,Kessler's psychological distress scale (K6),Internet-based computerized cognitive behavior therapy (iCBT) program in Manga format,control
+13768,1936417,satisfied with labor and delivery,group in which support was permitted,group in which there was no support
+13769,5732507,infant HIV status at 6&nbsp;weeks and at 12&nbsp;months,enhanced intervention (EI) condition of SC PMTCT plus the “Protect Your Family” intervention prevention of mother-to-child-transmission (PMTCT) of HIV,standard care (SC) condition plus time-equivalent attention-control on disease prevention
+13770,5844532,improved cross-sectional area (CSA),RGTA® (OTR4131)—Equitend®,placebo
+13771,5844532,"pre-injury performance level, racing in, and winning",RGTA® (OTR4131)—Equitend®,placebo
+13772,5844532,recurrence,RGTA® (OTR4131)—Equitend®,placebo
+13773,2699714,A1C level,etanercept therapy,placebo
+13774,2699714,C-peptide,etanercept therapy,placebo
+13775,2699714,insulin dose,etanercept therapy,placebo
+13776,2921405,diarrhea,2.4 g/day of prebiotic oligosaccharide and 1.9×107 colony forming unit (c.f.u)/day of probiotic Bifidobacterium lactis HN019,control milk
+13777,2921405,dysentery episodes,2.4 g/day of prebiotic oligosaccharide and 1.9×107 colony forming unit (c.f.u)/day of probiotic Bifidobacterium lactis HN019,control milk
+13778,2921405,"Incidence of pneumonia, severe acute lower respiratory infection (ALRI)",2.4 g/day of prebiotic oligosaccharide and 1.9×107 colony forming unit (c.f.u)/day of probiotic Bifidobacterium lactis HN019,control milk
+13779,2921405,days with severe illness and high fever,2.4 g/day of prebiotic oligosaccharide and 1.9×107 colony forming unit (c.f.u)/day of probiotic Bifidobacterium lactis HN019,control milk
+13780,4177066,importance of early reading aloud and of infant socialization,Early video administered  to first-time parents in modifying parental knowledge,Late video administered to first-time parents in modifying parental knowledge
+13781,4177066,"the acquisition of positive attitudes towards early reading aloud, early exposure to music and parental socialization",Early video administered  to first-time parents in modifying parental knowledge,Late video administered to first-time parents in modifying parental knowledge
+13782,3474778,The quality of water,high-performance water filter and jerry cans for safe storage,control
+13783,3474778,Diarrhea longitudinal prevalence in children &lt;2 years,high-performance water filter and jerry cans for safe storage,control
+13784,3474778,For all household members,high-performance water filter and jerry cans for safe storage,control
+13785,3474778,Weight-for-age z-scores (WAZ),high-performance water filter and jerry cans for safe storage,control
+13786,1065065,"cytokines, duration of ventilation and length of intensive care unit stay, and inspired fractional oxygen/arterial oxygen tension ratio",lornoxicam (8 mg administered intravenously every 12 hours for six doses),placebo
+13787,5093191,"6-min walk distance, leg strength, chest strength , 30-s sit-to-stand result , and reach distance",exercise&nbsp;training intervention,provide usual care
+13788,5093191,resting heart rate,exercise&amp;nbsp;training intervention,provide usual care
+13789,3672718,RFS (relapse free survival) and OS (overall survival),"epirubicin (E) containing chemotherapy with cyclophosphamide, methotrexate and fluorouracil (CMF)","cyclophosphamide, methotrexate and fluorouracil (CMF) treatment."
+13790,4733100,Community Healthy Activities Model Program for Seniors (CHAMPS) questionnaire at 12 months,"expert system-based, print-delivered physical activity intervention",control
+13791,4733100,Community Healthy Activities Model Program for Seniors (CHAMPS) questionnaire at 6 months,"expert system-based, print-delivered physical activity intervention",control
+13792,4733100,moderate-equivalent physical activity at 6&nbsp;months,"expert system-based, print-delivered physical activity intervention",control
+13793,4733100,moderate-equivalent physical activity at 12 months,"expert system-based, print-delivered physical activity intervention",control
+13794,1065070,extravascular lung water (EVLW),oleic acid 0.06 ml/kg intravenously over 30 min. , Sham operation; Escherichia coli lipopolysaccharide 15 ng/kg per min intravenously for 6 hours
+13795,1065070,postmortem gravimetric extravascular lung water  (EVLWG),oleic acid 0.06 ml/kg intravenously over 30 min. , Sham operation; Escherichia coli lipopolysaccharide 15 ng/kg per min intravenously for 6 hours
+13796,5976899,"range of motion (ROM), kinesiophobia, depression, and quality of life (QoL)",traditional physiotherapy-Mulligan mobilization (TPMM) group,traditional physiotherapy (TP) group
+13797,5976899,"pain, Neck Disability Index (NDI), right/left neck rotation, left lateral flexion ROM, and mental health subcategory of SF-36",traditional physiotherapy-Mulligan mobilization (TPMM) group,traditional physiotherapy (TP) group
+13798,3775760,area under the curve (AUC) for Rev,12 mg Opal-HIV-Gag(c) group,placebo
+13799,4644318,Effective pain relief,"fluoroscopically guided epidural injection, through the Parasagittal interlaminar (PIL)","fluoroscopically guided epidural injection, through including transforaminal (TF)"
+13800,4644318,effective pain relief [numerical rating scale (NRS),"fluoroscopically guided epidural injection, through the Parasagittal interlaminar (PIL)","fluoroscopically guided epidural injection, through including transforaminal (TF)"
+13801,4644318,Number of patients with improved disability,"fluoroscopically guided epidural injection, through the Parasagittal interlaminar (PIL)","fluoroscopically guided epidural injection, through including transforaminal (TF)"
+13802,4644318,adverse effects,"fluoroscopically guided epidural injection, through the Parasagittal interlaminar (PIL)","fluoroscopically guided epidural injection, through including transforaminal (TF)"
+13803,5891985,fasting total cholesterol (TC) and low density lipoprotein cholesterin (LDL-C),liraglutide,metformin
+13804,5891985,"waist circumference, and body weight ,  BMI",liraglutide,metformin
+13805,5891985,plasma insulin level (area under the curve (AUCins),liraglutide,metformin
+13806,5891985,non-esterified fatty acids (NEFA),liraglutide,metformin
+13807,5891985,soluble vascular cell adhesion molecule-1 (sVCAM-1) levels,liraglutide,metformin
+13808,4590915,"total urine volume (TUV), and glomerular filtration rate (GFR)","Group II (Rhubarb) received conservative management along with Rhubarb capsule (350 mg, thrice daily)",Group I (Control) was given conservative management
+13809,4590915,serum potassium,"Group II (Rhubarb) received conservative management along with Rhubarb capsule (350 mg, thrice daily)",Group I (Control) was given conservative management
+13810,4590915,"serum calcium, TUV, GFR","Group II (Rhubarb) received conservative management along with Rhubarb capsule (350 mg, thrice daily)",Group I (Control) was given conservative management
+13811,4590915,total urine protein (TUP),"Group II (Rhubarb) received conservative management along with Rhubarb capsule (350 mg, thrice daily)",Group I (Control) was given conservative management
+13812,3661555,Return-to-work rates,work support intervention aimed at enhancing return-to-work,usual care
+13813,3661555,Median time from initial sick leave to partial return-to-work,work support intervention aimed at enhancing return-to-work,usual care
+13814,3661555,Quality of life and work ability,work support intervention aimed at enhancing return-to-work,usual care
+13815,3661555,Work functioning and costs,work support intervention aimed at enhancing return-to-work,usual care
+13816,5435086,the number of high use days without medical review within 48 h,budesonide/formoterol inhaler,budesonide/formoterol with salbutamol
+13817,5435086,relative rate,budesonide/formoterol inhaler,budesonide/formoterol with salbutamol
+13818,5244530,"depression severity reduction, remission rate, change in quality of life, psychological well-being, sedative prescriptions, sick leave",person-centred  general practitioners (GP) consultations,treatment as usual (TAU)
+13819,5244530,continued antidepressants until the 6&nbsp;month,person-centred  general practitioners (GP) consultations,treatment as usual (TAU)
+13820,3364614,LF/HF ratio,blue laser light,control reasons the laser
+13821,3717757,HR genotype persistence,HPV-16/18 vaccine,placebo (Al(OH)3 control)
+13822,3717757,LR genotype persistent,HPV-16/18 vaccine,placebo (Al(OH)3 control)
+13823,3724383,stool frequency,"synbiotic (Lactol®, composed of Lactobacillus Sporogenes, 1 Tab/20 kg/d) plus mineral oil (Paraffin 1 ml/kg/d)",mineral oil alone
+13824,3724383,"Straining at defecation, incomplete evacuation, and soiling","synbiotic (Lactol®, composed of Lactobacillus Sporogenes, 1 Tab/20 kg/d) plus mineral oil (Paraffin 1 ml/kg/d)",mineral oil alone
+13825,3724383,better global improvement,"synbiotic (Lactol®, composed of Lactobacillus Sporogenes, 1 Tab/20 kg/d) plus mineral oil (Paraffin 1 ml/kg/d)",mineral oil alone
+13826,3724383,severe side-effects,"synbiotic (Lactol®, composed of Lactobacillus Sporogenes, 1 Tab/20 kg/d) plus mineral oil (Paraffin 1 ml/kg/d)",mineral oil alone
+13827,4218764,The cumulative sufentanil consumption,"10-mL bolus of 0.2% ropivacaine before emergence, followed by a continuous infusion of 6 mL/h for 24 hours (PVB group)",saline at the same scheme of administration
+13828,4218764,pain scores (numerical rating scale),"10-mL bolus of 0.2% ropivacaine before emergence, followed by a continuous infusion of 6 mL/h for 24 hours (PVB group)",saline at the same scheme of administration
+13829,3664327,"effect on empathic concern,  personal distress ratings",empathy scenario and recorded self-reports of empathic reactions to the scenario,computerized implicit perspective taking task
+13830,4210722,vaccination certificates were submitted, a separate reminder card 4 days before the appointment (IG3),no further reminder (IG1); reminder card together with the appointment letter (IG2);
+13831,4210722,use of a reminder card, a separate reminder card 4 days before the appointment (IG3); reminder card together with the appointment letter (IG2);,no further reminder (IG1); 
+13832,3634264,flow mediated dilation,1500 mg/dialysis interval (every other day) oral L-carnitine,placebo
+13833,3634264,carotid intima-media thickness,1500 mg/dialysis interval (every other day) oral L-carnitine,placebo
+13834,5988794,"SF-12(12-item Short Form Health Survey), EQ-5D-5L scores at 6 or 12 months",hip arthroscopy,personalised hip therapy
+13835,5988794,International Hip Outcome Tool (iHOT-33),hip arthroscopy,personalised hip therapy
+13836,5822859,FO pulsatility index (FOPI)," group II (adequate growth and maternal hypertension),", and group III (normal controls); group I (IUGR);
+13837,4745915,cortisol concentration,12-week combined exercise program,sedentary control group
+13838,4745915,absolute number of CD80+ and CD86+ cDC,12-week combined exercise program,sedentary control group
+13839,4745915,"absolute number of CD62L+, CCR5+, and CCR7+ cDC",12-week combined exercise program,sedentary control group
+13840,4745915,"CCR5+ and CD86+ pDC, secreted amount of IL-6, IL-12p70, TNF-α, IFN-α, caspase-1, and MMP-9",12-week combined exercise program,sedentary control group
+13841,5777424,tooth sensitivity risk,Etodolac (400 mg),placebo
+13842,5777424,bleaching effectiveness,Etodolac (400 mg),placebo
+13843,3682309,"Duration RRT prescribed, hrs",continuous venovenous hemofiltration [CVVH],continuous venovenous hemodialysis [CVVHD]
+13844,3682309,Duration RRT received,continuous venovenous hemofiltration [CVVH],continuous venovenous hemodialysis [CVVHD]
+13845,3682309,Mean RRT dose,continuous venovenous hemofiltration [CVVH],continuous venovenous hemodialysis [CVVHD]
+13846,3682309,"Prescribed dose delivered, %",continuous venovenous hemofiltration [CVVH],continuous venovenous hemodialysis [CVVHD]
+13847,3682309,"Net ultrafiltration, L/day",continuous venovenous hemofiltration [CVVH],continuous venovenous hemodialysis [CVVHD]
+13848,3751568,child-reported maximal knee pain,physiotherapist-prescribed exercise programme,no treatment
+13849,3751568,"overall psychosocial health, specifically self-esteem, mental health and behaviour",physiotherapist-prescribed exercise programme,no treatment
+13850,3751568,adverse events,physiotherapist-prescribed exercise programme,no treatment
+13851,1849920,number of restored surfaces,amalgam group,composite group (0.9 vs. 0.6 μg/g creatinine)
+13852,1849920,cumulative number of restored surfaces,amalgam group,composite group (0.9 vs. 0.6 μg/g creatinine)
+13853,1849920,mean urinary mercury concentration,amalgam group 0.9 ,composite group 0.6 μg/g 
+13854,3646875,similarity of the students’ ontology artefacts compared with gold standard ontologies developed by the authors before the experiment; secondary outcome was the intra-group similarity of group members’ ontologies,training on different topics in ontology development,untrained group
+13855,5769202,"refractive errors, visual acuity",Bates eye exercise therapy,Trataka Yoga Kriya
+13856,5850179,major adverse cardiovascular event,morphine,no‐morphine
+13857,5850179,The all‐cause mortality,morphine,no‐morphine
+13858,5850179,infarct size,morphine,no‐morphine
+13859,4990415,weight and BMI,Group Support Lifestyle Modification (GSLiM),dietary counseling
+13860,4990415,"Systolic blood pressure, Diastolic blood pressure",Group Support Lifestyle Modification (GSLiM),dietary counseling
+13861,4990415,Negative emotions,Group Support Lifestyle Modification (GSLiM),dietary counseling
+13862,4990415,Physical Discomfort,Group Support Lifestyle Modification (GSLiM),dietary counseling
+13863,4990415,Total WEL score,Group Support Lifestyle Modification (GSLiM),dietary counseling
+13864,1174954,"Western Ontario and McMaster Universities (WOMAC) OA index, particularly of physical function, patient global assessment ",risedronate 15 mg,placebo
+13865,1174954,joint-space width,risedronate 5 mg ,risedronate 15 mg
+13866,1174954,cartilage degradation and bone resorption,"risedronate 5 mg, risedronate 15 mg",placebo
+13867,5096778,the number of capsules returned,ibudilast (40 mg twice daily),placebo
+13868,5096778, frequency of moderate to severe headaches 5-8 weeks,ibudilast (40 mg twice daily),placebo
+13869,5096778,headache index,ibudilast (40 mg twice daily),placebo
+13870,5096778,frequency intake of symptomatic medication,ibudilast (40 mg twice daily),placebo
+13871,5739620,time to the onset of skin toxicity,erythromycin ointment 2% followed by doxycycline,r doxycycline 100 mg b.i.d.
+13872,5739620,appearance of a moderate to severe skin toxicity,erythromycin ointment 2% followed by doxycycline,r doxycycline 100 mg b.i.d.
+13873,5739620,adverse events,erythromycin ointment 2% followed by doxycycline,r doxycycline 100 mg b.i.d.
+13874,5878866,The mean pain intensity score,transcutaneous electrical nerve stimulation (TENS),50 mg of fentanyl
+13875,5878866,overall pain scores,transcutaneous electrical nerve stimulation (TENS),50 mg of fentanyl
+13876,5878866,The use of analgesic drugs,transcutaneous electrical nerve stimulation (TENS),50 mg of fentanyl
+13877,5878866,nausea/vomiting,transcutaneous electrical nerve stimulation (TENS),50 mg of fentanyl
+13878,2797957,mean change TPS,Sativex,placebo
+13879,2797957,"mean change in superficial , deep, and muscular  pain",Sativex,placebo
+13880,2797957,"sensory scale, affective scale, and present pain intensity",Sativex,placebo
+13881,4390525,saphenous nerve lesion,"G1-group after proximal stripping without invagination, G2-group after proximal stripping with invagination","G3-group after distal stripping without invagination, G4-group after distal stripping with invagination"
+13882,4390525,saphenous nerve sensory perception abnormalities,G1-group after proximal stripping without invagination, G4-group after distal stripping with invagination
+13883,4627615,25(OH)D concentration,buccal spray;,control
+13884,4627615,25(OH)D concentration, soft gelatin capsule,control
+13885,4627615,adverse event, soft gelatin capsule,control
+13886,4736250,self-reported moderate intensity MET,screened for metabolic syndrome,control group
+13887,4736250,"fibre intake score, fat intake score, fruit intake, and vegetable intake",screened for metabolic syndrome,control group
+13888,5753932,maximum voluntary contraction force; stabilized body temperature,body-weight supported treadmill cool (16°C),body-weight supported treadmill room (21°C)
+13889,4105274,knee flexion range of motion,With gabapentin,Without gabapentin
+13890,4889182,number of page views in the social media group,social media exposure,no social media exposure (control)
+13891,3398966,Mortality,the HQP model of community-based nurse care management.,the usual care afforded to traditional Medicare beneficiaries
